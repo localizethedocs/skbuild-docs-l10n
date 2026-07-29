@@ -1596,7 +1596,7 @@ msgstr ""
 #: ../../../../CHANGES.md:527 ../../../../CHANGES.md:646
 #: ../../../../CHANGES.md:724 ../../../../CHANGES.md:791
 msgid "Internal API"
-msgstr ""
+msgstr "內部 API"
 
 #: ../../../../CHANGES.md:529
 msgid "Add {func}`skbuild.platform_specifics.windows.find_visual_studio`."

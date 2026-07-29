@@ -52,11 +52,11 @@ msgstr ""
 
 #: ../../../hacking.rst:30
 msgid "Internal API"
-msgstr ""
+msgstr "內部 API"
 
 #: ../../../modules.rst:2
 msgid "skbuild"
-msgstr ""
+msgstr "skbuild"
 
 #: ../../../hacking.rst:37
 msgid "Internal CMake Modules"

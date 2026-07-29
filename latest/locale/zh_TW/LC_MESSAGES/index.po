@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../index.rst:9
 msgid "User guide"
-msgstr ""
+msgstr "使用者指南"
 
 #: ../../../index.rst:22
 msgid "For maintainers"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../index.rst:2
 msgid "Welcome to scikit-build"
-msgstr ""
+msgstr "歡迎使用 scikit-build"
 
 #: ../../../../README.md:3
 msgid ""
@@ -40,6 +40,8 @@ msgid ""
 "The scikit-build package is fundamentally just glue between the `setuptools` "
 "Python module and [CMake](https://cmake.org)."
 msgstr ""
+"scikit-build 軟體包本質上只是 `setuptools` Python 模組與 [CMake](https://"
+"cmake.org) 之間的黏合劑。"
 
 #: ../../../../README.md:7
 msgid ""
@@ -87,6 +89,9 @@ msgid ""
 "requires = [\"scikit-build>=1\"]\n"
 "build-backend = \"scikit_build_core.setuptools.build_meta\"\n"
 msgstr ""
+"[build-system]\n"
+"requires = [\"scikit-build>=1\"]\n"
+"build-backend = \"scikit_build_core.setuptools.build_meta\"\n"
 
 #: ../../../../README.md:23
 msgid "If you want to use scikit-build-core directly but keep setuptools:"
@@ -98,6 +103,9 @@ msgid ""
 "requires = [\"scikit-build-core[setuptools]>=1\"]\n"
 "build-backend = \"scikit_build_core.setuptools.build_meta\"\n"
 msgstr ""
+"[build-system]\n"
+"requires = [\"scikit-build-core[setuptools]>=1\"]\n"
+"build-backend = \"scikit_build_core.setuptools.build_meta\"\n"
 
 #: ../../../../README.md:31
 msgid "And either use setup with at least a `cmake_source_dir` argument:"
@@ -109,6 +117,9 @@ msgid ""
 "\n"
 "setup(cmake_source_dir=\".\")\n"
 msgstr ""
+"from setuptools import setup\n"
+"\n"
+"setup(cmake_source_dir=\".\")\n"
 
 #: ../../../../README.md:39
 msgid "or the following in your pyproject.toml:"
@@ -119,6 +130,8 @@ msgid ""
 "[tool.scikit-build]\n"
 "cmake.source-dir = \".\"\n"
 msgstr ""
+"[tool.scikit-build]\n"
+"cmake.source-dir = \".\"\n"
 
 #: ../../../../README.md:46
 msgid ""
@@ -139,6 +152,9 @@ msgid ""
 "requires = [\"scikit-build-core>=1\"]\n"
 "build-backend = \"scikit_build_core.build\"\n"
 msgstr ""
+"[build-system]\n"
+"requires = [\"scikit-build-core>=1\"]\n"
+"build-backend = \"scikit_build_core.build\"\n"
 
 #: ../../../../README.md:56
 msgid ""

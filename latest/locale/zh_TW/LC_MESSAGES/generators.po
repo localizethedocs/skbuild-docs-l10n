@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../generators.rst:8
 msgid "Build system generator"
-msgstr ""
+msgstr "建置系統生成器"
 
 #: ../../../generators.rst:10
 msgid ""
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../../generators.rst:40
 msgid "Compiler"
-msgstr ""
+msgstr "編譯器"
 
 #: ../../../generators.rst:42
 msgid ""
@@ -79,15 +79,15 @@ msgstr ""
 
 #: ../../../generators.rst:51
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../../generators.rst:51
 msgid "MacOSX"
-msgstr ""
+msgstr "MacOSX"
 
 #: ../../../generators.rst:51
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../../generators.rst:53
 msgid "**C runtime**"
@@ -135,8 +135,8 @@ msgstr ""
 
 #: ../../../generators.rst:57
 msgid "`Microsoft Visual Studio`_"
-msgstr ""
+msgstr "`Microsoft Visual Studio`_"
 
 #: ../../../generators.rst:58
 msgid "`Microsoft Windows SDK`_"
-msgstr ""
+msgstr "`Microsoft Windows SDK`_"

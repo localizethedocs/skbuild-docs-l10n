@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../cmake-modules.rst:3
 msgid "CMake modules"
-msgstr ""
+msgstr "CMake 模組"
 
 #: ../../../cmake-modules.rst:5
 msgid ""
