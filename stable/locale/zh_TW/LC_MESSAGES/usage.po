@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage.rst:6
 msgid "Why should I use scikit-build ?"
-msgstr ""
+msgstr "為什麼我應該使用 scikit-build？"
 
 #: ../../../usage.rst:8
 msgid ""

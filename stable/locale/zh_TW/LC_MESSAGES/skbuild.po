@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../skbuild.rst:2
 msgid "skbuild package"
-msgstr ""
+msgstr "skbuild 軟體包"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/skbuild/__init__.py:docstring
 #: of skbuild:1
@@ -37,11 +37,11 @@ msgstr ""
 
 #: ../../../skbuild.rst:10
 msgid "Submodules"
-msgstr ""
+msgstr "子模組"
 
 #: ../../../skbuild.rst:13
 msgid "skbuild.exceptions module"
-msgstr ""
+msgstr "skbuild.exceptions 模組"
 
 #: ../../../../../../.conda/lib/python3.13/site-packages/skbuild/exceptions.py:docstring
 #: of skbuild.exceptions:1

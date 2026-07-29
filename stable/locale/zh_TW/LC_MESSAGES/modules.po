@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../modules.rst:2
 msgid "skbuild"
-msgstr ""
+msgstr "skbuild"
