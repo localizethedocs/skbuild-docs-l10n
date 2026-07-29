@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, the scikit-build team
+# This file is distributed under the same license as the scikit-build package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: scikit-build latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-29 08:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../cmake-modules/targetLinkLibrariesWithDynamicLookup.rst:2
+msgid "targetLinkLibrariesWithDynamicLookup"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:4
+msgid "Public Functions"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:6
+msgid "The following functions are defined:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:12
+msgid "target_link_libraries_with_dynamic_lookup(<Target> [<Libraries>])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:15
+msgid ""
+"Useful to \"weakly\" link a loadable module. For example, it should be used "
+"when compiling a loadable module when the symbols should be resolve from the "
+"run-time environment where the module is loaded, and not a specific system "
+"library."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:20
+msgid ""
+"Like proper linking, except that the given ``<Libraries>`` are not "
+"necessarily linked. Instead, the ``<Target>`` is produced in a manner that "
+"allows for symbols unresolved within it to be resolved at runtime, "
+"presumably by the given ``<Libraries>``.  If such a target can be produced, "
+"the provided ``<Libraries>`` are not actually linked."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:26
+msgid ""
+"It links a library to a target such that the symbols are resolved at run-"
+"time not link-time."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:29
+msgid ""
+"The linker is checked to see if it supports undefined symbols when linking a "
+"shared library. If it does then the library is not linked when specified "
+"with this function."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:33
+msgid ""
+"On platforms that do not support weak-linking, this function works just like "
+"``target_link_libraries``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:38
+msgid ""
+"For OSX it uses ``undefined dynamic_lookup``. This is similar to using ``-"
+"shared`` on Linux where undefined symbols are ignored."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:41
+msgid ""
+"For more details, see `blog <http://blog.tim-smith.us/2015/09/python-"
+"extension-modules-os-x/>`_ from Tim D. Smith."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:47
+msgid ""
+"Check if the linker requires a command line flag to allow leaving symbols "
+"unresolved when producing a target of type ``<TargetType>`` that is weakly-"
+"linked against a dependency of type ``<LibType>``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:51
+msgid "``<TargetType>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:52
+msgid "can be one of \"STATIC\", \"SHARED\", \"MODULE\", or \"EXE\"."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:54
+msgid "``<LibType>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:55
+msgid "can be one of \"STATIC\", \"SHARED\", or \"MODULE\"."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:57
+msgid "Long signature:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:61
+msgid ""
+"check_dynamic_lookup(<TargetType>\n"
+"                     <LibType>\n"
+"                     <ResultVar>\n"
+"                     [<LinkFlagsVar>])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:67
+msgid "Short signature:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:71
+msgid ""
+"check_dynamic_lookup(<ResultVar>) # <TargetType> set to \"MODULE\"\n"
+"                                  # <LibType> set to \"SHARED\""
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:75
+msgid ""
+"The result is cached between invocations and recomputed only when the value "
+"of CMake's linker flag list changes; ``CMAKE_STATIC_LINKER_FLAGS`` if "
+"``<TargetType>`` is \"STATIC\", and ``CMAKE_SHARED_LINKER_FLAGS`` otherwise."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:80
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:128
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:150
+msgid "Defined variables:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:82
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:130
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:152
+msgid "``<ResultVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:83
+msgid ""
+"Whether the current C toolchain supports weak-linking for target binaries of "
+"type ``<TargetType>`` that are weakly-linked against a dependency target of "
+"type ``<LibType>``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:87
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:157
+msgid "``<LinkFlagsVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:88
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:158
+msgid ""
+"List of flags to add to the linker command to produce a working target "
+"binary of type ``<TargetType>`` that is weakly-linked against a dependency "
+"target of type ``<LibType>``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:92
+msgid "``HAS_DYNAMIC_LOOKUP_<TargetType>_<LibType>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:93
+msgid "Cached, global alias for ``<ResultVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:95
+msgid "``DYNAMIC_LOOKUP_FLAGS_<TargetType>_<LibType>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:96
+msgid "Cached, global alias for ``<LinkFlagsVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:100
+msgid "Private Functions"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:102
+msgid "The following private functions are defined:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:104
+msgid ""
+"These functions are not part of the scikit-build API. They exist purely as "
+"an implementation detail and may change from version to version without "
+"notice, or even be removed."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:108
+msgid "We mean it."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:115
+msgid "_get_target_type(<ResultVar> <Target>)"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:118
+msgid ""
+"Shorthand for querying an abbreviated version of the target type of the "
+"given ``<Target>``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:121
+msgid "``<ResultVar>`` is set to:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:123
+msgid "\"STATIC\" for a STATIC_LIBRARY,"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:124
+msgid "\"SHARED\" for a SHARED_LIBRARY,"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:125
+msgid "\"MODULE\" for a MODULE_LIBRARY,"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:126
+msgid "and \"EXE\" for an EXECUTABLE."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:131
+msgid "The abbreviated version of the ``<Target>``'s type."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:138
+msgid ""
+"_test_weak_link_project(<TargetType>\n"
+"                        <LibType>\n"
+"                        <ResultVar>\n"
+"                        <LinkFlagsVar>)"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:144
+msgid ""
+"Attempt to compile and run a test project where a target of type "
+"``<TargetType>`` is weakly-linked against a dependency of type ``<LibType>``:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:147
+msgid ""
+"``<TargetType>`` can be one of \"STATIC\", \"SHARED\", \"MODULE\", or "
+"\"EXE\"."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:148
+msgid "``<LibType>`` can be one of \"STATIC\", \"SHARED\", or \"MODULE\"."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:153
+msgid ""
+"Whether the current C toolchain can produce a working target binary of type "
+"``<TargetType>`` that is weakly-linked against a dependency target of type "
+"``<LibType>``."
+msgstr ""
