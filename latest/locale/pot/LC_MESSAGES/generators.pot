@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, the scikit-build team
+# This file is distributed under the same license as the scikit-build package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: scikit-build latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-29 08:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../generators.rst:3
+msgid "C Runtime, Compiler and Build System Generator"
+msgstr ""
+
+#: ../../../generators.rst:8
+msgid "Build system generator"
+msgstr ""
+
+#: ../../../generators.rst:10
+msgid ""
+"Since scikit-build simply provides glue between ``setuptools`` and "
+"``CMake``, a `CMake generator`_ is used to configure the build system "
+"allowing to build of CPython C extensions."
+msgstr ""
+
+#: ../../../generators.rst:18
+msgid ""
+"scikit-build no longer probes for installed Visual Studio versions or runs a "
+"language test to discover a working generator. CMake's own default generator "
+"selection applies."
+msgstr ""
+
+#: ../../../generators.rst:22
+msgid ""
+"CMake selects its default generator for the current platform, and the "
+"``CMAKE_GENERATOR`` environment variable can be used to override it::"
+msgstr ""
+
+#: ../../../generators.rst:25
+msgid "CMAKE_GENERATOR=\"Unix Makefiles\" pip install ."
+msgstr ""
+
+#: ../../../generators.rst:27
+msgid ""
+"``Ninja`` is the recommended generator. It is automatically parallel and is "
+"available on all platforms. The recommended ``scikit_build_core.setuptools."
+"build_meta`` backend (see :ref:`basic_usage_example`) adds the `ninja python "
+"package <https://pypi.org/project/ninja/>`_ to the build requirements "
+"automatically when no suitable build tool is already available."
+msgstr ""
+
+#: ../../../generators.rst:34
+msgid ""
+"For more details about CMake generators, see the `CMake documentation "
+"<https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html>`_."
+msgstr ""
+
+#: ../../../generators.rst:40
+msgid "Compiler"
+msgstr ""
+
+#: ../../../generators.rst:42
+msgid ""
+"The compiler is selected by CMake following its usual rules; the ``CC`` and "
+"``CXX`` environment variables can be used to point at specific compilers. "
+"The compiler toolchain used to build the target CPython interpreter should "
+"be available; refer to the table below for the usual distribution mechanisms "
+"for each operating system."
+msgstr ""
+
+#: ../../../generators.rst:51
+msgid "Linux"
+msgstr ""
+
+#: ../../../generators.rst:51
+msgid "MacOSX"
+msgstr ""
+
+#: ../../../generators.rst:51
+msgid "Windows"
+msgstr ""
+
+#: ../../../generators.rst:53
+msgid "**C runtime**"
+msgstr ""
+
+#: ../../../generators.rst:53
+msgid "`GNU C Library (glibc)`_"
+msgstr ""
+
+#: ../../../generators.rst:53
+msgid "libSystem"
+msgstr ""
+
+#: ../../../generators.rst:53
+msgid "`Microsoft C run-time library`_"
+msgstr ""
+
+#: ../../../generators.rst:55
+msgid "**Compiler**"
+msgstr ""
+
+#: ../../../generators.rst:55
+msgid "`GNU compiler (gcc)`_"
+msgstr ""
+
+#: ../../../generators.rst:55
+msgid "`clang`_"
+msgstr ""
+
+#: ../../../generators.rst:55
+msgid "Microsoft C/C++ Compiler (cl.exe)"
+msgstr ""
+
+#: ../../../generators.rst:57
+msgid "**Provenance**"
+msgstr ""
+
+#: ../../../generators.rst:57
+msgid "`Package manager`_"
+msgstr ""
+
+#: ../../../generators.rst:57
+msgid "OSX SDK within `XCode`_"
+msgstr ""
+
+#: ../../../generators.rst:57
+msgid "`Microsoft Visual Studio`_"
+msgstr ""
+
+#: ../../../generators.rst:58
+msgid "`Microsoft Windows SDK`_"
+msgstr ""

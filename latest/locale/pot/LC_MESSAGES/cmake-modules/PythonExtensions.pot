@@ -1,0 +1,419 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, the scikit-build team
+# This file is distributed under the same license as the scikit-build package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: scikit-build latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-29 08:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../cmake-modules/PythonExtensions.rst:2
+msgid "PythonExtensions"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:3
+msgid ""
+"This module defines CMake functions to build Python extension modules and "
+"stand-alone executables."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:6
+msgid "The following variables are defined: ::"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:9
+msgid ""
+"PYTHON_PREFIX                     - absolute path to the current Python\n"
+"                                    distribution's prefix\n"
+"PYTHON_SITE_PACKAGES_DIR          - absolute path to the current Python\n"
+"                                    distribution's site-packages directory\n"
+"PYTHON_RELATIVE_SITE_PACKAGES_DIR - path to the current Python\n"
+"                                    distribution's site-packages directory\n"
+"                                    relative to its prefix\n"
+"PYTHON_SEPARATOR                  - separator string for file path\n"
+"                                    components.  Equivalent to ``os.sep`` "
+"in\n"
+"                                    Python.\n"
+"PYTHON_PATH_SEPARATOR             - separator string for PATH-style\n"
+"                                    environment variables.  Equivalent to\n"
+"                                    ``os.pathsep`` in Python.\n"
+"PYTHON_EXTENSION_MODULE_SUFFIX    - suffix of the compiled module. For "
+"example, on\n"
+"                                    Linux, based on environment, it could be "
+"``.cpython-35m-x86_64-linux-gnu.so``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:27
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:3
+msgid "The following functions are defined:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:31
+msgid ""
+"For libraries meant to be used as Python extension modules, either "
+"dynamically loaded or directly linked.  Amend the configuration of the "
+"library target (created using ``add_library``) with additional options "
+"needed to build and use the referenced library as a Python extension module."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:36
+msgid "python_extension_module(<Target>"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:37
+msgid ""
+"[LINKED_MODULES_VAR <LinkedModVar>] [FORWARD_DECL_MODULES_VAR "
+"<ForwardDeclModVar>] [MODULE_SUFFIX <ModuleSuffix>])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:41
+msgid ""
+"Only extension modules that are configured to be built as MODULE libraries "
+"can be runtime-loaded through the standard Python import mechanism.  All "
+"other modules can only be included in standalone applications that are "
+"written to expect their presence.  In addition to being linked against the "
+"libraries for these modules, such applications must forward declare their "
+"entry points and initialize them prior to use.  To generate these forward "
+"declarations and initializations, see ``python_modules_header``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:49
+msgid ""
+"If ``<Target>`` does not refer to a target, then it is assumed to refer to "
+"an extension module that is not linked at all, but compiled along with other "
+"source files directly into an executable.  Adding these modules does not "
+"cause any library configuration modifications, and they are not added to the "
+"list of linked modules.  They still must be forward declared and "
+"initialized, however, and so are added to the forward declared modules list."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:56
+msgid ""
+"If the associated target is of type ``MODULE_LIBRARY``, the LINK_FLAGS "
+"target property is used to set symbol visibility and export only the module "
+"init function. This applies to GNU and MSVC compilers."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:60
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:141
+msgid "Options:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:62
+msgid "``LINKED_MODULES_VAR <LinkedModVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:63
+msgid ""
+"Name of the variable referencing a list of extension modules whose libraries "
+"must be linked into the executables of any stand-alone applications that use "
+"them.  By default, the global property ``PY_LINKED_MODULES_LIST`` is used."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:67
+msgid "``FORWARD_DECL_MODULES_VAR <ForwardDeclModVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:68
+msgid ""
+"Name of the variable referencing a list of extension modules whose entry "
+"points must be forward declared and called by any stand-alone applications "
+"that use them.  By default, the global property "
+"``PY_FORWARD_DECL_MODULES_LIST`` is used."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:73
+msgid "``MODULE_SUFFIX <ModuleSuffix>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:74
+msgid ""
+"Suffix appended to the python extension module file. The default suffix is "
+"retrieved using ``sysconfig.get_config_var(\"EXT_SUFFIX\")``, if not "
+"available, the default is then ``.so`` on unix and ``.pyd`` on windows. "
+"Setting the variable ``PYTHON_EXTENSION_MODULE_SUFFIX`` in the caller scope "
+"defines the value used for all extensions not having a suffix explicitly "
+"specified using ``MODULE_SUFFIX`` parameter."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:85
+msgid "python_standalone_executable(<Target>)"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:87
+msgid ""
+"For standalone executables that initialize their own Python runtime (such as "
+"when building source files that include one generated by Cython with the --"
+"embed option).  Amend the configuration of the executable target (created "
+"using ``add_executable``) with additional options needed to properly build "
+"the referenced executable."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:96
+msgid ""
+"Generate a header file that contains the forward declarations and "
+"initialization routines for the given list of Python extension modules. "
+"``<Name>`` is the logical name for the header file (no file extensions). "
+"``<HeaderFilename>`` is the actual destination filename for the header file "
+"(e.g.: decl_modules.h)."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:102
+msgid "python_modules_header(<Name> [HeaderFilename]"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:103
+msgid ""
+"[FORWARD_DECL_MODULES_LIST <ForwardDeclModList>] [HEADER_OUTPUT_VAR "
+"<HeaderOutputVar>] [INCLUDE_DIR_OUTPUT_VAR <IncludeDirOutputVar>])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:107
+msgid ""
+"If only ``<Name>`` is provided, and it ends in the \".h\" extension, then it "
+"is assumed to be the ``<HeaderFilename>``.  The filename of the header file "
+"without the extension is used as the logical name.  If only ``<Name>`` is "
+"provided, and it does not end in the \".h\" extension, then the "
+"``<HeaderFilename>`` is assumed to be ``<Name>.h``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:113
+msgid ""
+"The exact contents of the generated header file depend on the logical "
+"``<Name>``.  It should be set to a value that corresponds to the target "
+"application, or for the case of multiple applications, some identifier that "
+"conveys its purpose.  It is featured in the generated multiple inclusion "
+"guard as well as the names of the generated initialization routines."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:119
+msgid ""
+"The generated header file includes forward declarations for all listed "
+"modules, as well as implementations for the following class of routines:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:122
+msgid "``int <Name>_<Module>(void)``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:123
+msgid ""
+"Initializes the python extension module, ``<Module>``.  Returns an integer "
+"handle to the module."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:126
+msgid "``void <Name>_LoadAllPythonModules(void)``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:127
+msgid "Initializes all listed python extension modules."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:129
+msgid "``void CMakeLoadAllPythonModules(void);``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:130
+msgid ""
+"Alias for ``<Name>_LoadAllPythonModules`` whose name does not depend on "
+"``<Name>``.  This function is excluded during preprocessing if the "
+"preprocessing macro ``EXCLUDE_LOAD_ALL_FUNCTION`` is defined."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:134
+msgid "``void Py_Initialize_Wrapper();``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:135
+msgid ""
+"Wrapper around ``Py_Initialize()`` that initializes all listed python "
+"extension modules.  This function is excluded during preprocessing if the "
+"preprocessing macro ``EXCLUDE_PY_INIT_WRAPPER`` is defined.  If this "
+"function is generated, then ``Py_Initialize()`` is redefined to a macro that "
+"calls this function."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:143
+msgid "``FORWARD_DECL_MODULES_LIST <ForwardDeclModList>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:144
+msgid ""
+"List of extension modules for which to generate forward declarations of "
+"their entry points and their initializations.  By default, the global "
+"property ``PY_FORWARD_DECL_MODULES_LIST`` is used."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:148
+msgid "``HEADER_OUTPUT_VAR <HeaderOutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:149
+msgid ""
+"Name of the variable to set to the path to the generated header file.  By "
+"default, ``<Name>`` is used."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:152
+msgid "``INCLUDE_DIR_OUTPUT_VAR <IncludeDirOutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:153
+msgid ""
+"Name of the variable to set to the path to the directory containing the "
+"generated header file.  By default, ``<Name>_INCLUDE_DIRS`` is used."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:156
+msgid "Defined variables:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:158
+msgid "``<HeaderOutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:159
+msgid "The path to the generated header file"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:161
+msgid "``<IncludeDirOutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:162
+msgid "Directory containing the generated header file"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:166
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:21
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:51
+msgid "Example usage"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindPythonExtensions.cmake:168
+msgid ""
+"find_package(PythonExtensions)\n"
+"find_package(Cython)\n"
+"find_package(Boost COMPONENTS python)\n"
+"\n"
+"# Simple Cython Module -- no executables\n"
+"add_cython_target(_module.pyx)\n"
+"add_library(_module MODULE ${_module})\n"
+"python_extension_module(_module)\n"
+"\n"
+"# Mix of Cython-generated code and C++ code using Boost Python\n"
+"# Stand-alone executable -- no modules\n"
+"include_directories(${Boost_INCLUDE_DIRS})\n"
+"add_cython_target(main.pyx CXX EMBED_MAIN)\n"
+"add_executable(main boost_python_module.cxx ${main})\n"
+"target_link_libraries(main ${Boost_LIBRARIES})\n"
+"python_standalone_executable(main)\n"
+"\n"
+"# stand-alone executable with three extension modules:\n"
+"# one statically linked, one dynamically linked, and one loaded at runtime\n"
+"#\n"
+"# Freely mixes Cython-generated code, code using Boost-Python, and\n"
+"# hand-written code using the CPython API.\n"
+"\n"
+"# module1 -- statically linked\n"
+"add_cython_target(module1.pyx)\n"
+"add_library(module1 STATIC ${module1})\n"
+"python_extension_module(module1\n"
+"                        LINKED_MODULES_VAR linked_module_list\n"
+"                        FORWARD_DECL_MODULES_VAR fdecl_module_list)\n"
+"\n"
+"# module2 -- dynamically linked\n"
+"include_directories(${Boost_INCLUDE_DIRS})\n"
+"add_library(module2 SHARED boost_module2.cxx)\n"
+"target_link_libraries(module2 ${Boost_LIBRARIES})\n"
+"python_extension_module(module2\n"
+"                        LINKED_MODULES_VAR linked_module_list\n"
+"                        FORWARD_DECL_MODULES_VAR fdecl_module_list)\n"
+"\n"
+"# module3 -- loaded at runtime\n"
+"add_cython_target(module3a.pyx)\n"
+"add_library(module3 MODULE ${module3a} module3b.cxx)\n"
+"target_link_libraries(module3 ${Boost_LIBRARIES})\n"
+"python_extension_module(module3\n"
+"                        LINKED_MODULES_VAR linked_module_list\n"
+"                        FORWARD_DECL_MODULES_VAR fdecl_module_list)\n"
+"\n"
+"# application executable -- generated header file + other source files\n"
+"python_modules_header(modules\n"
+"                      FORWARD_DECL_MODULES_LIST ${fdecl_module_list})\n"
+"include_directories(${modules_INCLUDE_DIRS})\n"
+"\n"
+"add_cython_target(mainA)\n"
+"add_cython_target(mainC)\n"
+"add_executable(main ${mainA} mainB.cxx ${mainC} mainD.c)\n"
+"\n"
+"target_link_libraries(main ${linked_module_list} ${Boost_LIBRARIES})\n"
+"python_standalone_executable(main)"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:7
+msgid ""
+"Add a library that contains a mix of C, C++, Fortran, Cython, F2PY, "
+"Template, and Tempita sources. The required targets are automatically "
+"generated to \"lower\" source files from their high-level representation to "
+"a file that the compiler can accept."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:13
+msgid "add_python_library(<Name>"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:14
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:44
+msgid ""
+"SOURCES [source1 [source2 ...]] [INCLUDE_DIRECTORIES [dir1 [dir2 ...]] "
+"[LINK_LIBRARIES [lib1 [lib2 ...]] [DEPENDS [source1 [source2 ...]]])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:23
+msgid ""
+"find_package(PythonExtensions)\n"
+"\n"
+"file(GLOB arpack_sources ARPACK/SRC/*.f ARPACK/UTIL/*.f)\n"
+"\n"
+" add_python_library(arpack_scipy\n"
+"   SOURCES ${arpack_sources}\n"
+"           ${g77_wrapper_sources}\n"
+"   INCLUDE_DIRECTORIES ARPACK/SRC\n"
+" )"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:37
+msgid ""
+"Add a extension that contains a mix of C, C++, Fortran, Cython, F2PY, "
+"Template, and Tempita sources. The required targets are automatically "
+"generated to \"lower\" source files from their high-level representation to "
+"a file that the compiler can accept."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:43
+msgid "add_python_extension(<Name>"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UsePythonExtensions.cmake:53
+msgid ""
+"find_package(PythonExtensions)\n"
+"\n"
+"file(GLOB arpack_sources ARPACK/SRC/*.f ARPACK/UTIL/*.f)\n"
+"\n"
+" add_python_extension(arpack_scipy\n"
+"   SOURCES ${arpack_sources}\n"
+"           ${g77_wrapper_sources}\n"
+"   INCLUDE_DIRECTORIES ARPACK/SRC\n"
+" )"
+msgstr ""
