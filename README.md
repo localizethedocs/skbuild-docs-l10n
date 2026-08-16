@@ -1,4 +1,10 @@
 <div align="center">
+<picture>
+  <img height="100" src="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/scikit-build.svg">
+</picture>
+</div>
+
+<div align="center">
 <h1 id="localization-of-the-scikit-build-documentation">Localization of The Scikit Build Documentation</h1>
 </div>
 
