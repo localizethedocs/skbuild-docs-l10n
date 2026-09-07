@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="../genindex.html"><link rel="search" title="搜索" href="../search.html"><link rel="next" title="F2PY" href="F2PY.html"><link rel="prev" title="NumPy" href="NumPy.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/skbuild-docs-l10n/cmake-modules/PythonExtensions.html">
+        <link rel="prefetch" href="../_static/scikit_build_mark.svg" as="image">
+
+    <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>PythonExtensions - scikit-build 1.0.0rc1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">scikit-build 1.0.0rc1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/scikit_build_mark.svg" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">scikit-build 1.0.0rc1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Why should I use scikit-build ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html#migrating-from-scikit-build-0-x">Migrating from scikit-build 0.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html#advanced-usage">Advanced Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generators.html">C Runtime, Compiler and Build System Generator</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../cmake-modules.html">CMake modules</a><input aria-label="Toggle navigation of CMake modules" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Cython.html">Cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NumPy.html">NumPy</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">PythonExtensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="F2PY.html">F2PY</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hacking.html">Hacking</a><input aria-label="Toggle navigation of Hacking" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../skbuild.html">skbuild package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="targetLinkLibrariesWithDynamicLookup.html">targetLinkLibrariesWithDynamicLookup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../make_a_release.html">Making a release</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/blob/main/docs/cmake-modules/PythonExtensions.rst?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/edit/main/docs/cmake-modules/PythonExtensions.rst" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="pythonextensions">
+<h1>PythonExtensions<a class="headerlink" href="#pythonextensions" title="链接到此标题。">¶</a></h1>
+<p>This module defines CMake functions to build Python extension modules and
+stand-alone executables.</p>
+<p>The following variables are defined:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PYTHON_PREFIX                     - absolute path to the current Python
+                                    distribution's prefix
+PYTHON_SITE_PACKAGES_DIR          - absolute path to the current Python
+                                    distribution's site-packages directory
+PYTHON_RELATIVE_SITE_PACKAGES_DIR - path to the current Python
+                                    distribution's site-packages directory
+                                    relative to its prefix
+PYTHON_SEPARATOR                  - separator string for file path
+                                    components.  Equivalent to ``os.sep`` in
+                                    Python.
+PYTHON_PATH_SEPARATOR             - separator string for PATH-style
+                                    environment variables.  Equivalent to
+                                    ``os.pathsep`` in Python.
+PYTHON_EXTENSION_MODULE_SUFFIX    - suffix of the compiled module. For example, on
+                                    Linux, based on environment, it could be ``.cpython-35m-x86_64-linux-gnu.so``.
+</pre></div>
+</div>
+<p>The following functions are defined:</p>
+<dl class="cmake command">
+<dt class="sig sig-object cmake" id="command:python_extension_module">
+<span class="sig-name descname"><span class="pre">python_extension_module</span></span><a class="headerlink" href="#command:python_extension_module" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<p>For libraries meant to be used as Python extension modules, either dynamically
+loaded or directly linked.  Amend the configuration of the library target
+(created using <code class="docutils literal notranslate"><span class="pre">add_library</span></code>) with additional options needed to build and
+use the referenced library as a Python extension module.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>python_extension_module(&lt;Target&gt;</dt><dd><p>[LINKED_MODULES_VAR &lt;LinkedModVar&gt;]
+[FORWARD_DECL_MODULES_VAR &lt;ForwardDeclModVar&gt;]
+[MODULE_SUFFIX &lt;ModuleSuffix&gt;])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Only extension modules that are configured to be built as MODULE libraries can
+be runtime-loaded through the standard Python import mechanism.  All other
+modules can only be included in standalone applications that are written to
+expect their presence.  In addition to being linked against the libraries for
+these modules, such applications must forward declare their entry points and
+initialize them prior to use.  To generate these forward declarations and
+initializations, see <code class="docutils literal notranslate"><span class="pre">python_modules_header</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">&lt;Target&gt;</span></code> does not refer to a target, then it is assumed to refer to an
+extension module that is not linked at all, but compiled along with other
+source files directly into an executable.  Adding these modules does not cause
+any library configuration modifications, and they are not added to the list of
+linked modules.  They still must be forward declared and initialized, however,
+and so are added to the forward declared modules list.</p>
+<p>If the associated target is of type <code class="docutils literal notranslate"><span class="pre">MODULE_LIBRARY</span></code>, the LINK_FLAGS target
+property is used to set symbol visibility and export only the module init function.
+This applies to GNU and MSVC compilers.</p>
+<p>Options:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">LINKED_MODULES_VAR</span> <span class="pre">&lt;LinkedModVar&gt;</span></code></dt><dd><p>Name of the variable referencing a list of extension modules whose libraries
+must be linked into the executables of any stand-alone applications that use
+them.  By default, the global property <code class="docutils literal notranslate"><span class="pre">PY_LINKED_MODULES_LIST</span></code> is used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">FORWARD_DECL_MODULES_VAR</span> <span class="pre">&lt;ForwardDeclModVar&gt;</span></code></dt><dd><p>Name of the variable referencing a list of extension modules whose entry
+points must be forward declared and called by any stand-alone applications
+that use them.  By default, the global property
+<code class="docutils literal notranslate"><span class="pre">PY_FORWARD_DECL_MODULES_LIST</span></code> is used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">MODULE_SUFFIX</span> <span class="pre">&lt;ModuleSuffix&gt;</span></code></dt><dd><p>Suffix appended to the python extension module file.
+The default suffix is retrieved using <code class="docutils literal notranslate"><span class="pre">sysconfig.get_config_var(&quot;EXT_SUFFIX&quot;)</span></code>,
+if not available, the default is then <code class="docutils literal notranslate"><span class="pre">.so</span></code> on unix and <code class="docutils literal notranslate"><span class="pre">.pyd</span></code> on
+windows.
+Setting the variable <code class="docutils literal notranslate"><span class="pre">PYTHON_EXTENSION_MODULE_SUFFIX</span></code> in the caller
+scope defines the value used for all extensions not having a suffix
+explicitly specified using <code class="docutils literal notranslate"><span class="pre">MODULE_SUFFIX</span></code> parameter.</p>
+</dd>
+</dl>
+<dl class="cmake command">
+<dt class="sig sig-object cmake" id="command:python_standalone_executable">
+<span class="sig-name descname"><span class="pre">python_standalone_executable</span></span><a class="headerlink" href="#command:python_standalone_executable" title="链接到此定义。">¶</a></dt>
+<dd><p>python_standalone_executable(&lt;Target&gt;)</p>
+</dd></dl>
+
+<p>For standalone executables that initialize their own Python runtime
+(such as when building source files that include one generated by Cython with
+the --embed option).  Amend the configuration of the executable target
+(created using <code class="docutils literal notranslate"><span class="pre">add_executable</span></code>) with additional options needed to properly
+build the referenced executable.</p>
+<dl class="cmake command">
+<dt class="sig sig-object cmake" id="command:python_modules_header">
+<span class="sig-name descname"><span class="pre">python_modules_header</span></span><a class="headerlink" href="#command:python_modules_header" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<p>Generate a header file that contains the forward declarations and
+initialization routines for the given list of Python extension modules.
+<code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code> is the logical name for the header file (no file extensions).
+<code class="docutils literal notranslate"><span class="pre">&lt;HeaderFilename&gt;</span></code> is the actual destination filename for the header file
+(e.g.: decl_modules.h).</p>
+<blockquote>
+<div><dl class="simple">
+<dt>python_modules_header(&lt;Name&gt; [HeaderFilename]</dt><dd><p>[FORWARD_DECL_MODULES_LIST &lt;ForwardDeclModList&gt;]
+[HEADER_OUTPUT_VAR &lt;HeaderOutputVar&gt;]
+[INCLUDE_DIR_OUTPUT_VAR &lt;IncludeDirOutputVar&gt;])</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>If only <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code> is provided, and it ends in the &quot;.h&quot; extension, then it
+is assumed to be the <code class="docutils literal notranslate"><span class="pre">&lt;HeaderFilename&gt;</span></code>.  The filename of the header file
+without the extension is used as the logical name.  If only <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code> is
+provided, and it does not end in the &quot;.h&quot; extension, then the
+<code class="docutils literal notranslate"><span class="pre">&lt;HeaderFilename&gt;</span></code> is assumed to be <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;.h</span></code>.</p>
+<p>The exact contents of the generated header file depend on the logical
+<code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code>.  It should be set to a value that corresponds to the target
+application, or for the case of multiple applications, some identifier that
+conveys its purpose.  It is featured in the generated multiple inclusion
+guard as well as the names of the generated initialization routines.</p>
+<p>The generated header file includes forward declarations for all listed
+modules, as well as implementations for the following class of routines:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">&lt;Name&gt;_&lt;Module&gt;(void)</span></code></dt><dd><p>Initializes the python extension module, <code class="docutils literal notranslate"><span class="pre">&lt;Module&gt;</span></code>.  Returns an integer
+handle to the module.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">&lt;Name&gt;_LoadAllPythonModules(void)</span></code></dt><dd><p>Initializes all listed python extension modules.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">CMakeLoadAllPythonModules(void);</span></code></dt><dd><p>Alias for <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;_LoadAllPythonModules</span></code> whose name does not depend on
+<code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code>.  This function is excluded during preprocessing if the
+preprocessing macro <code class="docutils literal notranslate"><span class="pre">EXCLUDE_LOAD_ALL_FUNCTION</span></code> is defined.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Py_Initialize_Wrapper();</span></code></dt><dd><p>Wrapper around <code class="docutils literal notranslate"><span class="pre">Py_Initialize()</span></code> that initializes all listed python
+extension modules.  This function is excluded during preprocessing if the
+preprocessing macro <code class="docutils literal notranslate"><span class="pre">EXCLUDE_PY_INIT_WRAPPER</span></code> is defined.  If this
+function is generated, then <code class="docutils literal notranslate"><span class="pre">Py_Initialize()</span></code> is redefined to a macro
+that calls this function.</p>
+</dd>
+</dl>
+<p>Options:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">FORWARD_DECL_MODULES_LIST</span> <span class="pre">&lt;ForwardDeclModList&gt;</span></code></dt><dd><p>List of extension modules for which to generate forward declarations of
+their entry points and their initializations.  By default, the global
+property <code class="docutils literal notranslate"><span class="pre">PY_FORWARD_DECL_MODULES_LIST</span></code> is used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">HEADER_OUTPUT_VAR</span> <span class="pre">&lt;HeaderOutputVar&gt;</span></code></dt><dd><p>Name of the variable to set to the path to the generated header file.  By
+default, <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;</span></code> is used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">INCLUDE_DIR_OUTPUT_VAR</span> <span class="pre">&lt;IncludeDirOutputVar&gt;</span></code></dt><dd><p>Name of the variable to set to the path to the directory containing the
+generated header file.  By default, <code class="docutils literal notranslate"><span class="pre">&lt;Name&gt;_INCLUDE_DIRS</span></code> is used.</p>
+</dd>
+</dl>
+<p>Defined variables:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;HeaderOutputVar&gt;</span></code></dt><dd><p>The path to the generated header file</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;IncludeDirOutputVar&gt;</span></code></dt><dd><p>Directory containing the generated header file</p>
+</dd>
+</dl>
+<section id="example-usage">
+<h2>Example usage<a class="headerlink" href="#example-usage" title="链接到此标题。">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">find_package(</span><span class="nb">PythonExtensions</span><span class="nf">)</span>
+<span class="nf">find_package(</span><span class="nb">Cython</span><span class="nf">)</span>
+<span class="nf">find_package(</span><span class="nb">Boost</span><span class="w"> </span><span class="no">COMPONENTS</span><span class="w"> </span><span class="nb">python</span><span class="nf">)</span>
+
+<span class="c"># Simple Cython Module -- no executables</span>
+<span class="nf">add_cython_target(</span><span class="nb">_module.pyx</span><span class="nf">)</span>
+<span class="nf">add_library(</span><span class="nb">_module</span><span class="w"> </span><span class="no">MODULE</span><span class="w"> </span><span class="o">${</span><span class="nt">_module</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_extension_module(</span><span class="nb">_module</span><span class="nf">)</span>
+
+<span class="c"># Mix of Cython-generated code and C++ code using Boost Python</span>
+<span class="c"># Stand-alone executable -- no modules</span>
+<span class="nf">include_directories(</span><span class="o">${</span><span class="nt">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">add_cython_target(</span><span class="nb">main.pyx</span><span class="w"> </span><span class="no">CXX</span><span class="w"> </span><span class="no">EMBED_MAIN</span><span class="nf">)</span>
+<span class="nf">add_executable(</span><span class="nb">main</span><span class="w"> </span><span class="nb">boost_python_module.cxx</span><span class="w"> </span><span class="o">${</span><span class="nt">main</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">target_link_libraries(</span><span class="nb">main</span><span class="w"> </span><span class="o">${</span><span class="nt">Boost_LIBRARIES</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_standalone_executable(</span><span class="nb">main</span><span class="nf">)</span>
+
+<span class="c"># stand-alone executable with three extension modules:</span>
+<span class="c"># one statically linked, one dynamically linked, and one loaded at runtime</span>
+<span class="c">#</span>
+<span class="c"># Freely mixes Cython-generated code, code using Boost-Python, and</span>
+<span class="c"># hand-written code using the CPython API.</span>
+
+<span class="c"># module1 -- statically linked</span>
+<span class="nf">add_cython_target(</span><span class="nb">module1.pyx</span><span class="nf">)</span>
+<span class="nf">add_library(</span><span class="nb">module1</span><span class="w"> </span><span class="no">STATIC</span><span class="w"> </span><span class="o">${</span><span class="nt">module1</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_extension_module(</span><span class="nb">module1</span>
+<span class="w">                        </span><span class="no">LINKED_MODULES_VAR</span><span class="w"> </span><span class="nb">linked_module_list</span>
+<span class="w">                        </span><span class="no">FORWARD_DECL_MODULES_VAR</span><span class="w"> </span><span class="nb">fdecl_module_list</span><span class="nf">)</span>
+
+<span class="c"># module2 -- dynamically linked</span>
+<span class="nf">include_directories(</span><span class="o">${</span><span class="nt">Boost_INCLUDE_DIRS</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">add_library(</span><span class="nb">module2</span><span class="w"> </span><span class="no">SHARED</span><span class="w"> </span><span class="nb">boost_module2.cxx</span><span class="nf">)</span>
+<span class="nf">target_link_libraries(</span><span class="nb">module2</span><span class="w"> </span><span class="o">${</span><span class="nt">Boost_LIBRARIES</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_extension_module(</span><span class="nb">module2</span>
+<span class="w">                        </span><span class="no">LINKED_MODULES_VAR</span><span class="w"> </span><span class="nb">linked_module_list</span>
+<span class="w">                        </span><span class="no">FORWARD_DECL_MODULES_VAR</span><span class="w"> </span><span class="nb">fdecl_module_list</span><span class="nf">)</span>
+
+<span class="c"># module3 -- loaded at runtime</span>
+<span class="nf">add_cython_target(</span><span class="nb">module3a.pyx</span><span class="nf">)</span>
+<span class="nf">add_library(</span><span class="nb">module3</span><span class="w"> </span><span class="no">MODULE</span><span class="w"> </span><span class="o">${</span><span class="nt">module3a</span><span class="o">}</span><span class="w"> </span><span class="nb">module3b.cxx</span><span class="nf">)</span>
+<span class="nf">target_link_libraries(</span><span class="nb">module3</span><span class="w"> </span><span class="o">${</span><span class="nt">Boost_LIBRARIES</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_extension_module(</span><span class="nb">module3</span>
+<span class="w">                        </span><span class="no">LINKED_MODULES_VAR</span><span class="w"> </span><span class="nb">linked_module_list</span>
+<span class="w">                        </span><span class="no">FORWARD_DECL_MODULES_VAR</span><span class="w"> </span><span class="nb">fdecl_module_list</span><span class="nf">)</span>
+
+<span class="c"># application executable -- generated header file + other source files</span>
+<span class="nf">python_modules_header(</span><span class="nb">modules</span>
+<span class="w">                      </span><span class="no">FORWARD_DECL_MODULES_LIST</span><span class="w"> </span><span class="o">${</span><span class="nt">fdecl_module_list</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">include_directories(</span><span class="o">${</span><span class="nt">modules_INCLUDE_DIRS</span><span class="o">}</span><span class="nf">)</span>
+
+<span class="nf">add_cython_target(</span><span class="nb">mainA</span><span class="nf">)</span>
+<span class="nf">add_cython_target(</span><span class="nb">mainC</span><span class="nf">)</span>
+<span class="nf">add_executable(</span><span class="nb">main</span><span class="w"> </span><span class="o">${</span><span class="nt">mainA</span><span class="o">}</span><span class="w"> </span><span class="nb">mainB.cxx</span><span class="w"> </span><span class="o">${</span><span class="nt">mainC</span><span class="o">}</span><span class="w"> </span><span class="nb">mainD.c</span><span class="nf">)</span>
+
+<span class="nf">target_link_libraries(</span><span class="nb">main</span><span class="w"> </span><span class="o">${</span><span class="nt">linked_module_list</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nt">Boost_LIBRARIES</span><span class="o">}</span><span class="nf">)</span>
+<span class="nf">python_standalone_executable(</span><span class="nb">main</span><span class="nf">)</span>
+</pre></div>
+</div>
+<p>The following functions are defined:</p>
+<dl class="cmake command">
+<dt class="sig sig-object cmake" id="command:add_python_library">
+<span class="sig-name descname"><span class="pre">add_python_library</span></span><a class="headerlink" href="#command:add_python_library" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a library that contains a mix of C, C++, Fortran, Cython, F2PY, Template,
+and Tempita sources. The required targets are automatically generated to
+&quot;lower&quot; source files from their high-level representation to a file that the
+compiler can accept.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>add_python_library(&lt;Name&gt;</dt><dd><p>SOURCES [source1 [source2 ...]]
+[INCLUDE_DIRECTORIES [dir1 [dir2 ...]]
+[LINK_LIBRARIES [lib1 [lib2 ...]]
+[DEPENDS [source1 [source2 ...]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id1">
+<h2>Example usage<a class="headerlink" href="#id1" title="链接到此标题。">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">find_package(</span><span class="nb">PythonExtensions</span><span class="nf">)</span>
+
+<span class="nf">file(</span><span class="no">GLOB</span><span class="w"> </span><span class="nb">arpack_sources</span><span class="w"> </span><span class="na">ARPACK/SRC/</span><span class="p">*.</span><span class="nb">f</span><span class="w"> </span><span class="na">ARPACK/UTIL/</span><span class="p">*.</span><span class="nb">f</span><span class="nf">)</span>
+
+<span class="w"> </span><span class="nf">add_python_library(</span><span class="nb">arpack_scipy</span>
+<span class="w">   </span><span class="no">SOURCES</span><span class="w"> </span><span class="o">${</span><span class="nt">arpack_sources</span><span class="o">}</span>
+<span class="w">           </span><span class="o">${</span><span class="nt">g77_wrapper_sources</span><span class="o">}</span>
+<span class="w">   </span><span class="no">INCLUDE_DIRECTORIES</span><span class="w"> </span><span class="na">ARPACK/SRC</span>
+<span class="w"> </span><span class="nf">)</span>
+</pre></div>
+</div>
+<dl class="cmake command">
+<dt class="sig sig-object cmake" id="command:add_python_extension">
+<span class="sig-name descname"><span class="pre">add_python_extension</span></span><a class="headerlink" href="#command:add_python_extension" title="链接到此定义。">¶</a></dt>
+<dd></dd></dl>
+
+<p>Add a extension that contains a mix of C, C++, Fortran, Cython, F2PY, Template,
+and Tempita sources. The required targets are automatically generated to
+&quot;lower&quot; source files from their high-level representation to a file that the
+compiler can accept.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>add_python_extension(&lt;Name&gt;</dt><dd><p>SOURCES [source1 [source2 ...]]
+[INCLUDE_DIRECTORIES [dir1 [dir2 ...]]
+[LINK_LIBRARIES [lib1 [lib2 ...]]
+[DEPENDS [source1 [source2 ...]]])</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2>Example usage<a class="headerlink" href="#id2" title="链接到此标题。">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">find_package(</span><span class="nb">PythonExtensions</span><span class="nf">)</span>
+
+<span class="nf">file(</span><span class="no">GLOB</span><span class="w"> </span><span class="nb">arpack_sources</span><span class="w"> </span><span class="na">ARPACK/SRC/</span><span class="p">*.</span><span class="nb">f</span><span class="w"> </span><span class="na">ARPACK/UTIL/</span><span class="p">*.</span><span class="nb">f</span><span class="nf">)</span>
+
+<span class="w"> </span><span class="nf">add_python_extension(</span><span class="nb">arpack_scipy</span>
+<span class="w">   </span><span class="no">SOURCES</span><span class="w"> </span><span class="o">${</span><span class="nt">arpack_sources</span><span class="o">}</span>
+<span class="w">           </span><span class="o">${</span><span class="nt">g77_wrapper_sources</span><span class="o">}</span>
+<span class="w">   </span><span class="no">INCLUDE_DIRECTORIES</span><span class="w"> </span><span class="na">ARPACK/SRC</span>
+<span class="w"> </span><span class="nf">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="F2PY.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">F2PY</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="NumPy.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">NumPy</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2016, the scikit-build team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/scikit-build/scikit-build" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">PythonExtensions</a><ul>
+<li><a class="reference internal" href="#example-usage">Example usage</a></li>
+<li><a class="reference internal" href="#id1">Example usage</a></li>
+<li><a class="reference internal" href="#id2">Example usage</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=17d212bb"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/translations.js?v=540d3cec"></script>
+    </body>
+</html>
