@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, the scikit-build team
+# This file is distributed under the same license as the scikit-build package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: scikit-build stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-29 08:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../cmake-modules/F2PY.rst:2
+msgid "F2PY"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:3
+msgid ""
+"The purpose of the F2PY –Fortran to Python interface generator– project is "
+"to provide a connection between Python and Fortran languages."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:6
+msgid ""
+"F2PY is a Python package (with a command line tool f2py and a module f2py2e) "
+"that facilitates creating/building Python C/API extension modules that make "
+"it possible to call Fortran 77/90/95 external subroutines and Fortran 90/95 "
+"module subroutines as well as C functions; to access Fortran 77 COMMON "
+"blocks and Fortran 90/95 module data, including allocatable arrays from "
+"Python."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:11
+msgid "For more information on the F2PY project, see http://www.f2py.com/."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:13
+msgid "The following variables are defined:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:17
+msgid "F2PY_EXECUTABLE      - absolute path to the F2PY executable"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:21
+msgid ""
+"F2PY_VERSION_STRING  - the version of F2PY found\n"
+"F2PY_VERSION_MAJOR   - the F2PY major version\n"
+"F2PY_VERSION_MINOR   - the F2PY minor version\n"
+"F2PY_VERSION_PATCH   - the F2PY patch version"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:29
+msgid ""
+"By default, the module finds the F2PY program associated with the installed "
+"NumPy package."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:32
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:41
+msgid "Example usage"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:34
+msgid ""
+"Assuming that a package named ``method`` is declared in ``setup.py`` and "
+"that the corresponding directory containing ``__init__.py`` also exists, the "
+"following CMake code can be added to ``method/CMakeLists.txt`` to ensure the "
+"C sources associated with ``cylinder_methods.f90`` are generated and the "
+"corresponding module is compiled:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:39
+msgid ""
+"find_package(F2PY REQUIRED)\n"
+"\n"
+"set(f2py_module_name \"_cylinder_methods\")\n"
+"set(fortran_src_file \"${CMAKE_CURRENT_SOURCE_DIR}/cylinder_methods.f90\")\n"
+"\n"
+"set(generated_module_file ${CMAKE_CURRENT_BINARY_DIR}/"
+"${f2py_module_name}${PYTHON_EXTENSION_MODULE_SUFFIX})\n"
+"\n"
+"add_custom_target(${f2py_module_name} ALL\n"
+"  DEPENDS ${generated_module_file}\n"
+"  )\n"
+"\n"
+"add_custom_command(\n"
+"  OUTPUT ${generated_module_file}\n"
+"  COMMAND ${F2PY_EXECUTABLE}\n"
+"    -m ${f2py_module_name}\n"
+"    -c\n"
+"    ${fortran_src_file}\n"
+"  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}\n"
+"  )\n"
+"\n"
+"install(FILES ${generated_module_file} DESTINATION methods)"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/FindF2PY.cmake:65
+msgid ""
+"Using ``f2py`` with ``-c`` argument means that f2py is also responsible to "
+"build the module. In that case, CMake is not used to find the compiler and "
+"configure the associated build system."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:3
+msgid "The following functions are defined:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:7
+msgid ""
+"Create a custom rule to generate the source code for a Python extension "
+"module using f2py."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:10
+msgid "add_f2py_target(<Name> [<F2PYInput>]"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:11
+msgid "[OUTPUT_VAR <OutputVar>])"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:13
+msgid ""
+"``<Name>`` is the name of the new target, and ``<F2PYInput>`` is the path to "
+"a pyf source file.  Note that, despite the name, no new targets are created "
+"by this function.  Instead, see ``OUTPUT_VAR`` for retrieving the path to "
+"the generated source for subsequent targets."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:18
+msgid ""
+"If only ``<Name>`` is provided, and it ends in the \".pyf\" extension, then "
+"it is assumed to be the ``<F2PYInput>``.  The name of the input without the "
+"extension is used as the target name.  If only ``<Name>`` is provided, and "
+"it does not end in the \".pyf\" extension, then the ``<F2PYInput>`` is "
+"assumed to be ``<Name>.pyf``."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:25
+msgid "Options:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:27
+msgid "``OUTPUT_VAR <OutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:28
+msgid ""
+"Set the variable ``<OutputVar>`` in the parent scope to the path to the "
+"generated source file.  By default, ``<Name>`` is used as the output "
+"variable name."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:32
+msgid "``DEPENDS [source [source2...]]``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:33
+msgid "Sources that must be generated before the F2PY command is run."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:35
+msgid "Defined variables:"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:37
+msgid "``<OutputVar>``"
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:38
+msgid "The path of the generated source file."
+msgstr ""
+
+#: ../../../../skbuild/resources/cmake/UseF2PY.cmake:43
+msgid ""
+"find_package(F2PY)\n"
+"\n"
+"# Note: In this case, either one of these arguments may be omitted; their\n"
+"# value would have been inferred from that of the other.\n"
+"add_f2py_target(f2py_code f2py_code.pyf)\n"
+"\n"
+"add_library(f2py_code MODULE ${f2py_code})\n"
+"target_link_libraries(f2py_code ...)"
+msgstr ""
