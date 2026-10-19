@@ -1,0 +1,1748 @@
+<!doctype html>
+<html class="no-js" lang="en-US" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Making a release" href="make_a_release.html"><link rel="prev" title="Credits" href="authors.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/skbuild-docs-l10n/history.html">
+        <link rel="prefetch" href="_static/scikit_build_mark.svg" as="image">
+
+    <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>Release Notes - scikit-build 1.0.0rc2.dev1+g0cbfb0eee documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">scikit-build 1.0.0rc2.dev1+g0cbfb0eee documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/scikit_build_mark.svg" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">scikit-build 1.0.0rc2.dev1+g0cbfb0eee documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Why should I use scikit-build ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#migrating-from-scikit-build-0-x">Migrating from scikit-build 0.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#advanced-usage">Advanced Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">C Runtime, Compiler and Build System Generator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="cmake-modules.html">CMake modules</a><input aria-label="Toggle navigation of CMake modules" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/Cython.html">Cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/NumPy.html">NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/PythonExtensions.html">PythonExtensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/F2PY.html">F2PY</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hacking.html">Hacking</a><input aria-label="Toggle navigation of Hacking" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="skbuild.html">skbuild package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/targetLinkLibrariesWithDynamicLookup.html">targetLinkLibrariesWithDynamicLookup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="make_a_release.html">Making a release</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/blob/main/docs/history.md?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/edit/main/docs/history.md" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading">¶</a></h1>
+<p>This is the list of changes to scikit-build between each release. For full details, see the commit logs at <a class="reference external" href="https://github.com/scikit-build/scikit-build">https://github.com/scikit-build/scikit-build</a></p>
+<!-- START-BRIEF-CHANGELOG -->
+<section id="scikit-build-1-0-0">
+<h2>Scikit-build 1.0.0<a class="headerlink" href="#scikit-build-1-0-0" title="Link to this heading">¶</a></h2>
+<p>The classic scikit-build backend has been replaced by <a class="reference external" href="https://github.com/scikit-build/scikit-build-core">scikit-build-core</a>’s setuptools plugin. <code class="docutils literal notranslate"><span class="pre">skbuild.setup()</span></code> is now a thin wrapper around <code class="docutils literal notranslate"><span class="pre">scikit_build_core.setuptools.wrapper.setup()</span></code>, and scikit-build depends on <code class="docutils literal notranslate"><span class="pre">scikit-build-core[setuptools]</span></code>. Most packages — those that only use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">skbuild</span> <span class="pre">import</span> <span class="pre">setup</span></code> with the documented <code class="docutils literal notranslate"><span class="pre">cmake_*</span></code> keyword arguments — will continue to build unchanged. New projects are still encouraged to use scikit-build-core directly.</p>
+<p>What still works:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">skbuild</span> <span class="pre">import</span> <span class="pre">setup</span></code> with <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code>, <code class="docutils literal notranslate"><span class="pre">cmake_source_dir</span></code>, <code class="docutils literal notranslate"><span class="pre">cmake_install_dir</span></code>, <code class="docutils literal notranslate"><span class="pre">cmake_install_target</span></code>, and <code class="docutils literal notranslate"><span class="pre">cmake_process_manifest_hook</span></code>.</p></li>
+<li><p>The shipped CMake modules (<code class="docutils literal notranslate"><span class="pre">find_package(PythonExtensions)</span></code>, <code class="docutils literal notranslate"><span class="pre">Cython</span></code>, <code class="docutils literal notranslate"><span class="pre">F2PY</span></code>, <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>, …), now provided via scikit-build-core’s <code class="docutils literal notranslate"><span class="pre">cmake.module</span></code> entry point.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SKBUILD</span></code> CMake variable is still set (now <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>; both are truthy).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">build_ext</span> <span class="pre">--inplace</span></code> builds into the source tree without extra configuration.</p></li>
+</ul>
+<p>Breaking changes:</p>
+<ul class="simple">
+<li><p>The scikit-build specific command line options were removed: <code class="docutils literal notranslate"><span class="pre">--build-type</span></code>, <code class="docutils literal notranslate"><span class="pre">-G/--generator</span></code>, <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--cmake-executable</span></code>, <code class="docutils literal notranslate"><span class="pre">--skip-generator-test</span></code>, <code class="docutils literal notranslate"><span class="pre">--hide-listing</span></code>, <code class="docutils literal notranslate"><span class="pre">--force-cmake</span></code>, <code class="docutils literal notranslate"><span class="pre">--skip-cmake</span></code>, <code class="docutils literal notranslate"><span class="pre">--install-target</span></code>, and the <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">&lt;args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;cmake</span> <span class="pre">args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;build</span> <span class="pre">tool</span> <span class="pre">args&gt;</span></code> syntax. Use the <code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code>/<code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code> environment variables, the <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code> keyword, or <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> settings / <code class="docutils literal notranslate"><span class="pre">SKBUILD_*</span></code> environment variables instead.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_with_sdist=True</span></code> now raises an error; <code class="docutils literal notranslate"><span class="pre">cmake_languages</span></code> and <code class="docutils literal notranslate"><span class="pre">cmake_minimum_required_version</span></code> are ignored with a warning (set <code class="docutils literal notranslate"><span class="pre">cmake.version</span></code> in <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> instead).</p></li>
+<li><p>The internal modules <code class="docutils literal notranslate"><span class="pre">skbuild.command</span></code>, <code class="docutils literal notranslate"><span class="pre">skbuild.platform_specifics</span></code>, <code class="docutils literal notranslate"><span class="pre">skbuild.utils</span></code>, and <code class="docutils literal notranslate"><span class="pre">skbuild.setuptools_wrap</span></code> were removed. <code class="docutils literal notranslate"><span class="pre">skbuild.constants</span></code> and <code class="docutils literal notranslate"><span class="pre">skbuild.cmaker</span></code> are now deprecation shims keeping only the helpers downstream <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> files use: <code class="docutils literal notranslate"><span class="pre">skbuild_plat_name()</span></code>, <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_DIR()</span></code>, and <code class="docutils literal notranslate"><span class="pre">get_cmake_version()</span></code>. <code class="docutils literal notranslate"><span class="pre">skbuild.exceptions.SKBuildError</span></code> is now an alias of setuptools’ <code class="docutils literal notranslate"><span class="pre">SetupError</span></code>, so it is no longer a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>; its <code class="docutils literal notranslate"><span class="pre">SKBuildInvalidFileInstallationError</span></code> and <code class="docutils literal notranslate"><span class="pre">SKBuildGeneratorNotFoundError</span></code> subclasses were removed.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_skbuild</span></code> build directory is gone; the standard setuptools <code class="docutils literal notranslate"><span class="pre">build/</span></code> directories are used (CMake builds in an <code class="docutils literal notranslate"><span class="pre">_skbuild</span></code> directory under <code class="docutils literal notranslate"><span class="pre">build/temp.*</span></code>).</p></li>
+<li><p>sdists no longer auto-generate their manifest from git; provide a <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> (or use setuptools-scm) like any setuptools project.</p></li>
+<li><p>Editable installs (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code>) require <code class="docutils literal notranslate"><span class="pre">editable.mode</span> <span class="pre">=</span> <span class="pre">&quot;inplace&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> table of <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p></li>
+<li><p>CMake generator probing (including Visual Studio discovery) was removed; CMake’s own default generator selection applies, and <code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code> overrides it.</p></li>
+<li><p>Dependencies changed to <code class="docutils literal notranslate"><span class="pre">scikit-build-core[setuptools]</span></code>; <code class="docutils literal notranslate"><span class="pre">distro</span></code>, <code class="docutils literal notranslate"><span class="pre">wheel</span></code>, and <code class="docutils literal notranslate"><span class="pre">tomli</span></code> were dropped.</p></li>
+<li><p>Python 3.8 and 3.9 support was dropped; Python 3.10+ is required.</p></li>
+</ul>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Use scikit-build-core’s setuptools plugin as the backend in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1185">#1185</a></p></li>
+<li><p>Drop Python 3.8 support in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1207">#1207</a></p></li>
+<li><p>Drop Python 3.9 support in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1210">#1210</a></p></li>
+</ul>
+</section>
+<section id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Repair <code class="docutils literal notranslate"><span class="pre">add_f2py_target</span></code> argument handling and the F2PY version regex in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1216">#1216</a></p></li>
+<li><p>Fix the <code class="docutils literal notranslate"><span class="pre">python_modules_header</span></code> include-dir output variable and drop a debug print in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1217">#1217</a></p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Review and update for the scikit-build-core backend in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1212">#1212</a></p></li>
+<li><p>Recommend the scikit-build-core setuptools backend in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1213">#1213</a></p></li>
+<li><p>Switch to furo, matching scikit-build-core, in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1208">#1208</a></p></li>
+<li><p>Convert changelog and README to Markdown with MyST in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1198">#1198</a></p></li>
+</ul>
+</section>
+<section id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Trim the suite now that the backend lives in scikit-build-core in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1211">#1211</a></p></li>
+<li><p>Tolerate CMake 4 install path normalization in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1205">#1205</a></p></li>
+<li><p>Split the test matrix per Python version in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1209">#1209</a></p></li>
+<li><p>Test on Python 3.15 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1215">#1215</a></p></li>
+</ul>
+</section>
+<section id="miscellaneous">
+<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Mark as Production/Stable and prepare the release in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1222">#1222</a></p></li>
+<li><p>Remove dead code and fix docs in the CMake modules in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1218">#1218</a></p></li>
+<li><p>Pin GitHub Actions to commit SHAs and harden workflows in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1219">#1219</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1221">#1221</a></p></li>
+<li><p>Drop ref-names from <code class="docutils literal notranslate"><span class="pre">.git_archival.txt</span></code> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1220">#1220</a></p></li>
+<li><p>Packit maintenance in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1201">#1201</a></p></li>
+<li><p>Bump the actions group in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1200">#1200</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1204">#1204</a></p></li>
+<li><p>Pre-commit autoupdate in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1199">#1199</a>, <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1203">#1203</a>, and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1206">#1206</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-19-1">
+<h2>Scikit-build 0.19.1<a class="headerlink" href="#scikit-build-0-19-1" title="Link to this heading">¶</a></h2>
+<p>This is a patch release to add support for Visual Studio 2026.</p>
+<section id="id1">
+<h3>Features<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support Visual Studio 18 2026 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1186">#1186</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Bug fixes<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Correctness bugs found in code review in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1191">#1191</a></p></li>
+<li><p>Resolve Visual Studio generator environments lazily in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1193">#1193</a></p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Testing<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add windows-latest job for Visual Studio 2026 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1194">#1194</a></p></li>
+<li><p>Convert decorator into fixture in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1175">#1175</a></p></li>
+<li><p>Remove usage of <code class="docutils literal notranslate"><span class="pre">py.path</span></code> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1173">#1173</a></p></li>
+<li><p>Make symlink auto-generated in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1172">#1172</a></p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Miscellaneous<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Trivial cleanups found in code review in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1192">#1192</a></p></li>
+<li><p>Update ruff-check and a bit more in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1174">#1174</a></p></li>
+<li><p>Add agent files in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1184">#1184</a></p></li>
+<li><p>Bump setup-uv to maintained tag scheme in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1179">#1179</a></p></li>
+<li><p>Bump the actions group in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1180">#1180</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1183">#1183</a></p></li>
+<li><p>Bump actions/checkout from 6 to 7 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1190">#1190</a></p></li>
+<li><p>Pre-commit autoupdate in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1176">#1176</a>, <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1182">#1182</a>, and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1187">#1187</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-19-0">
+<h2>Scikit-build 0.19.0<a class="headerlink" href="#scikit-build-0-19-0" title="Link to this heading">¶</a></h2>
+<p>This release updates for changes in setuptools and CMake 4, and drops Python 3.7.</p>
+<section id="id5">
+<h3>Features<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Drop Python 3.7 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1134">#1134</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Bug fixes<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update for newer setuptools in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1120">#1120</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setuptools_wrap.py</span></code>: parse <code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code> with <code class="docutils literal notranslate"><span class="pre">shlex.split</span></code> like elsewhere by <a class="reference external" href="https://github.com/sponsors/haampie">&#64;haampie</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1126">#1126</a></p></li>
+<li><p>Drop <code class="docutils literal notranslate"><span class="pre">dry-run</span></code> (removed in setuptools) in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1166">#1166</a></p></li>
+<li><p>Ensure generic f2py executable is looked up first by <a class="reference external" href="https://github.com/sponsors/smiet">&#64;smiet</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1111">#1111</a></p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Testing<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support Python 3.14 in CI in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1167">#1167</a></p></li>
+<li><p>pytest <code class="docutils literal notranslate"><span class="pre">log_level</span></code> is better than <code class="docutils literal notranslate"><span class="pre">log_cli_level</span></code> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1164">#1164</a></p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Miscellaneous<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Bot suffix now required for changelog filtering in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1168">#1168</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-18-1">
+<h2>Scikit-build 0.18.1<a class="headerlink" href="#scikit-build-0-18-1" title="Link to this heading">¶</a></h2>
+<p>This release fixes issues with setuptools 74, and avoids a warning from recent versions of wheel. Android and iOS are now included in known platforms.</p>
+<section id="id9">
+<h3>Bug fixes<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support for setuptools 74 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1116">#1116</a></p></li>
+<li><p>iOS and Android support by <a class="reference external" href="https://github.com/sponsors/FeodorFitsner">&#64;FeodorFitsner</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1101">#1101</a></p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Testing<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix for distutils change in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1103">#1103</a></p></li>
+<li><p>Remove test directives by <a class="reference external" href="https://github.com/sponsors/s-t-e-v-e-n-k">&#64;s-t-e-v-e-n-k</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1108">#1108</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-18-0">
+<h2>Scikit-build 0.18.0<a class="headerlink" href="#scikit-build-0-18-0" title="Link to this heading">¶</a></h2>
+<p>This release bumps the minimum required CMake to 3.5 and supports CPython 3.13.</p>
+<section id="id11">
+<h3>Bug fixes<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support MSVC 17.10 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1081">#1081</a></p></li>
+<li><p>CMake 3.5+ requirement in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1095">#1095</a></p></li>
+<li><p>Support CPython 3.13 with windows lib finding fix in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1094">#1094</a></p></li>
+<li><p>Don’t die on PermissionError during chmod by <a class="reference external" href="https://github.com/sponsors/mweinelt">&#64;mweinelt</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1073">#1073</a></p></li>
+<li><p>Remove usage of deprecated distutils in cmake files by <a class="reference external" href="https://github.com/sponsors/hmaarrfk">&#64;hmaarrfk</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1032">#1032</a></p></li>
+<li><p>Use first available option for vswhere output by <a class="reference external" href="https://github.com/sponsors/ZzEeKkAa">&#64;ZzEeKkAa</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1030">#1030</a></p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Testing<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support setuptools 69.3.0 changes in two tests by <a class="reference external" href="https://github.com/sponsors/s-t-e-v-e-n-k">&#64;s-t-e-v-e-n-k</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1087">#1087</a></p></li>
+<li><p>Use uv in a few places in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1092">#1092</a></p></li>
+</ul>
+</section>
+<section id="fedora-ci">
+<h3>Fedora CI<a class="headerlink" href="#fedora-ci" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fedora maintenance by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1078">#1078</a></p></li>
+<li><p>Fedora: Fix rsync filter rule by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1003">#1003</a></p></li>
+<li><p>Fix Fedora tests by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1050">#1050</a></p></li>
+<li><p>Fedora downstream CI by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/993">#993</a></p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Miscellaneous<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Clean up pylint in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1017">#1017</a></p></li>
+<li><p>Fix mypy type ignores for new setuptools types in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1082">#1082</a></p></li>
+<li><p>Move to Ruff-format in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1035">#1035</a></p></li>
+<li><p>Remove pkg_resources and test command in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1014">#1014</a></p></li>
+<li><p>Ruff moved to astral-sh in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1007">#1007</a></p></li>
+<li><p>Target-version no longer needed by Black or Ruff in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1008">#1008</a></p></li>
+<li><p>Update ruff and fix warnings in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1060">#1060</a></p></li>
+<li><p>Use 2x faster black mirror in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1021">#1021</a></p></li>
+<li><p>Group dependabot updates in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1054">#1054</a></p></li>
+<li><p>macos-latest is changing to macos-14 ARM runners in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1083">#1083</a></p></li>
+<li><p>Skip win PyPy PEP 518 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/1091">#1091</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-6">
+<h2>Scikit-build 0.17.6<a class="headerlink" href="#scikit-build-0-17-6" title="Link to this heading">¶</a></h2>
+<p>A small fix release with some new platforms and better testing, including CPython 3.12.0b1.</p>
+<section id="id14">
+<h3>Bug fixes<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support added for SunOS by <a class="reference external" href="https://github.com/sponsors/mtelka">&#64;mtelka</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/983">#983</a>.</p></li>
+<li><p>Support added for AIX (with recent CMake) by <a class="reference external" href="https://github.com/sponsors/bhuntsman">&#64;bhuntsman</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/988">#988</a>.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Testing<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Tests now pass on CPython 3.12.0b1 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/879">#879</a>.</p></li>
+<li><p>Tests no longer use <code class="docutils literal notranslate"><span class="pre">pytest-virtualenv</span></code> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/879">#879</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isolated</span></code> marker now includes <code class="docutils literal notranslate"><span class="pre">test_distribution</span></code> tests in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/879">#879</a>.</p></li>
+<li><p>Tests avoid incorrect <code class="docutils literal notranslate"><span class="pre">get_map</span></code> match by <a class="reference external" href="https://github.com/sponsors/keszybz">&#64;keszybz</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/990">#990</a>.</p></li>
+<li><p>Fedora testing fix by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/986">#986</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/938">#938</a>.</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Miscellaneous<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Docs improvements in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/979">#979</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-5">
+<h2>Scikit-build 0.17.5<a class="headerlink" href="#scikit-build-0-17-5" title="Link to this heading">¶</a></h2>
+<p>A small fix release fixing the passing on of generator specific arguments. This fixes some cases where the Ninja generator was found but then was unable to build. NetBSD was reported to work, so was added to the BSD’s supported.</p>
+<section id="id17">
+<h3>Bug fixes<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Generator args were missing for actual compile in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/975">#975</a>.</p></li>
+<li><p>Add support for netbsd &amp; pyodide (future) in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/977">#977</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-4">
+<h2>Scikit-build 0.17.4<a class="headerlink" href="#scikit-build-0-17-4" title="Link to this heading">¶</a></h2>
+<p>A followup fix to the issue 0.17.3 tried to fix. We now have a method to manually test downstream packages, too.</p>
+<section id="id18">
+<h3>Bug fixes<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Make sure include dir is found even if the lib is not present in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/974">#974</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-3">
+<h2>Scikit-build 0.17.3<a class="headerlink" href="#scikit-build-0-17-3" title="Link to this heading">¶</a></h2>
+<p>A small release related to <code class="docutils literal notranslate"><span class="pre">PYTHON_LIBRARY</span></code> handling changes in 0.17.2; scikit-build 0.17.3 returns an empty string from <code class="docutils literal notranslate"><span class="pre">get_python_library</span></code> if no Python library is present (like on manylinux), where 0.17.2 returned None, and previous versions returned a non-existent path. Note that adding <code class="docutils literal notranslate"><span class="pre">REQUIRED</span></code> to <code class="docutils literal notranslate"><span class="pre">find_package(PythonLibs</span></code> will fail, but it is incorrect (you must not link to <code class="docutils literal notranslate"><span class="pre">libPython.so</span></code>) and was really just injecting a non-existent path before.</p>
+<section id="id19">
+<h3>Bug fixes<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Keep <code class="docutils literal notranslate"><span class="pre">get_python_library</span></code> return type string if python lib non-existing for now in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/959">#959</a>.</p></li>
+<li><p>Avoid ‘not found’ warning if libs are not found by FindPythonExtensions in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/960">#960</a>.</p></li>
+<li><p>FindNumPy should not call FindPythonLibs in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/958">#958</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-2">
+<h2>Scikit-build 0.17.2<a class="headerlink" href="#scikit-build-0-17-2" title="Link to this heading">¶</a></h2>
+<p>Another small release with fixes for non-MSVC Windows platforms.</p>
+<section id="id20">
+<h3>Bug fixes<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>RPM spec fix by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/937">#937</a>.</p></li>
+<li><p>Validate value before returning library path by <a class="reference external" href="https://github.com/sponsors/dlech">&#64;dlech</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/942">#942</a>.</p></li>
+<li><p>Only add <code class="docutils literal notranslate"><span class="pre">Python_LIBRARY</span></code> on Windows MSVC in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/943">#943</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/944">#944</a>.</p></li>
+<li><p>Slightly nicer traceback for failed compiler in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/947">#947</a>.</p></li>
+</ul>
+</section>
+<section id="id21">
+<h3>Testing<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Hide a few warnings that are expected in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/948">#948</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-1">
+<h2>Scikit-build 0.17.1<a class="headerlink" href="#scikit-build-0-17-1" title="Link to this heading">¶</a></h2>
+<p>This is a small release fixing a few bugs; the primary one being a change that was triggering a bug in older FindPython. The unused variable messages have been deactivated to simplify output, as well.</p>
+<section id="id22">
+<h3>Bug fixes<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Older (&lt;3.24) CMake breaks when lib specified in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/932">#932</a>.</p></li>
+<li><p>An error output was missing formatting in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/931">#931</a>.</p></li>
+<li><p>Make empty <code class="docutils literal notranslate"><span class="pre">CMAKE_OSX_DEPLOYMENT_TARGET</span></code> a warning (bug in conda-forge’s clang activation fixed upstream) in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/934">#934</a>.</p></li>
+<li><p>Remove unused variable warnings by in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/930">#930</a>.</p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>Testing<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add Fedora packaging with packit automation by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/928">#928</a>.</p></li>
+<li><p>Fix codecov ci by <a class="reference external" href="https://github.com/sponsors/LecrisUT">&#64;LecrisUT</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/929">#929</a>.</p></li>
+<li><p>Update some coverage settings in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/933">#933</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-17-0">
+<h2>Scikit-build 0.17.0<a class="headerlink" href="#scikit-build-0-17-0" title="Link to this heading">¶</a></h2>
+<p>A lot of bug fixes are present in this release, focusing on Windows, PyPy, and cross compiling. We’ve also improved the compatibility with default setuptools behaviors a little, and enabled some things that were previously unavailable, like overriding the build type via the cmake argument environment variables. We’ve expanded our CI matrix to include Windows and macOS PyPy and some Fortran tests on Linux. This release requires Python 3.7+.</p>
+<section id="id24">
+<h3>Bug fixes<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Match setuptools behavior for <code class="docutils literal notranslate"><span class="pre">include_package_data</span></code> default. by <a class="reference external" href="https://github.com/sponsors/vyasr">&#64;vyasr</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/873">#873</a>.</p></li>
+<li><p>Misc. fixes for F2PY and PythonExtensions modules by <a class="reference external" href="https://github.com/sponsors/benbovy">&#64;benbovy</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/495">#495</a>.</p></li>
+<li><p>Provide more useful error if user provides <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> by <a class="reference external" href="https://github.com/sponsors/vyasr">&#64;vyasr</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/872">#872</a>.</p></li>
+<li><p>Stop assuming that <code class="docutils literal notranslate"><span class="pre">.pyx</span></code> files are in the same directory as <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> by <a class="reference external" href="https://github.com/sponsors/vyasr">&#64;vyasr</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/871">#871</a>.</p></li>
+<li><p>Allow build type overriding in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/902">#902</a>.</p></li>
+<li><p>Detect PyPy library correctly on Windows by user:`gershnik` in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/904">#904</a>.</p></li>
+<li><p>Include library for FindPython for better Windows cross-compiles in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/913">#913</a>. Thanks to user:`maxbachmann` for testing.</p></li>
+<li><p>Fix logic for default generator when cross-compiling for ARM on Windows in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/917">#917</a> by <a class="reference external" href="https://github.com/sponsors/dlech">&#64;dlech</a>.</p></li>
+<li><p>Use f2py’s <code class="docutils literal notranslate"><span class="pre">get_include</span></code> if present in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/877">#877</a>.</p></li>
+<li><p>Fix support for cross-compilation exception using <code class="docutils literal notranslate"><span class="pre">targetLinkLibrariesWithDynamicLookup</span></code> by <a class="reference external" href="https://github.com/sponsors/erykoff">&#64;erykoff</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/901">#901</a>.</p></li>
+<li><p>Treat empty <code class="docutils literal notranslate"><span class="pre">MACOSX_DEPLOYMENT_TARGET</span></code> as if it was unset in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/918">#918</a>.</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>Testing<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add hello fortran sample package + tests by <a class="reference external" href="https://github.com/sponsors/benbovy">&#64;benbovy</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/493">#493</a>.</p></li>
+<li><p>Add sdist check &amp; fix in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/906">#906</a>.</p></li>
+<li><p>Fix some setuptools types in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/888">#888</a>.</p></li>
+<li><p>Add PyPy Win &amp; macOS to the CI in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/907">#907</a>.</p></li>
+<li><p>Add tests for Python 3.12 Linux alphas in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/922">#922</a>.</p></li>
+</ul>
+</section>
+<section id="id26">
+<h3>Miscellaneous<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Drop Python 3.6 in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/862">#862</a>.</p></li>
+<li><p>Move building backend to hatchling in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/870">#870</a>.</p></li>
+<li><p>Avoid mutating function input parameters in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/899">#899</a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">_compat</span></code>/typing name in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/869">#869</a>.</p></li>
+</ul>
+<!-- END-BRIEF-CHANGELOG -->
+</section>
+</section>
+<section id="scikit-build-0-16-7">
+<h2>Scikit-build 0.16.7<a class="headerlink" href="#scikit-build-0-16-7" title="Link to this heading">¶</a></h2>
+<p>This is expected to be the final release series supporting Python 3.6. 0.17 will require Python 3.7+ and start removing deprecated functionality.</p>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">SKBUILD_GNU_SKIP_LOCAL_SYMBOL_EXPORT_OVERRIDE</span></code> to disable script in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/848">#848</a>, thanks to <a class="reference external" href="https://github.com/sponsors/aaron-bray">&#64;aaron-bray</a> and <a class="reference external" href="https://github.com/sponsors/vyasr">&#64;vyasr</a>.</p></li>
+<li><p>Address a new warning from setuptools in our test suite in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/859">#859</a>.</p></li>
+<li><p>Move to using Ruff, update to Black 23, and use Flynt to move more code to f-strings.</p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-6">
+<h2>Scikit-build 0.16.6<a class="headerlink" href="#scikit-build-0-16-6" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix a discovery regression in 0.16.5 when a <code class="docutils literal notranslate"><span class="pre">cmake</span></code> folder or <code class="docutils literal notranslate"><span class="pre">cmake.py</span></code> was present in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/848">#848</a>.</p></li>
+<li><p>Correct an issue in the tests where a generator wasn’t expanded into a list in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/850">#850</a>.</p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-5">
+<h2>Scikit-build 0.16.5<a class="headerlink" href="#scikit-build-0-16-5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Use cmake module if installed over system installs in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/839">#839</a>.</p></li>
+<li><p>Support setting of <code class="docutils literal notranslate"><span class="pre">-DCMAKE_SYSTEM_PROCESSOR</span></code> if passed for selecting an arch, useful for cross compiling on conda-forge in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/843">#843</a>.</p></li>
+<li><p>Fixed a rare encoded error output string on Windows in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/842">#842</a>.</p></li>
+<li><p>Better granularity in extras in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/838">#838</a>.</p></li>
+<li><p>Add test markers for nosetuptoolsscm and isolated (helpful for package distributions building scikit-build itself like conda) in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/837">#837</a>.</p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-4">
+<h2>Scikit-build 0.16.4<a class="headerlink" href="#scikit-build-0-16-4" title="Link to this heading">¶</a></h2>
+<p>This releases backports additions for Windows ARM cross-compiling via cibuildwheel from scikit-build-core 0.1.4.</p>
+<ul class="simple">
+<li><p>Initial experimental support for Windows ARM cross-compile in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/824">#824</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/818">#818</a></p></li>
+<li><p>Replace mailing list with GitHub Discussions board in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/823">#823</a></p></li>
+<li><p>Some CI updates in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/811">#811</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/812">#812</a></p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-3">
+<h2>Scikit-build 0.16.3<a class="headerlink" href="#scikit-build-0-16-3" title="Link to this heading">¶</a></h2>
+<p>This release fixes logging issues using setuptools 65.6+ affecting our tests. Pytest 7.2+ is now supported. <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">&lt;command&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">setup_requires</span></code> are deprecated, and tests are marked as such.</p>
+<ul class="simple">
+<li><p>Fix typo in usage.rst in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/795">#795</a>, thanks to <a class="reference external" href="https://github.com/sponsors/chohner">&#64;chohner</a>.</p></li>
+<li><p>Support pytest 7.2+ in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/801">#801</a>.</p></li>
+<li><p>Change warning filtering in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/802">#802</a>.</p></li>
+<li><p>Handle logging changes in setuptools 65.6+ in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/807">#807</a>.</p></li>
+<li><p>Add deprecated markers to some tests in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/807">#807</a>.</p></li>
+<li><p>Allow known warnings to show up in the tests <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/807">#807</a>.</p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-2">
+<h2>Scikit-build 0.16.2<a class="headerlink" href="#scikit-build-0-16-2" title="Link to this heading">¶</a></h2>
+<p>This addresses one more small regression with the FindPython change from 0.16.0 that was affecting conda. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/793">#793</a>.</p>
+</section>
+<section id="scikit-build-0-16-1">
+<h2>Scikit-build 0.16.1<a class="headerlink" href="#scikit-build-0-16-1" title="Link to this heading">¶</a></h2>
+<p>This was a quick patch release that fixed a missing Python requires setting and some missing files <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/790">#790</a>, and addressed a warning from setuptools in the tests.</p>
+<ul class="simple">
+<li><p>Ignored distutils warning <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/785">#785</a>. thanks to <a class="reference external" href="https://github.com/sponsors/bnavigator">&#64;bnavigator</a>.</p></li>
+</ul>
+</section>
+<section id="scikit-build-0-16-0">
+<h2>Scikit-build 0.16.0<a class="headerlink" href="#scikit-build-0-16-0" title="Link to this heading">¶</a></h2>
+<p>This release adds support for Python 3.11 and removes support for Python 2.7 and 3.5 (<a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/688">#688</a>). Testing and static checking improved, including being fully statically typed internally (though setuptools is not fully typed, so it is of limited use).</p>
+<p>All deprecated setuptools/distutils features are also deprecated in scikit-build, like the <code class="docutils literal notranslate"><span class="pre">test</span></code> command, <code class="docutils literal notranslate"><span class="pre">easy_install</span></code>, etc. Editable mode is still unsupported. Python 3.6 support is deprecated. Older versions of CMake (&lt;3.15) are not recommended; a future version will remove support for older CMake’s (along with providing a better mechanism for ensuring a proper CMake is available). If you need any of these features, please open or find an issue explaining what and why you need something.</p>
+<section id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Cython module now supports FindPython mode. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/743">#743</a></p></li>
+<li><p>PyPy is discovered without extra settings in FindPython mode <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/744">#744</a></p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Bug fixes<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>FindPython mode uses a new path specification, should help make it usable. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/774">#774</a></p></li>
+<li><p>Better flushing and output streams for more consistent output ordering. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/781">#781</a></p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Documentation<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>scikit-build mailing list transitioned to the <a class="reference external" href="https://github.com/orgs/scikit-build/discussions">scikit-build GitHub Discussions board</a>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/800">#800</a>.</p>
+<ul>
+<li><p>Transitioning away from the mailing list and adopting the GitHub Discussions will provide a more integrated platform enabling us to more effectively engage with the community.</p></li>
+<li><p>After sending a <a class="reference external" href="https://groups.google.com/g/scikit-build/c/jU7-EvvMPb8">last message</a> describing the transition, the mailing list was updated to be read-only and the welcome message was updated to redirect visitor toward the Discussions board.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-15-0">
+<h2>Scikit-build 0.15.0<a class="headerlink" href="#scikit-build-0-15-0" title="Link to this heading">¶</a></h2>
+<p>This release is the final (again) release for Python &lt; 3.6 and MSVC&lt;2017. Support for FindPython from CMake 3.12+ was added, including FindPython2. Support for Cygwin added.</p>
+<section id="id29">
+<h3>New Features<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add support for FindPython (including 2 and 3). Thanks <a class="reference external" href="https://github.com/sponsors/hameerabbasi">&#64;hameerabbasi</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/712">#712</a>.</p></li>
+<li><p>Add support for Cygwin. Thanks <a class="reference external" href="https://github.com/sponsors/ax3l">&#64;ax3l</a> and <a class="reference external" href="https://github.com/sponsors/DWesl">&#64;DWesl</a> and <a class="reference external" href="https://github.com/sponsors/poikilos">&#64;poikilos</a> for the help! See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/485">#485</a>.</p></li>
+</ul>
+</section>
+<section id="id30">
+<h3>Bug fixes<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed issue with distutils usage in Python 3.10. Thanks to <a class="reference external" href="https://github.com/sponsors/SuperSandro2000">&#64;SuperSandro2000</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/700">#700</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-14-1">
+<h2>Scikit-build 0.14.1<a class="headerlink" href="#scikit-build-0-14-1" title="Link to this heading">¶</a></h2>
+<p>This release fixes a regression, and reverts a fix in 0.14.0. Some changes made to CI to fix recent removals.</p>
+<section id="id31">
+<h3>Bug fixes<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix issue with <code class="docutils literal notranslate"><span class="pre">SKBUILD_CONFIGURE_OPTIONS</span></code> not being read.</p></li>
+<li><p>Reverted manifest install changes.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-14-0">
+<h2>Scikit-build 0.14.0<a class="headerlink" href="#scikit-build-0-14-0" title="Link to this heading">¶</a></h2>
+<p>This is the final release for Python &lt; 3.6 and MSVC&lt;2017.</p>
+<section id="id32">
+<h3>New Features<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">--install-target</span></code> scikit-build command line option. And <code class="docutils literal notranslate"><span class="pre">cmake_install_target</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. Allows providing an install target different than the default <code class="docutils literal notranslate"><span class="pre">install</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/phcerdan">&#64;phcerdan</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/477">#477</a>.</p></li>
+</ul>
+</section>
+<section id="id33">
+<h3>Bug fixes<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>The manifest install location computation was fixed. Thanks <a class="reference external" href="https://github.com/sponsors/kratsg">&#64;kratsg</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/682">#682</a>. (Reverted in 0.14.1)</p></li>
+<li><p>Byte-compilation was skipped due to a missing return. Thanks <a class="reference external" href="https://github.com/sponsors/pekkarr">&#64;pekkarr</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/678">#678</a>.</p></li>
+<li><p>Packages can now be computed from the same shared collections, before this could confuse Scikit-build. Thanks <a class="reference external" href="https://github.com/sponsors/vyasr">&#64;vyasr</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/675">#675</a>.</p></li>
+<li><p>Fixed library detection for PyPy 3.9. Thanks <a class="reference external" href="https://github.com/sponsors/rkaminsk">&#64;rkaminsk</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/673">#673</a>.</p></li>
+</ul>
+</section>
+<section id="internal">
+<h3>Internal<a class="headerlink" href="#internal" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Scikit-build now uses <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">setuptools_scm</span></code> to build. If you are packaging scikit-build itself, you might need to update your requirements. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/634">#634</a>.</p></li>
+<li><p>The codebase is now formatted with Black. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/665">#665</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-13-1">
+<h2>Scikit-build 0.13.1<a class="headerlink" href="#scikit-build-0-13-1" title="Link to this heading">¶</a></h2>
+<p>This release fixes two bugs affecting Windows. Users should use <code class="docutils literal notranslate"><span class="pre">&quot;ninja;</span> <span class="pre">platform_system!='Windows&quot;</span></code>, at least for now, since MSVC ships with Ninja, and that Ninja is better at finding the matching MSVC than the Python package is. Including it may slow down the search and force the IDE generator instead, but will at least no longer discover GCC instead.</p>
+<section id="id34">
+<h3>Bug fixes<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>On Windows, don’t let Ninja find something other than what it’s supposed to look for. Ensure the Ninja package is used for the search, just like normal runs, if installed. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/652">#652</a>.</p></li>
+<li><p>Do not throw an error when printing info and a logger is disconnected. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/652">#652</a></p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-13-0">
+<h2>Scikit-build 0.13.0<a class="headerlink" href="#scikit-build-0-13-0" title="Link to this heading">¶</a></h2>
+<p>This is likely one of the final releases to support Python 2.7 and 3.5; future releases will likely target at least Python 3.6+ and MSCV 2017+.</p>
+<p>If you are using scikit-build via <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>, please remember to include <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> and <code class="docutils literal notranslate"><span class="pre">wheel</span></code>. A future version of scikit-build may remove the setuptools install-time hard requirement.</p>
+<section id="id35">
+<h3>New Features<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>CMake module <a class="reference internal" href="cmake-modules/Cython.html"><span class="doc">Cython</span></a> now uses Cython default arguments. This no longer adds <code class="docutils literal notranslate"><span class="pre">--no-docstrings</span></code> in Release and MinSizeRel builds, so Cython docstrings are now retained by default. Additionally, <code class="docutils literal notranslate"><span class="pre">--embed-positions</span></code> is no longer added to Debug and RelWithDebInfo builds. Users can enable these and other Cython arguments via the option <code class="docutils literal notranslate"><span class="pre">CYTHON_FLAGS</span></code>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/518">#518</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/519">#519</a>, thanks to <a class="reference external" href="https://github.com/sponsors/bdice">&#64;bdice</a> for the improvement.</p></li>
+<li><p>Experimental support for ARM64 on Windows. Thanks to <a class="reference external" href="https://github.com/sponsors/gaborkertesz-linaro">&#64;gaborkertesz-linaro</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/612">#612</a>.</p></li>
+<li><p>Support for MSVC 2022. Thanks to <a class="reference external" href="https://github.com/sponsors/tttapa">&#64;tttapa</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/627">#627</a>.</p></li>
+<li><p>Support the modern form of <code class="docutils literal notranslate"><span class="pre">target_link_libraries</span></code>, via <code class="docutils literal notranslate"><span class="pre">SKBUILD_LINK_LIBRARIES_KEYWORD</span></code> (somewhat experimental). Thanks to <a class="reference external" href="https://github.com/sponsors/maxbachmann">&#64;maxbachmann</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/611">#611</a>.</p></li>
+</ul>
+</section>
+<section id="id36">
+<h3>Bug fixes<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update the Ninja path if using the <code class="docutils literal notranslate"><span class="pre">ninja</span></code> package. This fixes repeated isolated builds. Further path inspection and updates for isolated builds may be considered in the future. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/631">#631</a>, thanks to <a class="reference external" href="https://github.com/sponsors/RUrlus">&#64;RUrlus</a> and <a class="reference external" href="https://github.com/sponsors/segevfiner">&#64;segevfiner</a> for help in tracking this down.</p></li>
+<li><p>Allow OpenBSD to pass the platform check (untested). See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/586">#586</a>.</p></li>
+<li><p>Avoid forcing the min macOS version. Behaviour is now inline with setuptools. Users should set <code class="docutils literal notranslate"><span class="pre">MACOSX_DEPLOYMENT_TARGET</span></code> when building (automatic with cibuildwheel), otherwise you will get the same value Python was compiled with. Note: This may seem like a regression for PyPy until the next release (7.3.8), since it was compiled with 10.7, which is too old to build with on modern macOS - manually set <code class="docutils literal notranslate"><span class="pre">MACOSX_DEPLOYMENT_TARGET</span></code> (including setting it if unset in your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>) for PyPy until 7.3.8. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/607">#607</a></p></li>
+<li><p>Fix logging issue when using Setuptools 60.2+. <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/623">#623</a></p></li>
+<li><p>MacOS cross compiling support fix (for conda-forge) for built-in modules. Thanks to <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/622">#622</a>.</p></li>
+<li><p>Better detection of the library path, fixes some issues with PyPy. Thanks to <a class="reference external" href="https://github.com/sponsors/rkaminsk">&#64;rkaminsk</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/620">#620</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/630">#630</a>. PyPy is now part of our testing matrix as of <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/624">#624</a>. Also <a class="reference external" href="https://github.com/sponsors/robtaylor">&#64;robtaylor</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/632">#632</a>.</p></li>
+<li><p>Fixed issue when cross-compiling on conda-forge (probably upstream bug, but easy to avoid). <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/646">#646</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-12-0">
+<h2>Scikit-build 0.12.0<a class="headerlink" href="#scikit-build-0-12-0" title="Link to this heading">¶</a></h2>
+<p>The scikit-build GitHub organization welcomes <a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a> and <a class="reference external" href="https://github.com/sponsors/mayeut">&#64;mayeut</a> as core contributors and maintainers. Both are also maintainers of <a class="reference external" href="https://cibuildwheel.readthedocs.io">cibuildwheel</a>.</p>
+<p><a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a> is a <a class="reference external" href="https://pybind11.readthedocs.io">pybind11</a> and <a class="reference external" href="https://pypa-build.readthedocs.io">pypa/build</a> maintainer, has been instrumental in adding Apple Silicon support, adding support for Visual Studio 2019, updating the Continuous Integration infrastructure, as well as helping review &amp; integrate contributions, and addressing miscellaneous issues. Additionally, <a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a> has worked on an <a class="reference external" href="https://github.com/pybind/scikit_build_example">example project</a> to build with <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> and <code class="docutils literal notranslate"><span class="pre">scikit-build</span></code>.</p>
+<p><a class="reference external" href="https://github.com/sponsors/mayeut">&#64;mayeut</a> is a <a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a> maintainer and focused his effort on updating the <code class="docutils literal notranslate"><span class="pre">cmake-python-distributions</span></code> and <code class="docutils literal notranslate"><span class="pre">ninja-python-distributions</span></code> so that the corresponding wheels are available on all supported platforms including Apple Silicon and all flavors of manylinux.</p>
+<section id="id37">
+<h3>New Features<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support Apple Silicon, including producing Universal2 wheels (<a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/530">#530</a>) and respecting standard setuptools cross-compile variables (<a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/555">#555</a>). Thanks to <a class="reference external" href="https://github.com/sponsors/YannickJadoul">&#64;YannickJadoul</a> for the contributions.</p></li>
+<li><p>Support MSVC 2019 without having to run it with the MSVC activation variables, just like 2017 and earlier versions. Thanks to <a class="reference external" href="https://github.com/sponsors/YannickJadoul">&#64;YannickJadoul</a> for the contribution in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/526">#526</a>.</p></li>
+</ul>
+</section>
+<section id="id38">
+<h3>Bug fixes<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support <code class="docutils literal notranslate"><span class="pre">-A</span></code> and <code class="docutils literal notranslate"><span class="pre">-T</span></code> internally when setting up MSVC generators. Architecture now always passed through <code class="docutils literal notranslate"><span class="pre">-A</span></code> to MSVC generators. Thanks <a class="reference external" href="https://github.com/sponsors/YannickJadoul">&#64;YannickJadoul</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/557">#557</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/536">#536</a>.</p></li>
+<li><p>Fixed a regression that caused setuptools to complain about unknown setup option (<code class="docutils literal notranslate"><span class="pre">cmake_process_manifest_hook</span></code>). Thanks <a class="reference external" href="https://github.com/sponsors/Jmennius">&#64;Jmennius</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/498">#498</a>.</p></li>
+<li><p>If it applies, ensure generator toolset is used to configure the project. Thanks <a class="reference external" href="https://github.com/sponsors/YannickJadoul">&#64;YannickJadoul</a> for the contributions. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/526">#526</a>.</p></li>
+<li><p>Read <code class="docutils literal notranslate"><span class="pre">CYTHON_FLAGS</span></code> where needed, instead of once, allowing the user to define multiple modules with different flags. Thanks <a class="reference external" href="https://github.com/sponsors/oiffrig">&#64;oiffrig</a> for the contributions in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/536">#536</a>.</p></li>
+<li><p>Avoid an IndexError if prefix was empty. Thanks <a class="reference external" href="https://github.com/sponsors/dfaure">&#64;dfaure</a> for the contributions in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/522">#522</a>.</p></li>
+</ul>
+</section>
+<section id="id39">
+<h3>Documentation<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">Conda:</span> <span class="pre">Step-by-step</span></code> release guide available in <a class="reference internal" href="make_a_release.html"><span class="doc">Making a release</span></a> section.</p></li>
+<li><p>Update links to CMake documentation pages in <a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a>. Thanks <a class="reference external" href="https://github.com/sponsors/Eothred">&#64;Eothred</a> for the contributions in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/508">#508</a>.</p></li>
+</ul>
+</section>
+<section id="tests">
+<h3>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve and simplify Continuous Integration infrastructure.</p>
+<ul>
+<li><p>Support <code class="docutils literal notranslate"><span class="pre">nox</span></code> for running the tests locally. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/540">#540</a>.</p></li>
+<li><p>Use GitHub Actions for Continuous Integration and remove use of scikit-ci, tox, TravisCI, AppVeyor and CircleCI. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/549">#549</a>, <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/551">#551</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/552">#552</a>.</p></li>
+<li><p>Add support for testing against Python 3.10. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/565">#565</a>.</p></li>
+<li><p>Style checking handled by pre-commit. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/541">#541</a>.</p></li>
+<li><p>Check for misspellings adding GitHub Actions workflow using codespell. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/541">#541</a>.</p></li>
+</ul>
+</li>
+<li><p>Fix linting error <a class="reference external" href="https://flake8.pycqa.org/en/latest/user/error-codes.html">F522</a> reported with flake8 &gt;= 3.8.x. Thanks <a class="reference external" href="https://github.com/sponsors/benbovy">&#64;benbovy</a> for the contributions. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/494">#494</a>.</p></li>
+<li><p>Fix regex in tests to support Python 3.10. Thanks <a class="reference external" href="https://github.com/sponsors/mgorny">&#64;mgorny</a> for the contributions in <a class="reference external" href="https://github.com/scikit-build/scikit-build/pull/544">#544</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-11-1">
+<h2>Scikit-build 0.11.1<a class="headerlink" href="#scikit-build-0-11-1" title="Link to this heading">¶</a></h2>
+<section id="id40">
+<h3>Bug fixes<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support using scikit-build with conan where <code class="docutils literal notranslate"><span class="pre">distro&lt;1.2.0</span></code> is required. Thanks <a class="reference external" href="https://github.com/sponsors/AntoinePrv">&#64;AntoinePrv</a> and <a class="reference external" href="https://github.com/sponsors/Chrismarsh">&#64;Chrismarsh</a> for reporting issues <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/472">#472</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/488">#488</a>.</p></li>
+</ul>
+</section>
+<section id="id41">
+<h3>Documentation<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix link in <code class="docutils literal notranslate"><span class="pre">Conda:</span> <span class="pre">Step-by-step</span></code> release guide available in <a class="reference internal" href="make_a_release.html"><span class="doc">Making a release</span></a> section.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-11-0">
+<h2>Scikit-build 0.11.0<a class="headerlink" href="#scikit-build-0-11-0" title="Link to this heading">¶</a></h2>
+<section id="id42">
+<h3>New Features<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a hook to process the cmake install manifest building the wheel. The hook function can be specified as an argument to the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function. This can be used e.g. to prevent installing cmake configuration files, headers, or static libraries with the wheel. Thanks <a class="reference external" href="https://github.com/sponsors/SylvainCorlay">&#64;SylvainCorlay</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/473">#473</a>.</p></li>
+<li><p>Add support for passing <a class="reference internal" href="usage.html#usage-cmake-configure-options"><span class="std std-ref">CMake configure options</span></a> like <code class="docutils literal notranslate"><span class="pre">-DFOO:STRING:bar</span></code> as global <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code> options.</p></li>
+<li><p>Add support for building project using PyPy or PyPy3. See <a class="reference external" href="https://pypy.org">https://pypy.org</a> See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/407">#407</a>.</p></li>
+<li><p>Add support for OS/400 (now known as IBM i). Thanks <a class="reference external" href="https://github.com/sponsors/jwoehr">&#64;jwoehr</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/444">#444</a>.</p></li>
+<li><p>Display CMake command used to configure the project. Thanks <a class="reference external" href="https://github.com/sponsors/native-api">&#64;native-api</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/443">#443</a>.</p></li>
+<li><p>CMake modules:</p>
+<ul>
+<li><p>Improve CMake module <a class="reference internal" href="cmake-modules/F2PY.html"><span class="doc">F2PY</span></a> adding <code class="docutils literal notranslate"><span class="pre">add_f2py_target()</span></code> CMake function allowing to generate <code class="docutils literal notranslate"><span class="pre">*-f2pywrappers.f</span></code> and <code class="docutils literal notranslate"><span class="pre">*module.c</span></code> files from <code class="docutils literal notranslate"><span class="pre">*.pyf</span></code> files. Thanks <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for the contribution.</p></li>
+<li><p>Update CMake module <a class="reference internal" href="cmake-modules/PythonExtensions.html"><span class="doc">PythonExtensions</span></a> adding <code class="docutils literal notranslate"><span class="pre">add_python_library()</span></code> and <code class="docutils literal notranslate"><span class="pre">add_python_extension()</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for the contribution.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id43">
+<h3>Bug fixes<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix python 2.7 installation ensuring setuptools &lt; 45 is required. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/478">#478</a>.</p></li>
+<li><p>Fix unclosed file resource in <code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.cmaker.CMaker.check_for_bad_installs()</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/Nic30">&#64;Nic30</a> for the suggestion. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/429">#429</a>.</p></li>
+<li><p>Update CMake module <a class="reference internal" href="cmake-modules/PythonExtensions.html"><span class="doc">PythonExtensions</span></a>:</p>
+<ul>
+<li><p>Ensure correct suffix is used for compiled python module on windows. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/383">#383</a>.</p></li>
+<li><p>Fix warning using <code class="docutils literal notranslate"><span class="pre">EXT_SUFFIX</span></code> config variable instead of deprecated <code class="docutils literal notranslate"><span class="pre">SO</span></code> variable. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/381">#381</a>.</p></li>
+</ul>
+</li>
+<li><p>Honor the <code class="docutils literal notranslate"><span class="pre">MACOSX_DEPLOYMENT_TARGET</span></code> environment variable if it is defined on macOS. Thanks <a class="reference external" href="https://github.com/sponsors/certik">&#64;certik</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/441">#441</a>.</p></li>
+<li><p>Fix CMake module <a class="reference internal" href="cmake-modules/F2PY.html"><span class="doc">F2PY</span></a> to ensure the <code class="docutils literal notranslate"><span class="pre">f2py</span></code> executable specific to the python version being used is found. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/449">#449</a>. Thanks <a class="reference external" href="https://github.com/sponsors/bnavigator">&#64;bnavigator</a> for the contribution.</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">platform.linux_distribution()</span></code> which was removed in Python 3.8 by a call to <code class="docutils literal notranslate"><span class="pre">distro.id()</span></code>. This adds the <code class="docutils literal notranslate"><span class="pre">distro</span></code> package as dependency. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/458">#458</a>. Thanks <a class="reference external" href="https://github.com/sponsors/bnavigator">&#64;bnavigator</a> for the contribution.</p></li>
+</ul>
+</section>
+<section id="id44">
+<h3>Documentation<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add notes section to the <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">maintainers</span></code> top-level category that includes a comparison between <code class="docutils literal notranslate"><span class="pre">sysconfig</span></code> and <code class="docutils literal notranslate"><span class="pre">distutils.sysconfig</span></code> modules.</p></li>
+<li><p>Remove obsolete comment in <code class="docutils literal notranslate"><span class="pre">cmaker.py</span></code>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/439">#439</a>. Thanks <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a></p></li>
+</ul>
+</section>
+<section id="id45">
+<h3>Tests<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">initialize_git_repo_and_commit</span></code> to prevent signing message on system with commit signing enabled globally.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-10-0">
+<h2>Scikit-build 0.10.0<a class="headerlink" href="#scikit-build-0-10-0" title="Link to this heading">¶</a></h2>
+<section id="id46">
+<h3>New Features<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve message displayed when discovering a working environment for building projects. For example, instead of displaying <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Trying</span> <span class="pre">&quot;Ninja&quot;</span> <span class="pre">generator</span></code>, it now displays a message like <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Trying</span> <span class="pre">&quot;Ninja</span> <span class="pre">(Visual</span> <span class="pre">Studio</span> <span class="pre">15</span> <span class="pre">2017</span> <span class="pre">Win64</span> <span class="pre">v140)&quot;</span> <span class="pre">generator</span></code>.</p></li>
+</ul>
+</section>
+<section id="id47">
+<h3>Bug fixes<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Checking generator candidates can now handle handle paths and binaries with spaces, so that <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">--cmake-executable</span> <span class="pre">&quot;C:/Program</span> <span class="pre">Files</span> <span class="pre">(x86)/cmake/cmake.exe&quot;</span></code> works as expected. Contributed by <a class="reference external" href="https://github.com/sponsors/jokva">&#64;jokva</a>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/400">#400</a>.</p></li>
+<li><p>Fix sdist command to ensure symlinks in original source tree are maintained. Contributed by <a class="reference external" href="https://github.com/sponsors/anibali">&#64;anibali</a>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/401">#401</a>.</p></li>
+<li><p>Ensure use of <code class="docutils literal notranslate"><span class="pre">bdist_egg</span></code> or <code class="docutils literal notranslate"><span class="pre">bdist_rpm</span></code> commands trigger build using cmake.</p></li>
+<li><p>Fix default value returned by <a class="reference internal" href="skbuild.html#skbuild.constants.skbuild_plat_name" title="skbuild.constants.skbuild_plat_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">skbuild.constants.skbuild_plat_name()</span></code></a> on macOS. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/417">#417</a>.</p></li>
+</ul>
+</section>
+<section id="internal-api">
+<h3>Internal API<a class="headerlink" href="#internal-api" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="xref py py-func docutils literal notranslate"><span class="pre">skbuild.platform_specifics.windows.find_visual_studio()</span></code>.</p></li>
+</ul>
+</section>
+<section id="id48">
+<h3>Documentation<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix typo in example associated with <a class="reference internal" href="cmake-modules/PythonExtensions.html"><span class="doc">PythonExtensions</span></a>. Thanks <a class="reference external" href="https://github.com/sponsors/eirrgang">&#64;eirrgang</a> for the contribution.</p></li>
+<li><p>Update <a class="reference internal" href="make_a_release.html"><span class="doc">Making a release</span></a> section to include <code class="docutils literal notranslate"><span class="pre">Conda:</span> <span class="pre">Step-by-step</span></code> release guide.</p></li>
+</ul>
+</section>
+<section id="id49">
+<h3>Tests<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">check_sdist_content()</span></code> and fix tests that are checking content of sdist to account for changes introduced in Python 3.8 and backported to python 2.7, 3.6 and 3.7. The changes introduced in <a class="reference external" href="https://github.com/python/cpython/pull/9419">python/cpython#9419</a> adds directory entries to ZIP files created by distutils. Thanks <a class="reference external" href="https://github.com/sponsors/anibali">&#64;anibali</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/404">#404</a>.</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">check_wheel_content()</span></code> to consider changes in <code class="docutils literal notranslate"><span class="pre">0.33.1</span> <span class="pre">&lt;</span> <span class="pre">wheel.__version__</span> <span class="pre">&lt;</span> <span class="pre">0.33.4</span></code> where directory entries are included when building wheel. See <a class="reference external" href="https://github.com/pypa/wheel/issues/294">pypa/wheel#294</a>.</p></li>
+<li><p>Fix reporting of <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> raised in <code class="docutils literal notranslate"><span class="pre">check_wheel_content()</span></code> function by relocating the source code into a dedicated module <code class="docutils literal notranslate"><span class="pre">tests.pytest_helpers</span></code> and by adding a <code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> configuration file registering it for pytest assertion rewriting. See <a class="reference external" href="https://docs.pytest.org/en/latest/writing_plugins.html#assertion-rewriting">https://docs.pytest.org/en/latest/writing_plugins.html#assertion-rewriting</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/403">#403</a>.</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">test_generator_selection</span></code> when building with “Visual C++ for Python 2.7” installed for all users. This addresses failure associated with <code class="docutils literal notranslate"><span class="pre">win_c_compilervs2008cxx_compilervs2008python2.7</span></code> when running test in <a class="reference external" href="https://github.com/conda-forge/scikit-build-feedstock">scikit-build-feedstock</a> where “Visual C++ for Python 2.7” is installed using (<a class="reference external" href="https://chocolatey.org/packages/vcpython27">vcpython27</a> chocolatey package.</p></li>
+<li><p>Continuous Integration</p>
+<ul>
+<li><p>Add support for Azure Pipelines for Python 3.7 32-bit and 64-bit</p></li>
+<li><p>AppVeyor: Disable test for Python 3.7 32-bit and 64-bit.</p></li>
+<li><p>CircleCI: Update version of docker images from jessie to stretch. This addresses issue <a class="reference external" href="https://github.com/circleci/circleci-images/issues/370#issuecomment-476611431">circleci/circleci-images#370</a>.</p></li>
+<li><p>TravisCI: Remove obsolete Python 3.4 testing. It reached <a class="reference external" href="https://devguide.python.org/devcycle/?highlight=end%20of%20life#end-of-life-branches">end-of-life on March 18 2019</a>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-9-0">
+<h2>Scikit-build 0.9.0<a class="headerlink" href="#scikit-build-0-9-0" title="Link to this heading">¶</a></h2>
+<section id="id50">
+<h3>New Features<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add support for building distutils based extensions associated with <code class="docutils literal notranslate"><span class="pre">ext_modules</span></code> setup keyword along side skbuild based extensions. This means using <code class="docutils literal notranslate"><span class="pre">build_ext</span></code> command (and associated <code class="docutils literal notranslate"><span class="pre">--inplace</span></code> argument) is supported. Thanks <a class="reference external" href="https://github.com/sponsors/Erotemic">&#64;Erotemic</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/284">#284</a>.</p></li>
+</ul>
+</section>
+<section id="id51">
+<h3>Bug fixes<a class="headerlink" href="#id51" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix build of wheels if path includes spaces. See issue <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/375">#375</a>. Thanks <a class="reference external" href="https://github.com/sponsors/padraic-padraic">&#64;padraic-padraic</a> for the contribution.</p></li>
+<li><p>Ensure wheel platform name is correctly set when providing custom <code class="docutils literal notranslate"><span class="pre">CMAKE_OSX_DEPLOYMENT_TARGET</span></code> and <code class="docutils literal notranslate"><span class="pre">CMAKE_OSX_ARCHITECTURES</span></code> values are provided. Thanks <a class="reference external" href="https://github.com/sponsors/nonhermitian">&#64;nonhermitian</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/377">#377</a>.</p></li>
+<li><p>Fix testing with recent version of pytest by updating the pytest-runner requirements expression in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/mackelab">&#64;mackelab</a> for the contribution.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-8-1">
+<h2>Scikit-build 0.8.1<a class="headerlink" href="#scikit-build-0-8-1" title="Link to this heading">¶</a></h2>
+<section id="id52">
+<h3>Bug fixes<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">bdist_wheel</span></code> command to support <code class="docutils literal notranslate"><span class="pre">wheel</span> <span class="pre">&gt;=</span> <span class="pre">0.32.0</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/fbudin69500">&#64;fbudin69500</a> for reporting issue <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/360">#360</a>.</p></li>
+</ul>
+</section>
+<section id="id53">
+<h3>Tests<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">test_distribution.py</span></code> updating use of <code class="docutils literal notranslate"><span class="pre">Path.files()</span></code> and requiring <code class="docutils literal notranslate"><span class="pre">path.py&gt;=11.5.0</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-8-0">
+<h2>Scikit-build 0.8.0<a class="headerlink" href="#scikit-build-0-8-0" title="Link to this heading">¶</a></h2>
+<section id="id54">
+<h3>New Features<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Introduced <code class="xref py py-const docutils literal notranslate"><span class="pre">skbuild.constants.CMAKE_DEFAULT_EXECUTABLE</span></code> to facilitate distribution of scikit-build in package manager like <a class="reference external" href="https://github.com/NixOS/nixpkgs">Nixpkgs</a> where all paths to dependencies are hardcoded. Suggested by <a class="reference external" href="https://github.com/sponsors/FRidh">&#64;FRidh</a>.</p></li>
+<li><p>Setup keywords:</p>
+<ul>
+<li><p>If not already set, <code class="docutils literal notranslate"><span class="pre">zip_safe</span></code> option is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>. Suggested by <a class="reference external" href="https://github.com/sponsors/blowekamp">&#64;blowekamp</a>.</p></li>
+</ul>
+</li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">--skip-generator-test</span></code> when a generator is explicitly selected using <code class="docutils literal notranslate"><span class="pre">--generator</span></code>. This allows to speed up overall build when the build environment is known.</p></li>
+</ul>
+</section>
+<section id="id55">
+<h3>Bug fixes<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix support for building project with CMake source directory outside of the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> directory. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/335">#335</a> fixed by <a class="reference external" href="https://github.com/sponsors/massich">&#64;massich</a>.</p></li>
+<li><p>Fix reading of <code class="docutils literal notranslate"><span class="pre">.cmake</span></code> files having any character not available in <a class="reference external" href="https://en.wikipedia.org/wiki/Windows-1252">CP-1252</a> (the default code page on windows). See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/334">#334</a> fixed by <a class="reference external" href="https://github.com/sponsors/bgermann">&#64;bgermann</a>.</p></li>
+<li><p>Fix parsing of macOS specific arguments like <code class="docutils literal notranslate"><span class="pre">--plat-name</span> <span class="pre">macosx-X.Y-x86_64</span></code> and <code class="docutils literal notranslate"><span class="pre">-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=X.Y</span></code> and ensure that the ones specified as command line arguments override the default values or the one hard-coded in the <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code> setup keyword. Thanks <a class="reference external" href="https://github.com/sponsors/yonip">&#64;yonip</a> for the help addressing <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/342">#342</a>.</p></li>
+<li><p>Support case where relative directory set in <code class="docutils literal notranslate"><span class="pre">package_dir</span></code> has an ending slash. For example, specifying <code class="docutils literal notranslate"><span class="pre">package_dir={'awesome':</span> <span class="pre">'src/awesome/'},</span></code> is now properly handled.</p></li>
+<li><p>Fix support for isolated build environment ensuring the CMake project is reconfigured when <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> is called multiple times. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/352">#352</a>.</p></li>
+</ul>
+</section>
+<section id="id56">
+<h3>Documentation<a class="headerlink" href="#id56" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>README: Update overall download count.</p></li>
+<li><p>Add logo and update sphinx configuration. Thanks <a class="reference external" href="https://github.com/sponsors/SteveJordanKW">&#64;SteveJordanKW</a> for the design work.</p></li>
+<li><p>Update <a class="reference internal" href="installation.html#installation-cmake"><span class="std std-ref">CMake installation</span></a> section. Thanks <a class="reference external" href="https://github.com/sponsors/thewtex">&#64;thewtex</a>.</p></li>
+<li><p>Add <a class="reference internal" href="usage.html#support-isolated-build"><span class="std std-ref">Support for isolated build</span></a> section.</p></li>
+<li><p>Add <a class="reference internal" href="usage.html#optimized-incremental-build"><span class="std std-ref">Optimized incremental build</span></a> section.</p></li>
+<li><p>Update <a class="reference internal" href="usage.html#usage-setuptools-options"><span class="std std-ref">usage documentation</span></a> to specify that <code class="docutils literal notranslate"><span class="pre">--universal</span></code> and <code class="docutils literal notranslate"><span class="pre">--python-tags</span></code> have no effect. Thanks <a class="reference external" href="https://github.com/sponsors/bgermann">&#64;bgermann</a> for the suggestion. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/353">#353</a>.</p></li>
+<li><p>Simplify documentation merging <code class="docutils literal notranslate"><span class="pre">Extension</span> <span class="pre">Build</span> <span class="pre">System</span></code> section with the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Usage</span></code> section. Thanks <a class="reference external" href="https://github.com/sponsors/thewtex">&#64;thewtex</a> for the suggestion.</p></li>
+</ul>
+</section>
+<section id="id57">
+<h3>Tests<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">check_wheel_content</span></code> utility function.</p></li>
+<li><p>Skip <code class="docutils literal notranslate"><span class="pre">test_setup_requires_keyword_include_cmake</span></code> if running in conda test environment or if <a class="reference external" href="https://pypi.org">https://pypi.org</a> is not reachable. Suggested by <a class="reference external" href="https://github.com/sponsors/Luthaf">&#64;Luthaf</a>.</p></li>
+<li><p>Continuous Integration</p>
+<ul>
+<li><p>TravisCI:</p>
+<ul>
+<li><p>Remove testing of linux now covered by CircleCI, add testing for Python 3.5, 3.6 and 3.7 on macOS.</p></li>
+<li><p>Ensure system python uses latest version of pip</p></li>
+</ul>
+</li>
+<li><p>AppVeyor, CircleCI: Add testing for Python 3.7</p></li>
+<li><p>Remove uses of unneeded <code class="docutils literal notranslate"><span class="pre">$&lt;RUN_ENV&gt;</span></code> command wrapper. scikit-build should already take care of setting up the expected environment.</p></li>
+<li><p>Always install up-to-date <a class="reference external" href="http://scikit-ci.readthedocs.io">scikit-ci</a> and <a class="reference external" href="http://scikit-ci-addons.readthedocs.io">scikit-ci-addons</a>.</p></li>
+<li><p>Simplify release process managing <code class="docutils literal notranslate"><span class="pre">versioning</span></code> with <a class="reference external" href="https://github.com/warner/python-versioneer/">python-versioneer</a> and update <a class="reference internal" href="make_a_release.html#making-a-release"><span class="std std-ref">Making a release</span></a> documentation.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-7-1">
+<h2>Scikit-build 0.7.1<a class="headerlink" href="#scikit-build-0-7-1" title="Link to this heading">¶</a></h2>
+<section id="id58">
+<h3>Documentation<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix description and classifier list in setup.py.</p></li>
+<li><p>Fix link in README.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-7-0">
+<h2>Scikit-build 0.7.0<a class="headerlink" href="#scikit-build-0-7-0" title="Link to this heading">¶</a></h2>
+<section id="id59">
+<h3>New Features<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Faster incremental build by re-configuring the project only if needed. This was achieved by (1) adding support to retrieve the environment mapping associated with the generator set in the <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> file, (2) introducing a <code class="xref py py-func docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">spec</span> <span class="pre">file</span></code> storing the CMake version as well as the the CMake arguments and (3) re-configuring only if either the generator or the CMake specs change. Thanks <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/301">#301</a>.</p></li>
+<li><p>CMake modules:</p>
+<ul>
+<li><p>CMake module <a class="reference internal" href="cmake-modules/PythonExtensions.html"><span class="doc">PythonExtensions</span></a>: Set symbol visibility to export only the module init function. This applies to GNU and MSVC compilers. Thanks <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/299">#299</a>.</p></li>
+<li><p>Add CMake module <a class="reference internal" href="cmake-modules/F2PY.html"><span class="doc">F2PY</span></a> useful to find the <code class="docutils literal notranslate"><span class="pre">f2py</span></code> executable for building Python extensions with Fortran. Thanks to <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for moving forward with the integration. Concept for the module comes from the work of <a class="reference external" href="https://github.com/sponsors/scopatz">&#64;scopatz</a> done in <a class="reference external" href="https://github.com/pyne/pyne">PyNE</a> project. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/273">#273</a>.</p></li>
+<li><p>Update CMake module <a class="reference internal" href="cmake-modules/NumPy.html"><span class="doc">NumPy</span></a> setting variables <code class="docutils literal notranslate"><span class="pre">NumPy_CONV_TEMPLATE_EXECUTABLE</span></code> and <code class="docutils literal notranslate"><span class="pre">NumPy_FROM_TEMPLATE_EXECUTABLE</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for the contribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/278">#278</a>.</p></li>
+</ul>
+</li>
+<li><p>Setup keywords:</p>
+<ul>
+<li><p>Add support for <a class="reference internal" href="usage.html#usage-cmake-languages"><span class="std std-ref">cmake_languages</span></a> setup keyword.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">include_package_data</span></code> and <code class="docutils literal notranslate"><span class="pre">exclude_package_data</span></code> setup keywords as well as parsing of <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/315">#315</a>. Thanks <a class="reference external" href="https://github.com/sponsors/reiver-dev">&#64;reiver-dev</a> for reporting the issue.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">cmake_minimum_required_version</span></code> setup keyword. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/312">#312</a>. Suggested by <a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a>.</p></li>
+<li><p>Install cmake if found in <code class="docutils literal notranslate"><span class="pre">setup_requires</span></code> list. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/313">#313</a>. Suggested by <a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a>.</p></li>
+</ul>
+</li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">--cmake-executable</span></code> scikit-build command line option. Thanks <a class="reference external" href="https://github.com/sponsors/henryborchers">&#64;henryborchers</a> for the suggestion. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/317">#317</a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">_skbuild/platform-X.Y</span></code> instead of <code class="docutils literal notranslate"><span class="pre">_skbuild</span></code> to build package. This allows to have a different build directory for each python version. Thanks <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a> for the suggestion and <a class="reference external" href="https://github.com/sponsors/xoviat">&#64;xoviat</a> for contributing the feature. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/283">#283</a>.</p></li>
+<li><p>Run cmake and <code class="docutils literal notranslate"><span class="pre">develop</span></code> command when command <code class="docutils literal notranslate"><span class="pre">test</span></code> is executed.</p></li>
+</ul>
+</section>
+<section id="id60">
+<h3>Bug fixes<a class="headerlink" href="#id60" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix support of <code class="docutils literal notranslate"><span class="pre">--hide-listing</span></code> when building wheel.</p></li>
+<li><p>CMake module <a class="reference internal" href="cmake-modules/Cython.html"><span class="doc">Cython</span></a>: Fix escaping of spaces associated with <code class="docutils literal notranslate"><span class="pre">CYTHON_FLAGS</span></code> when provided as command line arguments to the cython executable through CMake cache entries. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/265">#265</a> fixed by <a class="reference external" href="https://github.com/sponsors/neok-m4700">&#64;neok-m4700</a>.</p></li>
+<li><p>Ensure package data files specified in the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function using <code class="docutils literal notranslate"><span class="pre">package_data</span></code> keyword are packaged and installed.</p></li>
+<li><p>Support specifying a default directory for all packages not already associated with one using syntax like <code class="docutils literal notranslate"><span class="pre">package_dir={'':'src'}</span></code> in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>. Thanks <a class="reference external" href="https://github.com/sponsors/benjaminjack">&#64;benjaminjack</a> for reporting the issue. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/274">#274</a>.</p></li>
+<li><p>Improve <code class="docutils literal notranslate"><span class="pre">--skip-cmake</span></code> command line option support so that it can re-generate a source distribution or a python wheel without having to run cmake executable to re-configure and build. Thanks to <a class="reference external" href="https://github.com/sponsors/jonwoodring">&#64;jonwoodring</a> for reporting the issue on the <a class="reference external" href="https://groups.google.com/forum/?utm_medium=email&amp;utm_source=footer#!topic/scikit-build/-ManO0dhIV4">mailing list</a>.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">skbuild</span> <span class="pre">&lt;version&gt;</span></code> as wheel generator. See <a class="reference external" href="https://www.python.org/dev/peps/pep-0427/#file-contents">PEP-0427</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/191">#191</a>.</p></li>
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> is considered when generating source distribution. Thanks <a class="reference external" href="https://github.com/sponsors/seanlis">&#64;seanlis</a> for reporting the problem and providing an initial patch, and thanks <a class="reference external" href="https://github.com/sponsors/henryiii">&#64;henryiii</a> for implementing the corresponding test. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/260">#260</a>.</p></li>
+<li><p>Support generation of source distribution for git repository having submodules. This works only for version of git &gt;= 2.11 supporting the <code class="docutils literal notranslate"><span class="pre">--recurse-submodules</span></code> option with <code class="docutils literal notranslate"><span class="pre">ls-files</span></code> command.</p></li>
+</ul>
+</section>
+<section id="id61">
+<h3>Internal API<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <a class="reference internal" href="skbuild.html#skbuild.cmaker.get_cmake_version" title="skbuild.cmaker.get_cmake_version"><code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.cmaker.get_cmake_version()</span></code></a>.</p></li>
+</ul>
+</section>
+<section id="python-support">
+<h3>Python Support<a class="headerlink" href="#python-support" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Tests using Python 3.3.x were removed and support for this version of python is not guaranteed anymore. Support was removed following the deprecation warnings reported by version 0.31.0 of wheel package, these were causing the tests <code class="docutils literal notranslate"><span class="pre">test_source_distribution</span></code> and <code class="docutils literal notranslate"><span class="pre">test_wheel</span></code> to fail.</p></li>
+</ul>
+</section>
+<section id="id62">
+<h3>Tests<a class="headerlink" href="#id62" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>Speedup execution of tests that do not require any CMake language enabled. This is achieved by (1) introducing the test project <code class="docutils literal notranslate"><span class="pre">hello-no-language</span></code>, (2) updating test utility functions <code class="docutils literal notranslate"><span class="pre">execute_setup_py</span></code> and <code class="docutils literal notranslate"><span class="pre">project_setup_py_test</span></code> to accept the optional parameter <code class="docutils literal notranslate"><span class="pre">disable_languages_test</span></code> allowing to skip unneeded compiler detection in test project used to verify that the selected CMake generator works as expected, and (3) updating relevant tests to use the new test project and parameters.</p>
+<p>Overall testing time on all continuous integration services was reduced:</p>
+<ul class="simple">
+<li><p>AppVeyor:</p>
+<ul>
+<li><p>from <strong>~16 to ~7</strong> minutes for 64 and 32-bit Python 2.7 tests done using Visual Studio Express 2008</p></li>
+<li><p>from more than <strong>2 hours to ~50 minutes</strong> for 64 and 32-bit Python 3.5 tests done using Visual Studio 2015. Improvement specific to Python 3.x were obtained by caching the results of slow calls to <code class="docutils literal notranslate"><span class="pre">distutils.msvc9compiler.query_vcvarsall</span></code> (for Python 3.3 and 3.4) and <code class="docutils literal notranslate"><span class="pre">distutils._msvccompiler._get_vc_env</span></code> (for Python 3.5 and above). These functions were called multiple times to create the list of <code class="xref py py-class docutils literal notranslate"><span class="pre">skbuild.platform_specifics.windows.CMakeVisualStudioCommandLineGenerator</span></code> used in <code class="xref py py-class docutils literal notranslate"><span class="pre">skbuild.platform_specifics.windows.WindowsPlatform</span></code>.</p></li>
+</ul>
+</li>
+<li><p>CircleCI: from <strong>~7 to ~5</strong> minutes.</p></li>
+<li><p>TravisCI: from <strong>~21 to ~10</strong> minutes.</p></li>
+</ul>
+</li>
+<li><p>Update maximum line length specified in flake8 settings from 80 to 120 characters.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">prepend_sys_path</span></code> utility function.</p></li>
+<li><p>Ensure that the project directory is prepended to <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> when executing test building sample project with the help of <code class="docutils literal notranslate"><span class="pre">execute_setup_py</span></code> function.</p></li>
+<li><p>Add codecov config file for better defaults and prevent associated Pull Request checks from reporting failure when coverage only slightly changes.</p></li>
+</ul>
+</section>
+<section id="id63">
+<h3>Documentation<a class="headerlink" href="#id63" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve internal API documentation:</p>
+<ul>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.platform_specifics.windows</span></code></p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.command</span></code></p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.command.generate_source_manifest</span></code></p></li>
+<li><p><a class="reference internal" href="skbuild.html#module-skbuild.utils" title="skbuild.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.utils</span></code></a></p></li>
+</ul>
+</li>
+<li><p>Split usage documentation into a <code class="docutils literal notranslate"><span class="pre">Basic</span> <span class="pre">Usage</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Usage</span></code> sections.</p></li>
+</ul>
+</section>
+<section id="cleanups">
+<h3>Cleanups<a class="headerlink" href="#cleanups" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix miscellaneous pylint warnings.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-6-1">
+<h2>Scikit-build 0.6.1<a class="headerlink" href="#scikit-build-0-6-1" title="Link to this heading">¶</a></h2>
+<section id="id64">
+<h3>Bug fixes<a class="headerlink" href="#id64" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ensure CMake arguments passed to scikit-build and starting with <code class="docutils literal notranslate"><span class="pre">-DCMAKE_*</span></code> are passed to the test project allowing to determine which generator to use. For example, this ensures that arguments like <code class="docutils literal notranslate"><span class="pre">-DCMAKE_MAKE_PROGRAM:FILEPATH=/path/to/program</span></code> are passed. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/256">#256</a>.</p></li>
+</ul>
+</section>
+<section id="id65">
+<h3>Documentation<a class="headerlink" href="#id65" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update <a class="reference internal" href="make_a_release.html"><span class="doc">Making a release</span></a> section including instructions to update <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> with up-to-date pypi download statistics based on Google big table.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-6-0">
+<h2>Scikit-build 0.6.0<a class="headerlink" href="#scikit-build-0-6-0" title="Link to this heading">¶</a></h2>
+<section id="id66">
+<h3>New features<a class="headerlink" href="#id66" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> support: Python modules generated by CMake are now properly included in binary distribution.</p></li>
+<li><p>Improve developer mode support for <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> generated by CMake.</p></li>
+</ul>
+</section>
+<section id="id67">
+<h3>Bug fixes<a class="headerlink" href="#id67" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Do not implicitly install python modules when the beginning of their name match a package explicitly listed. For example, if a project has a package <code class="docutils literal notranslate"><span class="pre">foo/__init__.py</span></code> and a module <code class="docutils literal notranslate"><span class="pre">fooConfig.py</span></code>, and only package <code class="docutils literal notranslate"><span class="pre">foo</span></code> was listed in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">fooConfig.py</span></code> is not installed anymore.</p></li>
+<li><p>CMake module <a class="reference internal" href="cmake-modules/targetLinkLibrariesWithDynamicLookup.html"><span class="doc">targetLinkLibrariesWithDynamicLookup</span></a>: Fix the caching of <em>dynamic lookup</em> variables. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/240">#240</a> fixed by <a class="reference external" href="https://github.com/sponsors/blowekamp">&#64;blowekamp</a>.</p></li>
+</ul>
+</section>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>wheel: As suggested by <a class="reference external" href="https://github.com/sponsors/thewtex">&#64;thewtex</a>, unpinning version of the package by requiring <code class="docutils literal notranslate"><span class="pre">&gt;=0.29.0</span></code> instead of <code class="docutils literal notranslate"><span class="pre">==0.29.0</span></code> will avoid uninstalling a newer version of wheel package on up-to-date system.</p></li>
+</ul>
+</section>
+<section id="id68">
+<h3>Documentation<a class="headerlink" href="#id68" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a command line <a class="reference internal" href="usage.html#usage-cmake-options"><span class="std std-ref">CMake Options</span></a> section to <a class="reference internal" href="usage.html"><span class="doc">Usage</span></a>.</p></li>
+<li><p>Fix <a class="reference internal" href="generators.html#visual-studio-ide"><span class="std std-ref">table</span></a> listing <em>Visual Studio IDE</em> version and corresponding with <em>CPython version</em> in <a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a>.</p></li>
+<li><p>Improve <a class="reference internal" href="make_a_release.html"><span class="doc">Making a release</span></a> section.</p></li>
+</ul>
+</section>
+<section id="id69">
+<h3>Tests<a class="headerlink" href="#id69" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Extend <code class="docutils literal notranslate"><span class="pre">test_hello</span></code>, <code class="docutils literal notranslate"><span class="pre">test_setup</span></code>, and <code class="docutils literal notranslate"><span class="pre">test_sdist_hide_listing</span></code> to
+(1) check if python modules are packaged into source and wheel distributions and (2) check if python modules are copied into the source tree when developer mode is enabled.</p></li>
+</ul>
+</section>
+<section id="id70">
+<h3>Internal API<a class="headerlink" href="#id70" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.setuptools_wrap.strip_package()</span></code> to handle empty package.</p></li>
+<li><p>Teach <code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.command.build_py.build_py.find_modules()</span></code> function to look for <code class="docutils literal notranslate"><span class="pre">py_module</span></code> file in <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_DIR</span></code>.</p></li>
+<li><p>Teach <code class="xref py py-class docutils literal notranslate"><span class="pre">skbuild.utils.PythonModuleFinder</span></code> to search for <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">module</span></code> in the CMake install tree.</p></li>
+<li><p>Update <code class="xref py py-func docutils literal notranslate"><span class="pre">skbuild.setuptools_wrap._consolidate()</span></code> to copy file into the CMake tree only if it exists.</p></li>
+<li><p>Update <code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.setuptools_wrap._copy_file()</span></code> to create directory only if there is one associated with the destination file.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-5-1">
+<h2>Scikit-build 0.5.1<a class="headerlink" href="#scikit-build-0-5-1" title="Link to this heading">¶</a></h2>
+<section id="id71">
+<h3>Bug fixes<a class="headerlink" href="#id71" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ensure file copied in “develop” mode have “mode bits” maintained.</p></li>
+</ul>
+</section>
+</section>
+<section id="scikit-build-0-5-0">
+<h2>Scikit-build 0.5.0<a class="headerlink" href="#scikit-build-0-5-0" title="Link to this heading">¶</a></h2>
+<section id="id72">
+<h3>New features<a class="headerlink" href="#id72" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve user experience by running CMake only if needed. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/207">#207</a></p></li>
+<li><p>Add support for <a class="reference internal" href="usage.html#usage-cmake-with-sdist"><span class="std std-ref">cmake_with_sdist</span></a> setup keyword argument.</p></li>
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">--force-cmake</span></code> and <code class="docutils literal notranslate"><span class="pre">--skip-cmake</span></code> global <a class="reference internal" href="usage.html#usage-setuptools-options"><span class="std std-ref">setup command-line options</span></a>.</p></li>
+<li><p>scikit-build conda-forge recipe added by <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a>. See <a class="reference external" href="https://github.com/conda-forge/staged-recipes/pull/1989">conda-forge/staged-recipes#1989</a></p></li>
+<li><p>Add support for <a class="reference external" href="https://packaging.python.org/distributing/#working-in-development-mode">development mode</a>. (<a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/187">#187</a>).</p></li>
+<li><p>Improved <a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a> selection:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>If available, uses <a class="reference internal" href="generators.html#ninja"><span class="std std-ref">Build system generator</span></a> build system generator on all platforms. An advantages is that ninja automatically parallelizes the build based on the number of CPUs.</p></li>
+<li><p>Automatically set the expected <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code> environment when <code class="docutils literal notranslate"><span class="pre">Ninja</span></code> or <code class="docutils literal notranslate"><span class="pre">NMake</span> <span class="pre">Makefiles</span></code> generators are used.</p></li>
+<li><p>Support <a class="reference external" href="http://aka.ms/vcpython27">Microsoft Visual C++ Compiler for Python 2.7</a>. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/216">#216</a>.</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Prompt for user to install the required compiler if it is not available. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/27">#27</a>.</p></li>
+<li><p>Improve <a class="reference internal" href="cmake-modules/targetLinkLibrariesWithDynamicLookup.html"><span class="doc">targetLinkLibrariesWithDynamicLookup</span></a> CMake Module extending the API of <code class="docutils literal notranslate"><span class="pre">check_dynamic_lookup</span></code> function:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Update long signature: <code class="docutils literal notranslate"><span class="pre">&lt;LinkFlagsVar&gt;</span></code> is now optional</p></li>
+<li><p>Add support for short signature: <code class="docutils literal notranslate"><span class="pre">check_dynamic_lookup(&lt;ResultVar&gt;)</span></code>. See <a class="reference external" href="https://github.com/SimpleITK/SimpleITK/pull/80#issuecomment-267617180">SimpleITK/SimpleITK#80</a>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id73">
+<h3>Bug fixes<a class="headerlink" href="#id73" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix scikit-build source distribution and add test. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/214">#214</a> Thanks <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a> for reporting the issue.</p></li>
+<li><p>Support building extension within a virtualenv on windows. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/119">#119</a>.</p></li>
+</ul>
+</section>
+<section id="id74">
+<h3>Documentation<a class="headerlink" href="#id74" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>add <a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a> section</p></li>
+<li><p>add <a class="reference internal" href="#"><span class="doc">Release Notes</span></a> section</p></li>
+<li><p>allow github issues and users to easily be referenced using <code class="docutils literal notranslate"><span class="pre">{issue}`XY`</span></code> and <code class="docutils literal notranslate"><span class="pre">{user}`username`</span></code> markups. This functionality is enabled by the <a class="reference external" href="https://github.com/sloria/sphinx-issues">sphinx-issue</a> sphinx extension</p></li>
+<li><p>make_a_release: Ensure uploaded distributions are signed</p></li>
+<li><p>usage:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add empty cross-compilation / wheels building sections</p></li>
+<li><p>Add <a class="reference internal" href="usage.html#why"><span class="std std-ref">Why should I use scikit-build ?</span></a></p></li>
+<li><p>Add <a class="reference internal" href="usage.html#usage-setup-options"><span class="std std-ref">Setup options</span></a> section</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>hacking:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add <a class="reference internal" href="hacking.html#internal-api"><span class="std std-ref">Internal API</span></a> section generated using <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code>.</p></li>
+<li><p>Add <a class="reference internal" href="hacking.html#internal-cmake-modules"><span class="std std-ref">Internal CMake Modules</span></a> to document <a class="reference internal" href="cmake-modules/targetLinkLibrariesWithDynamicLookup.html"><span class="doc">targetLinkLibrariesWithDynamicLookup</span></a> CMake module.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id75">
+<h3>Requirements<a class="headerlink" href="#id75" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>setuptools: As suggested by <a class="reference external" href="https://github.com/sponsors/mivade">&#64;mivade</a> in <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/212">#212</a>, remove the hard requirement for <code class="docutils literal notranslate"><span class="pre">==28.8.0</span></code> and require version <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">28.0.0</span></code>. This allows to “play” nicely with conda where it is problematic to update the version of setuptools. See <a class="reference external" href="https://github.com/pypa/pip/issues/2751">pypa/pip#2751</a> and <a class="reference external" href="https://github.com/ContinuumIO/anaconda-issues/issues/542">ContinuumIO/anaconda-issues#542</a>.</p></li>
+</ul>
+</section>
+<section id="id76">
+<h3>Tests<a class="headerlink" href="#id76" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve “push_dir” tests to not rely on build directory name. Thanks <a class="reference external" href="https://github.com/sponsors/isuruf">&#64;isuruf</a> for reporting the issue.</p></li>
+<li><p>travis/install_pyenv: Improve MacOSX build time updating <a class="reference external" href="http://scikit-ci-addons.readthedocs.io">scikit-ci-addons</a></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">get_cmakecache_variables</span></code> utility function.</p></li>
+</ul>
+</section>
+<section id="id77">
+<h3>Internal API<a class="headerlink" href="#id77" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.cmaker.CMaker.configure()</span></code>: Change parameter name from <code class="docutils literal notranslate"><span class="pre">generator_id</span></code> to <code class="docutils literal notranslate"><span class="pre">generator_name</span></code>. This is consistent with how generator are identified in <a class="reference external" href="https://cmake.org/cmake/help/v3.7/manual/cmake-generators.7.html">CMake documentation</a>. This change breaks backward compatibility.</p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.platform_specifics.abstract.CMakePlatform.get_best_generator()</span></code>: Change parameter name from <code class="docutils literal notranslate"><span class="pre">generator</span></code> to <code class="docutils literal notranslate"><span class="pre">generator_name</span></code>. Note that this function is also directly importable from <code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.platform_specifics</span></code>. This change breaks backward compatibility.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">skbuild.platform_specifics.abstract.CMakeGenerator</span></code>: This class allows to handle generators as sophisticated object instead of simple string. This is done anticipating the support for <a class="reference external" href="https://cmake.org/cmake/help/v3.7/variable/CMAKE_GENERATOR_PLATFORM.html">CMAKE_GENERATOR_PLATFORM</a> and <a class="reference external" href="https://cmake.org/cmake/help/v3.7/variable/CMAKE_GENERATOR_TOOLSET.html">CMAKE_GENERATOR_TOOLSET</a>. Note also that the class is directly importable from <code class="xref py py-mod docutils literal notranslate"><span class="pre">skbuild.platform_specifics</span></code> and is now returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">skbuild.platform_specifics.get_best_generator()</span></code>. This change breaks backward compatibility.</p></li>
+</ul>
+</section>
+<section id="id78">
+<h3>Cleanups<a class="headerlink" href="#id78" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>appveyor.yml:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Remove unused “on_failure: event logging” and “notifications: GitHubPullRequest”</p></li>
+<li><p>Remove unused SKIP env variable</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="scikit-build-0-4-0">
+<h2>Scikit-build 0.4.0<a class="headerlink" href="#scikit-build-0-4-0" title="Link to this heading">¶</a></h2>
+<section id="id79">
+<h3>New features<a class="headerlink" href="#id79" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add support for <code class="docutils literal notranslate"><span class="pre">--hide-listing</span></code> option</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>allow to build distributions without displaying files being included</p></li>
+<li><p>useful when building large project on Continuous Integration service limiting the amount of log produced by the build</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>CMake module: <code class="docutils literal notranslate"><span class="pre">skbuild/resources/cmake/FindPythonExtensions.cmake</span></code></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Function <code class="docutils literal notranslate"><span class="pre">python_extension_module</span></code>: add support for <a class="reference external" href="https://github.com/scikit-build/scikit-build/commit/0a9b7ef">module suffix</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id80">
+<h3>Bug fixes<a class="headerlink" href="#id80" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Do not package python modules under “purelib” dir in non-pure wheel</p></li>
+<li><p>CMake module: <code class="docutils literal notranslate"><span class="pre">skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake</span></code>:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix the logic checking for cross-compilation (the regression was introduced by <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/51">#51</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/47">#47</a></p></li>
+<li><p>It configure the text project setting <a class="reference external" href="https://cmake.org/cmake/help/v3.6/prop_tgt/ENABLE_EXPORTS.html?highlight=enable_export">CMAKE_ENABLE_EXPORTS</a> to ON. Doing so ensure the executable compiled in the test exports symbols (if supported by the underlying platform)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="docs">
+<h3>Docs<a class="headerlink" href="#docs" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <a class="reference external" href="http://scikit-build.readthedocs.io/en/latest/cmake-modules.html">short note</a> explaining how to include scikit-build CMake module</p></li>
+<li><p>Move “Controlling CMake using scikit-build” into a “hacking” section</p></li>
+<li><p>Add initial version of <a class="reference external" href="http://scikit-build.readthedocs.io/en/latest/extension_build_system.html">“extension_build_system” documentation</a></p></li>
+</ul>
+</section>
+<section id="id81">
+<h3>Tests<a class="headerlink" href="#id81" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>tests/samples: Simplify project removing unneeded install rules and file copy</p></li>
+<li><p>Simplify continuous integration</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>use <a class="reference external" href="http://scikit-ci.readthedocs.io">scikit-ci</a> and <a class="reference external" href="http://scikit-ci-addons.readthedocs.io">scikit-ci-addons</a></p></li>
+<li><p>speed up build setting up caching</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Makefile:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">coverage</span></code> target</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">docs-only</span></code> target allowing to regenerate the Sphinx documentation without opening a new page in the browser.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="scikit-build-0-3-0">
+<h2>Scikit-build 0.3.0<a class="headerlink" href="#scikit-build-0-3-0" title="Link to this heading">¶</a></h2>
+<section id="id82">
+<h3>New features<a class="headerlink" href="#id82" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improve support for “pure”, “CMake” and “hybrid” python package</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>a “pure” package is a python package that have all files living in the project source tree</p></li>
+<li><p>an “hybrid” package is a python package that have some files living in the project source tree and some files installed by CMake</p></li>
+<li><p>a “CMake” package is a python package that is fully generated and installed by CMake without any of his files existing in the source tree</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Add support for source distribution. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/84">#84</a></p></li>
+<li><p>Add support for setup arguments specific to scikit-build:</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_args</span></code>: additional option passed to CMake</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_install_dir</span></code>: relative directory where the CMake project being built should be installed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_source_dir</span></code>: location of the CMake project</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Add CMake module <code class="docutils literal notranslate"><span class="pre">FindNumPy.cmake</span></code></p></li>
+<li><p>Automatically set <code class="docutils literal notranslate"><span class="pre">package_dir</span></code> to reasonable defaults</p></li>
+<li><p>Support building project without CMakeLists.txt</p></li>
+</ul>
+</section>
+<section id="id83">
+<h3>Bug fixes<a class="headerlink" href="#id83" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix dispatch of arguments to setuptools, CMake and build tool. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/118">#118</a></p></li>
+<li><p>Force binary wheel generation. See <a class="reference external" href="https://github.com/scikit-build/scikit-build/issues/106">#106</a></p></li>
+<li><p>Fix support for <code class="docutils literal notranslate"><span class="pre">py_modules</span></code> (<a class="reference external" href="https://github.com/scikit-build/scikit-build/commit/6716723">6716723</a>)</p></li>
+<li><p>Do not raise error if calling “clean” command twice</p></li>
+</ul>
+</section>
+<section id="id84">
+<h3>Documentation<a class="headerlink" href="#id84" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improvement of documentation published on <a class="reference external" href="http://scikit-build.readthedocs.io/en/latest/">http://scikit-build.readthedocs.io/en/latest/</a></p></li>
+<li><p>Add docstrings for most of the modules, classes and functions</p></li>
+</ul>
+</section>
+<section id="id85">
+<h3>Tests<a class="headerlink" href="#id85" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ensure each test run in a dedicated temporary directory</p></li>
+<li><p>Add tests to raise coverage from 70% to 91%</p></li>
+<li><p>Refactor CI testing infrastructure introducing CI drivers written in python for AppVeyor, CircleCI and TravisCI</p></li>
+<li><p>Switch from <code class="docutils literal notranslate"><span class="pre">nose</span></code> to <code class="docutils literal notranslate"><span class="pre">py.test</span></code></p></li>
+<li><p>Relocate sample projects into a dedicated home: <a class="reference external" href="https://github.com/scikit-build/scikit-build-sample-projects">https://github.com/scikit-build/scikit-build-sample-projects</a></p></li>
+</ul>
+</section>
+<section id="id86">
+<h3>Cleanups<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Refactor commands introducing <code class="docutils literal notranslate"><span class="pre">set_build_base_mixin</span></code> and <code class="docutils literal notranslate"><span class="pre">new_style</span></code></p></li>
+<li><p>Remove unused code</p></li>
+</ul>
+</section>
+</section>
+<section id="history">
+<h2>History<a class="headerlink" href="#history" title="Link to this heading">¶</a></h2>
+<p>PyCMake was created at SciPy 2014 in response to general difficulties building
+C++ and Fortran based Python extensions across platforms. It was renamed to
+“scikit-build” in 2016.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="make_a_release.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Making a release</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="authors.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Credits</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2016, the scikit-build team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/scikit-build/scikit-build" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#scikit-build-1-0-0">Scikit-build 1.0.0</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#bug-fixes">Bug fixes</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-19-1">Scikit-build 0.19.1</a><ul>
+<li><a class="reference internal" href="#id1">Features</a></li>
+<li><a class="reference internal" href="#id2">Bug fixes</a></li>
+<li><a class="reference internal" href="#id3">Testing</a></li>
+<li><a class="reference internal" href="#id4">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-19-0">Scikit-build 0.19.0</a><ul>
+<li><a class="reference internal" href="#id5">Features</a></li>
+<li><a class="reference internal" href="#id6">Bug fixes</a></li>
+<li><a class="reference internal" href="#id7">Testing</a></li>
+<li><a class="reference internal" href="#id8">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-18-1">Scikit-build 0.18.1</a><ul>
+<li><a class="reference internal" href="#id9">Bug fixes</a></li>
+<li><a class="reference internal" href="#id10">Testing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-18-0">Scikit-build 0.18.0</a><ul>
+<li><a class="reference internal" href="#id11">Bug fixes</a></li>
+<li><a class="reference internal" href="#id12">Testing</a></li>
+<li><a class="reference internal" href="#fedora-ci">Fedora CI</a></li>
+<li><a class="reference internal" href="#id13">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-6">Scikit-build 0.17.6</a><ul>
+<li><a class="reference internal" href="#id14">Bug fixes</a></li>
+<li><a class="reference internal" href="#id15">Testing</a></li>
+<li><a class="reference internal" href="#id16">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-5">Scikit-build 0.17.5</a><ul>
+<li><a class="reference internal" href="#id17">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-4">Scikit-build 0.17.4</a><ul>
+<li><a class="reference internal" href="#id18">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-3">Scikit-build 0.17.3</a><ul>
+<li><a class="reference internal" href="#id19">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-2">Scikit-build 0.17.2</a><ul>
+<li><a class="reference internal" href="#id20">Bug fixes</a></li>
+<li><a class="reference internal" href="#id21">Testing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-1">Scikit-build 0.17.1</a><ul>
+<li><a class="reference internal" href="#id22">Bug fixes</a></li>
+<li><a class="reference internal" href="#id23">Testing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-17-0">Scikit-build 0.17.0</a><ul>
+<li><a class="reference internal" href="#id24">Bug fixes</a></li>
+<li><a class="reference internal" href="#id25">Testing</a></li>
+<li><a class="reference internal" href="#id26">Miscellaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-16-7">Scikit-build 0.16.7</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-6">Scikit-build 0.16.6</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-5">Scikit-build 0.16.5</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-4">Scikit-build 0.16.4</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-3">Scikit-build 0.16.3</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-2">Scikit-build 0.16.2</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-1">Scikit-build 0.16.1</a></li>
+<li><a class="reference internal" href="#scikit-build-0-16-0">Scikit-build 0.16.0</a><ul>
+<li><a class="reference internal" href="#new-features">New Features</a></li>
+<li><a class="reference internal" href="#id27">Bug fixes</a></li>
+<li><a class="reference internal" href="#id28">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-15-0">Scikit-build 0.15.0</a><ul>
+<li><a class="reference internal" href="#id29">New Features</a></li>
+<li><a class="reference internal" href="#id30">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-14-1">Scikit-build 0.14.1</a><ul>
+<li><a class="reference internal" href="#id31">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-14-0">Scikit-build 0.14.0</a><ul>
+<li><a class="reference internal" href="#id32">New Features</a></li>
+<li><a class="reference internal" href="#id33">Bug fixes</a></li>
+<li><a class="reference internal" href="#internal">Internal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-13-1">Scikit-build 0.13.1</a><ul>
+<li><a class="reference internal" href="#id34">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-13-0">Scikit-build 0.13.0</a><ul>
+<li><a class="reference internal" href="#id35">New Features</a></li>
+<li><a class="reference internal" href="#id36">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-12-0">Scikit-build 0.12.0</a><ul>
+<li><a class="reference internal" href="#id37">New Features</a></li>
+<li><a class="reference internal" href="#id38">Bug fixes</a></li>
+<li><a class="reference internal" href="#id39">Documentation</a></li>
+<li><a class="reference internal" href="#tests">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-11-1">Scikit-build 0.11.1</a><ul>
+<li><a class="reference internal" href="#id40">Bug fixes</a></li>
+<li><a class="reference internal" href="#id41">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-11-0">Scikit-build 0.11.0</a><ul>
+<li><a class="reference internal" href="#id42">New Features</a></li>
+<li><a class="reference internal" href="#id43">Bug fixes</a></li>
+<li><a class="reference internal" href="#id44">Documentation</a></li>
+<li><a class="reference internal" href="#id45">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-10-0">Scikit-build 0.10.0</a><ul>
+<li><a class="reference internal" href="#id46">New Features</a></li>
+<li><a class="reference internal" href="#id47">Bug fixes</a></li>
+<li><a class="reference internal" href="#internal-api">Internal API</a></li>
+<li><a class="reference internal" href="#id48">Documentation</a></li>
+<li><a class="reference internal" href="#id49">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-9-0">Scikit-build 0.9.0</a><ul>
+<li><a class="reference internal" href="#id50">New Features</a></li>
+<li><a class="reference internal" href="#id51">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-8-1">Scikit-build 0.8.1</a><ul>
+<li><a class="reference internal" href="#id52">Bug fixes</a></li>
+<li><a class="reference internal" href="#id53">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-8-0">Scikit-build 0.8.0</a><ul>
+<li><a class="reference internal" href="#id54">New Features</a></li>
+<li><a class="reference internal" href="#id55">Bug fixes</a></li>
+<li><a class="reference internal" href="#id56">Documentation</a></li>
+<li><a class="reference internal" href="#id57">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-7-1">Scikit-build 0.7.1</a><ul>
+<li><a class="reference internal" href="#id58">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-7-0">Scikit-build 0.7.0</a><ul>
+<li><a class="reference internal" href="#id59">New Features</a></li>
+<li><a class="reference internal" href="#id60">Bug fixes</a></li>
+<li><a class="reference internal" href="#id61">Internal API</a></li>
+<li><a class="reference internal" href="#python-support">Python Support</a></li>
+<li><a class="reference internal" href="#id62">Tests</a></li>
+<li><a class="reference internal" href="#id63">Documentation</a></li>
+<li><a class="reference internal" href="#cleanups">Cleanups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-6-1">Scikit-build 0.6.1</a><ul>
+<li><a class="reference internal" href="#id64">Bug fixes</a></li>
+<li><a class="reference internal" href="#id65">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-6-0">Scikit-build 0.6.0</a><ul>
+<li><a class="reference internal" href="#id66">New features</a></li>
+<li><a class="reference internal" href="#id67">Bug fixes</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#id68">Documentation</a></li>
+<li><a class="reference internal" href="#id69">Tests</a></li>
+<li><a class="reference internal" href="#id70">Internal API</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-5-1">Scikit-build 0.5.1</a><ul>
+<li><a class="reference internal" href="#id71">Bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-5-0">Scikit-build 0.5.0</a><ul>
+<li><a class="reference internal" href="#id72">New features</a></li>
+<li><a class="reference internal" href="#id73">Bug fixes</a></li>
+<li><a class="reference internal" href="#id74">Documentation</a></li>
+<li><a class="reference internal" href="#id75">Requirements</a></li>
+<li><a class="reference internal" href="#id76">Tests</a></li>
+<li><a class="reference internal" href="#id77">Internal API</a></li>
+<li><a class="reference internal" href="#id78">Cleanups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-4-0">Scikit-build 0.4.0</a><ul>
+<li><a class="reference internal" href="#id79">New features</a></li>
+<li><a class="reference internal" href="#id80">Bug fixes</a></li>
+<li><a class="reference internal" href="#docs">Docs</a></li>
+<li><a class="reference internal" href="#id81">Tests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scikit-build-0-3-0">Scikit-build 0.3.0</a><ul>
+<li><a class="reference internal" href="#id82">New features</a></li>
+<li><a class="reference internal" href="#id83">Bug fixes</a></li>
+<li><a class="reference internal" href="#id84">Documentation</a></li>
+<li><a class="reference internal" href="#id85">Tests</a></li>
+<li><a class="reference internal" href="#id86">Cleanups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#history">History</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=3599336f"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

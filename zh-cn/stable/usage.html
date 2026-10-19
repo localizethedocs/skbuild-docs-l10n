@@ -1,0 +1,675 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="genindex.html"><link rel="search" title="搜索" href="search.html"><link rel="next" title="C Runtime, Compiler and Build System Generator" href="generators.html"><link rel="prev" title="Installation" href="installation.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/skbuild-docs-l10n/usage.html">
+        <link rel="prefetch" href="_static/scikit_build_mark.svg" as="image">
+
+    <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>Why should I use scikit-build ? - scikit-build 1.0.0rc1 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">scikit-build 1.0.0rc1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/scikit_build_mark.svg" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">scikit-build 1.0.0rc1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Why should I use scikit-build ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#migrating-from-scikit-build-0-x">Migrating from scikit-build 0.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#advanced-usage">Advanced Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generators.html">C Runtime, Compiler and Build System Generator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="cmake-modules.html">CMake modules</a><input aria-label="Toggle navigation of CMake modules" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/Cython.html">Cython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/NumPy.html">NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/PythonExtensions.html">PythonExtensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/F2PY.html">F2PY</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hacking.html">Hacking</a><input aria-label="Toggle navigation of Hacking" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="skbuild.html">skbuild package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmake-modules/targetLinkLibrariesWithDynamicLookup.html">targetLinkLibrariesWithDynamicLookup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="make_a_release.html">Making a release</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/blob/main/docs/usage.rst?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/scikit-build/scikit-build/edit/main/docs/usage.rst" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="why-should-i-use-scikit-build">
+<span id="why"></span><h1>Why should I use scikit-build ?<a class="headerlink" href="#why-should-i-use-scikit-build" title="链接到此标题。">¶</a></h1>
+<p>Scikit-build is a replacement for <a class="reference external" href="https://setuptools.pypa.io/en/latest/userguide/ext_modules.html">setuptools.Extension</a> that
+builds extension modules with CMake, providing:</p>
+<ul class="simple">
+<li><p>better support for <a class="reference internal" href="generators.html"><span class="doc">additional compilers and build systems</span></a></p></li>
+<li><p>first-class <a class="reference internal" href="#cross-compilation"><span class="std std-ref">cross-compilation</span></a> support</p></li>
+<li><p>location of dependencies and their associated build requirements</p></li>
+</ul>
+<p>Scikit-build is a lightweight wrapper around the setuptools plugin of
+<a class="reference external" href="https://scikit-build-core.readthedocs.io">scikit-build-core</a>. Use it when
+you have an existing <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>-based project or need setuptools features;
+for new projects, use scikit-build-core directly.</p>
+</section>
+<section id="migrating-from-scikit-build-0-x">
+<span id="usage-cmake-options"></span><span id="usage-cmake-configure-options"></span><span id="usage-cmake-languages"></span><span id="usage-cmake-with-sdist"></span><span id="migration-guide"></span><h1>Migrating from scikit-build 0.x<a class="headerlink" href="#migrating-from-scikit-build-0-x" title="链接到此标题。">¶</a></h1>
+<p>Starting with scikit-build 1.0, the classic scikit-build backend was replaced
+by the setuptools plugin provided by <a class="reference external" href="https://scikit-build-core.readthedocs.io">scikit-build-core</a>. <code class="docutils literal notranslate"><span class="pre">skbuild.setup()</span></code> is now a
+thin wrapper around <code class="docutils literal notranslate"><span class="pre">scikit_build_core.setuptools.wrapper.setup()</span></code>. Most
+projects keep working unchanged:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">skbuild</span> <span class="pre">import</span> <span class="pre">setup</span></code> with the <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code>, <code class="docutils literal notranslate"><span class="pre">cmake_source_dir</span></code>,
+<code class="docutils literal notranslate"><span class="pre">cmake_install_dir</span></code>, <code class="docutils literal notranslate"><span class="pre">cmake_install_target</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cmake_process_manifest_hook</span></code> keyword arguments.</p></li>
+<li><p>The CMake modules shipped with scikit-build, like
+<code class="docutils literal notranslate"><span class="pre">find_package(PythonExtensions)</span></code>, <code class="docutils literal notranslate"><span class="pre">find_package(Cython)</span></code>,
+<code class="docutils literal notranslate"><span class="pre">find_package(NumPy)</span></code> and <code class="docutils literal notranslate"><span class="pre">find_package(F2PY)</span></code>. They are now injected
+into <code class="docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code> using scikit-build-core's <code class="docutils literal notranslate"><span class="pre">cmake.module</span></code>
+entry-point group.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SKBUILD</span></code> CMake variable is still set, now to <code class="docutils literal notranslate"><span class="pre">2</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">TRUE</span></code> (still truthy).</p></li>
+<li><p>The standard setuptools commands: <code class="docutils literal notranslate"><span class="pre">build</span></code>, <code class="docutils literal notranslate"><span class="pre">bdist_wheel</span></code>, <code class="docutils literal notranslate"><span class="pre">sdist</span></code>,
+<code class="docutils literal notranslate"><span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">build_ext</span> <span class="pre">--inplace</span></code>.</p></li>
+<li><p>The classic <code class="docutils literal notranslate"><span class="pre">build-system</span></code> table:
+<code class="docutils literal notranslate"><span class="pre">requires</span> <span class="pre">=</span> <span class="pre">[&quot;setuptools&quot;,</span> <span class="pre">&quot;scikit-build&quot;,</span> <span class="pre">&quot;cmake&quot;,</span> <span class="pre">&quot;ninja&quot;]</span></code> with
+<code class="docutils literal notranslate"><span class="pre">build-backend</span> <span class="pre">=</span> <span class="pre">&quot;setuptools.build_meta&quot;</span></code>. The recommended backend is now
+<code class="docutils literal notranslate"><span class="pre">scikit_build_core.setuptools.build_meta</span></code>, which adds <code class="docutils literal notranslate"><span class="pre">cmake</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ninja</span></code> only when needed and supports config-settings; see
+<a class="reference internal" href="#basic-usage-example"><span class="std std-ref">Example of setup.py, CMakeLists.txt and pyproject.toml</span></a>.</p></li>
+</ul>
+<p>The following changes are breaking:</p>
+<ul class="simple">
+<li><p>All scikit-build-specific command line options were removed:
+<code class="docutils literal notranslate"><span class="pre">--build-type</span></code>, <code class="docutils literal notranslate"><span class="pre">-G</span></code>/<code class="docutils literal notranslate"><span class="pre">--generator</span></code>, <code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">--cmake-executable</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--skip-generator-test</span></code>, <code class="docutils literal notranslate"><span class="pre">--hide-listing</span></code>, <code class="docutils literal notranslate"><span class="pre">--force-cmake</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--skip-cmake</span></code>, <code class="docutils literal notranslate"><span class="pre">--install-target</span></code>, as well as the
+<code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">&lt;setuptools</span> <span class="pre">args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;cmake</span> <span class="pre">args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;build</span> <span class="pre">tool</span> <span class="pre">args&gt;</span></code>
+triple-section syntax. Use the <code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code> and <code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code>
+environment variables, the <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code> keyword of <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, or
+scikit-build-core's <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> settings in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>
+(or the equivalent <code class="docutils literal notranslate"><span class="pre">SKBUILD_*</span></code> environment variables or config-settings)
+instead. See the <a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/configuration/index.html">scikit-build-core configuration documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_with_sdist=True</span></code> now raises an error. <code class="docutils literal notranslate"><span class="pre">cmake_languages</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cmake_minimum_required_version</span></code> are accepted but ignored with a warning;
+the minimum CMake version is configured with the <code class="docutils literal notranslate"><span class="pre">cmake.version</span></code> setting
+in the <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> table of <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p></li>
+<li><p>The internal Python API is gone; only <code class="docutils literal notranslate"><span class="pre">skbuild.setup</span></code> and
+<code class="docutils literal notranslate"><span class="pre">skbuild.exceptions.SKBuildError</span></code> remain public.
+<code class="docutils literal notranslate"><span class="pre">skbuild.command.*</span></code> and <code class="docutils literal notranslate"><span class="pre">skbuild.platform_specifics</span></code> were removed.
+<code class="docutils literal notranslate"><span class="pre">skbuild.cmaker</span></code>, <code class="docutils literal notranslate"><span class="pre">skbuild.constants</span></code>, <code class="docutils literal notranslate"><span class="pre">skbuild.utils</span></code> and
+<code class="docutils literal notranslate"><span class="pre">skbuild.setuptools_wrap</span></code> remain importable as deprecated shims that
+warn on import: <code class="docutils literal notranslate"><span class="pre">skbuild.cmaker</span></code> keeps only <code class="docutils literal notranslate"><span class="pre">get_cmake_version()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">skbuild.constants</span></code> keeps only <code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_DIR()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">skbuild_plat_name()</span></code>, and the last two expose nothing.
+<code class="docutils literal notranslate"><span class="pre">skbuild.exceptions.SKBuildError</span></code> is now an alias of setuptools'
+<code class="docutils literal notranslate"><span class="pre">SetupError</span></code>, so it is no longer a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>; its
+<code class="docutils literal notranslate"><span class="pre">SKBuildInvalidFileInstallationError</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SKBuildGeneratorNotFoundError</span></code> subclasses were removed.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_skbuild/&lt;platform&gt;-&lt;pyversion&gt;/</span></code> build directory is gone; the
+standard setuptools <code class="docutils literal notranslate"><span class="pre">build/</span></code> directories are used instead (CMake builds
+in an <code class="docutils literal notranslate"><span class="pre">_skbuild</span></code> directory under <code class="docutils literal notranslate"><span class="pre">build/temp.*</span></code>).</p></li>
+<li><p>sdists no longer automatically generate their file manifest from git;
+provide a <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> (or use <code class="docutils literal notranslate"><span class="pre">setuptools-scm</span></code>) like any other
+setuptools project.</p></li>
+<li><p>Editable installs (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code>) require setting
+<code class="docutils literal notranslate"><span class="pre">editable.mode</span> <span class="pre">=</span> <span class="pre">&quot;inplace&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> table of
+<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. A plain <code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">build_ext</span> <span class="pre">--inplace</span></code> still works
+without configuration.</p></li>
+<li><p>Generators are no longer discovered by probing for Visual Studio and
+running a language test; CMake's own default generator selection applies.
+Set the <code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code> environment variable to override it. See
+<a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a>.</p></li>
+<li><p>scikit-build now depends on <code class="docutils literal notranslate"><span class="pre">scikit-build-core[setuptools]</span></code> at run time;
+the <code class="docutils literal notranslate"><span class="pre">distro</span></code>, <code class="docutils literal notranslate"><span class="pre">wheel</span></code> and <code class="docutils literal notranslate"><span class="pre">tomli</span></code> dependencies were dropped.</p></li>
+</ul>
+</section>
+<section id="basic-usage">
+<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="链接到此标题。">¶</a></h1>
+<section id="example-of-setup-py-cmakelists-txt-and-pyproject-toml">
+<span id="basic-usage-example"></span><h2>Example of setup.py, CMakeLists.txt and pyproject.toml<a class="headerlink" href="#example-of-setup-py-cmakelists-txt-and-pyproject-toml" title="链接到此标题。">¶</a></h2>
+<p>The full example code is <a class="reference external" href="https://github.com/scikit-build/scikit-build-sample-projects/tree/master/projects/hello-cpp">Here</a></p>
+<p>Make a folder named <code class="docutils literal notranslate"><span class="pre">my_project</span></code> as your project root folder, and place the
+following in your project's <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">skbuild</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>  <span class="c1"># This line replaces 'from setuptools import setup'</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"hello-cpp"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">"1.2.3"</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">"a minimal example package (cpp version)"</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">'The scikit-build team'</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s2">"MIT"</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">'hello'</span><span class="p">],</span>
+    <span class="n">python_requires</span><span class="o">=</span><span class="s2">"&gt;=3.10"</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Your project now uses scikit-build instead of setuptools.</p>
+<p>Next, add a <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> to describe how to build your extension. In the following example,
+a C++ extension named <code class="docutils literal notranslate"><span class="pre">_hello</span></code> is built:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake_minimum_required</span><span class="p">(</span><span class="n">VERSION</span> <span class="mf">3.18</span><span class="o">..</span><span class="mf">.3.22</span><span class="p">)</span>
+
+<span class="n">project</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
+
+<span class="n">find_package</span><span class="p">(</span><span class="n">PythonExtensions</span> <span class="n">REQUIRED</span><span class="p">)</span>
+
+<span class="n">add_library</span><span class="p">(</span><span class="n">_hello</span> <span class="n">MODULE</span> <span class="n">hello</span><span class="o">/</span><span class="n">_hello</span><span class="o">.</span><span class="n">cxx</span><span class="p">)</span>
+<span class="n">python_extension_module</span><span class="p">(</span><span class="n">_hello</span><span class="p">)</span>
+<span class="n">install</span><span class="p">(</span><span class="n">TARGETS</span> <span class="n">_hello</span> <span class="n">LIBRARY</span> <span class="n">DESTINATION</span> <span class="n">hello</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, add a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> declaring the build backend:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">build</span><span class="o">-</span><span class="n">system</span><span class="p">]</span>
+<span class="n">requires</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"scikit-build&gt;=1"</span><span class="p">]</span>
+<span class="n">build</span><span class="o">-</span><span class="n">backend</span> <span class="o">=</span> <span class="s2">"scikit_build_core.setuptools.build_meta"</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">scikit_build_core.setuptools.build_meta</span></code> backend adds <code class="docutils literal notranslate"><span class="pre">cmake</span></code> (and
+<code class="docutils literal notranslate"><span class="pre">ninja</span></code>) to the build requirements only when a suitable version is not
+already available, and supports config-settings (see
+<a class="reference internal" href="#usage-setuptools-options"><span class="std std-ref">Command line options</span></a>). If you don't want those, you can use the
+standard setuptools backend here; then list <code class="docutils literal notranslate"><span class="pre">cmake</span></code> (and <code class="docutils literal notranslate"><span class="pre">ninja</span></code>) in
+<code class="docutils literal notranslate"><span class="pre">requires</span></code> yourself.</p>
+<p>Make a hello folder inside my_project folder and place <a class="reference external" href="https://github.com/scikit-build/scikit-build-sample-projects/blob/8fdbc8a0dd78656ea0b431e005b49f3e19786444/projects/hello-cpp/hello/_hello.cxx">_hello.cxx</a> and <a class="reference external" href="https://github.com/scikit-build/scikit-build-sample-projects/blob/8fdbc8a0dd78656ea0b431e005b49f3e19786444/projects/hello-cpp/hello/__init__.py">__init__.py</a> inside hello folder.</p>
+<p>Now everything is ready; go to my_project's parent folder and type the following command to install your extension:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">my_project</span><span class="o">/.</span>
+</pre></div>
+</div>
+<p>If you want to see the detail of installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">my_project</span><span class="o">/.</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>Try your new extension:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+Python 3.10.4 (main, Jun 29 2022, 12:14:53) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import hello
+&gt;&gt;&gt; hello.hello("scikit-build")
+Hello, scikit-build!
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>By default, scikit-build looks in the project top-level directory for a
+file named <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>. It will then invoke the <code class="docutils literal notranslate"><span class="pre">cmake</span></code>
+executable, using CMake's default <a class="reference internal" href="generators.html"><span class="doc">generator</span></a> unless
+the <code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code> environment variable is set.</p>
+</div>
+</section>
+<section id="setup-options">
+<span id="usage-setup-options"></span><h2>Setup options<a class="headerlink" href="#setup-options" title="链接到此标题。">¶</a></h2>
+<section id="setuptools-options">
+<h3>setuptools options<a class="headerlink" href="#setuptools-options" title="链接到此标题。">¶</a></h3>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版本发生变更: </span>scikit-build no longer intercepts or rewrites setuptools options.</p>
+</div>
+<p>Standard setuptools options are handled by setuptools itself and can be
+declared in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>, or the <code class="docutils literal notranslate"><span class="pre">[project]</span></code> table of
+<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> as usual. See the <a class="reference external" href="https://setuptools.pypa.io/en/latest/userguide/">setuptools documentation</a>.</p>
+</section>
+<section id="scikit-build-options">
+<h3>scikit-build options<a class="headerlink" href="#scikit-build-options" title="链接到此标题。">¶</a></h3>
+<p>Scikit-build augments the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function with the following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_args</span></code>: List of <a class="reference external" href="https://cmake.org/cmake/help/latest/manual/cmake.1.html#options">CMake options</a>.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">(</span>
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+  <span class="n">cmake_args</span><span class="o">=</span><span class="p">[</span><span class="s1">'-DSOME_FEATURE:BOOL=OFF'</span><span class="p">]</span>
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_install_dir</span></code>: relative directory where the CMake artifacts are installed.
+By default, it is set to an empty string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_source_dir</span></code>: Relative directory containing the project <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>.
+By default, it is set to the top-level directory where <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_install_target</span></code>: Name of the target to &quot;build&quot; for installing the
+artifacts into the wheel. By default, this option is set to <code class="docutils literal notranslate"><span class="pre">install</span></code>,
+which is always provided by CMake and runs <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--install</span></code>. Any other
+value is installed by building that target with <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span> <span class="pre">--target</span></code>,
+which can be used to only install certain components.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>install(TARGETS foo COMPONENT runtime)
+add_custom_target(foo-install-runtime
+    ${CMAKE_COMMAND}
+    -DCMAKE_INSTALL_COMPONENT=runtime
+    -P "${PROJECT_BINARY_DIR}/cmake_install.cmake"
+    DEPENDS foo
+    )
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake_process_manifest_hook</span></code>: Python function consuming the list of files to be
+installed produced by cmake. For example, <code class="docutils literal notranslate"><span class="pre">cmake_process_manifest_hook</span></code> can be used
+to exclude static libraries from the built wheel.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">exclude_static_libraries</span><span class="p">(</span><span class="n">cmake_manifest</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="ow">not</span> <span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'.a'</span><span class="p">)),</span> <span class="n">cmake_manifest</span><span class="p">))</span>
+
+<span class="n">setup</span><span class="p">(</span>
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+  <span class="n">cmake_process_manifest_hook</span><span class="o">=</span><span class="n">exclude_static_libraries</span>
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>These options are described in more detail in the <a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/plugins/setuptools.html">scikit-build-core
+setuptools plugin documentation</a>.
+All other scikit-build-core settings can be set in the <code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code>
+table of <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>; see the <a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/configuration/index.html">scikit-build-core configuration
+documentation</a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版本发生变更: </span>The <code class="docutils literal notranslate"><span class="pre">cmake_with_sdist</span></code> option now raises an error if set to <code class="docutils literal notranslate"><span class="pre">True</span></code>,
+and the <code class="docutils literal notranslate"><span class="pre">cmake_languages</span></code> and <code class="docutils literal notranslate"><span class="pre">cmake_minimum_required_version</span></code> options
+are ignored with a warning. See <a class="reference internal" href="#migration-guide"><span class="std std-ref">Migrating from scikit-build 0.x</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="command-line-options">
+<span id="usage-setuptools-options"></span><h2>Command line options<a class="headerlink" href="#command-line-options" title="链接到此标题。">¶</a></h2>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版本发生变更: </span>The scikit-build-specific command line options and the
+<code class="docutils literal notranslate"><span class="pre">setup.py</span> <span class="pre">&lt;setuptools</span> <span class="pre">args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;cmake</span> <span class="pre">args&gt;</span> <span class="pre">--</span> <span class="pre">&lt;build</span> <span class="pre">tool</span> <span class="pre">args&gt;</span></code>
+syntax were removed. See <a class="reference internal" href="#migration-guide"><span class="std std-ref">Migrating from scikit-build 0.x</span></a>.</p>
+</div>
+<p>Build with a standard frontend like <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">build</span></code> or <code class="docutils literal notranslate"><span class="pre">uv</span></code>. When using
+the <code class="docutils literal notranslate"><span class="pre">scikit_build_core.setuptools.build_meta</span></code> backend (see
+<a class="reference internal" href="#basic-usage-example"><span class="std std-ref">Example of setup.py, CMakeLists.txt and pyproject.toml</span></a>), any scikit-build-core setting can be passed as a
+config-setting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span> <span class="o">-</span><span class="n">C</span> <span class="n">cmake</span><span class="o">.</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="n">Debug</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">-</span><span class="n">C</span> <span class="n">cmake</span><span class="o">.</span><span class="n">args</span><span class="o">=</span><span class="s2">"-DSOME_FEATURE:BOOL=OFF"</span>
+</pre></div>
+</div>
+<p>CMake options can also be passed using the <code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code> environment
+variable, the <code class="docutils literal notranslate"><span class="pre">cmake_args</span></code> keyword of <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, or scikit-build-core's
+<code class="docutils literal notranslate"><span class="pre">[tool.scikit-build]</span></code> settings in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p>
+</section>
+</section>
+<section id="advanced-usage">
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="链接到此标题。">¶</a></h1>
+<section id="how-to-test-if-scikit-build-is-driving-the-compilation">
+<h2>How to test if scikit-build is driving the compilation ?<a class="headerlink" href="#how-to-test-if-scikit-build-is-driving-the-compilation" title="链接到此标题。">¶</a></h2>
+<p>To support the case of code base being built as both a standalone project
+and a python wheel, it is possible to test for the variable <code class="docutils literal notranslate"><span class="pre">SKBUILD</span></code>:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">if(</span><span class="no">SKBUILD</span><span class="nf">)</span>
+<span class="w">  </span><span class="nf">message(</span><span class="no">STATUS</span><span class="w"> </span><span class="s">"The project is built using scikit-build"</span><span class="nf">)</span>
+<span class="nf">endif()</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版本发生变更: </span>The <code class="docutils literal notranslate"><span class="pre">SKBUILD</span></code> variable is now set to <code class="docutils literal notranslate"><span class="pre">2</span></code> instead of <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>. Both
+values are truthy in CMake.</p>
+</div>
+</section>
+<section id="parallel-builds">
+<span id="usage-enabling-parallel-build"></span><h2>Parallel builds<a class="headerlink" href="#parallel-builds" title="链接到此标题。">¶</a></h2>
+<p>The build runs through <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span></code>; with the <code class="docutils literal notranslate"><span class="pre">Ninja</span></code> generator it is
+parallel by default. Set the <a class="reference external" href="https://cmake.org/cmake/help/latest/envvar/CMAKE_BUILD_PARALLEL_LEVEL.html">CMAKE_BUILD_PARALLEL_LEVEL</a>
+environment variable to control the number of parallel jobs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CMAKE_BUILD_PARALLEL_LEVEL</span><span class="o">=</span><span class="mi">3</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="support-for-isolated-build">
+<span id="support-isolated-build"></span><h2>Support for isolated build<a class="headerlink" href="#support-for-isolated-build" title="链接到此标题。">¶</a></h2>
+<p>Build frontends like <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">build</span></code> install the
+<code class="docutils literal notranslate"><span class="pre">build-system.requires</span></code> entries from <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> into an isolated
+environment before building. scikit-build supports isolated builds, as well
+as builds with isolation disabled (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--no-build-isolation</span></code>).</p>
+</section>
+<section id="editable-installs">
+<h2>Editable installs<a class="headerlink" href="#editable-installs" title="链接到此标题。">¶</a></h2>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 1.0 版本发生变更: </span>Editable installs previously worked without extra configuration.</p>
+</div>
+<p>In-place builds (<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">build_ext</span> <span class="pre">--inplace</span></code>) work without extra
+configuration. Editable installs (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code>) require opting in to
+scikit-build-core's &quot;inplace&quot; editable mode in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">scikit</span><span class="o">-</span><span class="n">build</span><span class="p">]</span>
+<span class="n">editable</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">"inplace"</span>
+</pre></div>
+</div>
+<p>For details, including setuptools' strict editable mode, see the
+<a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/plugins/setuptools.html#editable-installs">scikit-build-core setuptools plugin documentation</a>.</p>
+</section>
+<section id="optimized-incremental-build">
+<span id="id2"></span><h2>Optimized incremental build<a class="headerlink" href="#optimized-incremental-build" title="链接到此标题。">¶</a></h2>
+<p>To optimize the developer workflow, the CMake build directory is kept inside
+the standard setuptools <code class="docutils literal notranslate"><span class="pre">build/</span></code> directory (an <code class="docutils literal notranslate"><span class="pre">_skbuild</span></code> directory under
+<code class="docutils literal notranslate"><span class="pre">build/temp.*</span></code>) and reused across builds.</p>
+<p>If a file is added to the CMake build system by updating one of the
+<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> files, the generated build-system will automatically
+detect the change and reconfigure the project the next time a build is run.</p>
+</section>
+<section id="environment-variable-configuration">
+<h2>Environment variable configuration<a class="headerlink" href="#environment-variable-configuration" title="链接到此标题。">¶</a></h2>
+<p>Scikit-build support environment variables to configure some options. These are:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code></dt><dd><p>This will add configuration options when configuring CMake.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">CMAKE_GENERATOR</span></code></dt><dd><p>This selects the CMake generator to use. See <a class="reference internal" href="generators.html"><span class="doc">C Runtime, Compiler and Build System Generator</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">SKBUILD_CONFIGURE_OPTIONS</span></code></dt><dd><p>Extra arguments appended when configuring CMake, like <code class="docutils literal notranslate"><span class="pre">CMAKE_ARGS</span></code>. (Deprecated)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">SKBUILD_BUILD_OPTIONS</span></code></dt><dd><p>Extra arguments forwarded to <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span></code>. (Deprecated)</p>
+</dd>
+</dl>
+<p>Both <code class="docutils literal notranslate"><span class="pre">SKBUILD_*_OPTIONS</span></code> variables are split following shell quoting rules
+and only honored when building through <code class="docutils literal notranslate"><span class="pre">skbuild.setup()</span></code>.</p>
+<p>In addition, every scikit-build-core setting can be set using a corresponding
+<code class="docutils literal notranslate"><span class="pre">SKBUILD_*</span></code> environment variable. See the <a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/configuration/index.html">scikit-build-core configuration
+documentation</a>.</p>
+</section>
+<section id="cross-compilation">
+<span id="id3"></span><h2>Cross-compilation<a class="headerlink" href="#cross-compilation" title="链接到此标题。">¶</a></h2>
+<p>Cross-compilation works through the standard CMake mechanisms (<a class="reference external" href="https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html">CMake
+toolchains</a>). See
+the scikit-build-core <a class="reference external" href="https://scikit-build-core.readthedocs.io/en/latest/guide/crosscompile.html">cross-compilation guide</a>;
+tools like <a class="reference external" href="https://cibuildwheel.pypa.io">cibuildwheel</a> handle the common
+macOS and Windows cases automatically.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="generators.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">C Runtime, Compiler and Build System Generator</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="installation.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Installation</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2016, the scikit-build team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/scikit-build/scikit-build" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=17d212bb"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/translations.js?v=540d3cec"></script>
+    </body>
+</html>
