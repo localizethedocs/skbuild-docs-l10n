@@ -1,0 +1,259 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, the scikit-build team
+# This file is distributed under the same license as the scikit-build package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: scikit-build stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-29 08:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../CONTRIBUTING.rst:3
+msgid "Contributing"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:5
+msgid ""
+"Contributions are welcome, and they are greatly appreciated! Every little "
+"bit helps, and credit will always be given."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:9
+msgid "Types of Contributions"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:11
+msgid "You can contribute in many ways:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:14
+msgid "Report Bugs"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:16
+msgid "Report bugs at https://github.com/scikit-build/scikit-build/issues."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:18
+msgid "If you are reporting a bug, please include:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:20
+msgid "Your operating system name and version."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:21
+msgid ""
+"Any details about your local setup that might be helpful in troubleshooting."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:22
+msgid "Detailed steps to reproduce the bug."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:25
+msgid "Fix Bugs"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:27
+msgid ""
+"Look through the GitHub issues for bugs. Anything tagged with \"bug\" is "
+"open to whoever wants to implement it."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:31
+msgid "Implement Features"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:33
+msgid ""
+"Look through the GitHub issues for features. Anything tagged with "
+"\"feature\" is open to whoever wants to implement it."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:37
+msgid "Write Documentation"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:39
+msgid ""
+"The scikit-build project could always use more documentation. We welcome "
+"help with the official scikit-build docs, in docstrings, or even on blog "
+"posts and articles for the web."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:44
+msgid "Submit Feedback"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:46
+msgid ""
+"The best way to send feedback is to file an issue at https://github.com/"
+"scikit-build/scikit-build/issues."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:49
+msgid "If you are proposing a new feature:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:51
+msgid "Explain in detail how it would work."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:52
+msgid "Keep the scope as narrow as possible, to make it easier to implement."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:53
+msgid ""
+"Remember that this is a volunteer-driven project, and that contributions are "
+"welcome :)"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:58
+msgid "Get Started"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:60
+msgid ""
+"Ready to contribute? Here's how to set up ``scikit-build`` for local "
+"development."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:62
+msgid "Fork the ``scikit-build`` repo on GitHub."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:64
+msgid "Clone your fork locally::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:66
+msgid "$ git clone git@github.com:your_name_here/scikit-build.git"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:68
+msgid ""
+"You can use the ``gh`` command line application to do these last two steps, "
+"as well."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:71
+msgid ""
+"Make sure you have ``nox`` installed using ``pipx install nox``. If you "
+"don't have pipx, you can install it with ``pip install pipx``. (You can "
+"install ``nox`` with ``pip`` instead, but nox is an application, not a "
+"library, and applications should always use pipx.) You can install both of "
+"these packages from brew on macOS/linux. You can also use ``pipx run nox`` "
+"instead."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:78
+msgid "Create a branch for local development::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:80
+msgid "$ git checkout -b name-of-your-bugfix-or-feature"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:82
+msgid "Now you can make your changes locally."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:84
+msgid ""
+"When you're done making changes, check that your changes pass our linters "
+"and the tests:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:87
+msgid "$ nox"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:89
+msgid ""
+"If you would like to check all Python versions and you don't happen to have "
+"them all installed locally, you can use the manylinux docker image instead:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:92
+msgid ""
+"$ docker run --rm -itv $PWD:/src -w /src quay.io/pypa/manylinux_2_28_x86_64:"
+"latest pipx run nox"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:94
+msgid "Commit your changes and push your branch to GitHub::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:96
+msgid ""
+"$ git add -u .\n"
+"$ git commit -m \"Your detailed description of your changes.\"\n"
+"$ git push origin name-of-your-bugfix-or-feature"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:100
+msgid ""
+"Submit a pull request through the GitHub website or the ``gh`` command line "
+"application."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:104
+msgid "Pull Request Guidelines"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:106
+msgid "Before you submit a pull request, check that it meets these guidelines:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:108
+msgid "The pull request should include tests."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:110
+msgid "If the pull request adds functionality, the docs should be updated."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:112
+msgid ""
+"The pull request should work for Python 3.10+ and PyPy.  Make sure that the "
+"tests pass for all supported Python versions in CI on your PR."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:117
+msgid "Tips"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:119
+msgid "To run a subset of tests::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:121
+msgid "$ nox -s tests -- tests/test_skbuild.py"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:123
+msgid "You can build and serve the docs::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:125
+msgid "$ nox -s docs -- --serve"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:127
+msgid "You can build an SDist and a wheel in the ``dist`` folder::"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:129
+msgid "$ nox -s build"
+msgstr ""
