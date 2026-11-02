@@ -123,10 +123,10 @@ msgstr ""
 #: ../../../../README.md:46
 msgid ""
 "Either one of those will cause scikit-build-core's setuptools plugin to "
-"activate. The defaults for the native plugin are different from the `skbuild."
-"setup()` wrapper (`scikit_build_core.setuptools.wrapper.setup()`); for "
-"example `SKBUILD_CONFIGURE_OPTIONS`/`SKBUILD_BUILD_OPTIONS` are not adapted "
-"without the wrapper."
+"activate. The defaults for the native plugin are different from the "
+"`skbuild.setup()` wrapper (`scikit_build_core.setuptools.wrapper.setup()`); "
+"for example `SKBUILD_CONFIGURE_OPTIONS`/`SKBUILD_BUILD_OPTIONS` are not "
+"adapted without the wrapper."
 msgstr ""
 
 #: ../../../../README.md:48
@@ -245,6 +245,6 @@ msgstr ""
 
 #: ../../../../README.md:27
 msgid ""
-"Support for this work was provided by NSF grant [OAC-2209877](https://www."
-"nsf.gov/awardsearch/showAward?AWD_ID=2209877)."
+"Support for this work was provided by NSF grant [OAC-2209877](https://"
+"www.nsf.gov/awardsearch/showAward?AWD_ID=2209877)."
 msgstr ""

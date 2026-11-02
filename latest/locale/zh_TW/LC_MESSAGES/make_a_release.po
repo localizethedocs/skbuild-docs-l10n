@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../../../make_a_release.rst:7
 msgid ""
-"A core developer should use the following steps to create a release ``X.Y."
-"Z`` of **scikit-build** on `PyPI`_ and `Conda`_."
+"A core developer should use the following steps to create a release "
+"``X.Y.Z`` of **scikit-build** on `PyPI`_ and `Conda`_."
 msgstr ""
 
 #: ../../../make_a_release.rst:12
@@ -202,9 +202,9 @@ msgstr ""
 msgid ""
 "After a GitHub release is created in the `scikit-build <https://github.com/"
 "scikit-build/scikit-build>`_ project and after the conda-forge `Autoticking "
-"Bot <https://justcalamari.github.io/jekyll/update/2018/06/11/introduction."
-"html>`_ creates a pull request on the `scikit-build-feedstock`_ , follow "
-"these steps to finalize the conda package release:"
+"Bot <https://justcalamari.github.io/jekyll/update/2018/06/11/"
+"introduction.html>`_ creates a pull request on the `scikit-build-"
+"feedstock`_ , follow these steps to finalize the conda package release:"
 msgstr ""
 
 #: ../../../make_a_release.rst:147

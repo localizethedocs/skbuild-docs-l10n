@@ -43,11 +43,12 @@ msgstr ""
 
 #: ../../../hacking.rst:20
 msgid ""
-"The public Python API is ``skbuild.setup`` and ``skbuild.exceptions."
-"SKBuildError``. Anything else is deprecated: ``skbuild.cmaker``, ``skbuild."
-"constants``, ``skbuild.utils`` and ``skbuild.setuptools_wrap`` are "
-"compatibility shims that warn on import and keep only the handful of helpers "
-"downstream ``setup.py`` files use (see below)."
+"The public Python API is ``skbuild.setup`` and "
+"``skbuild.exceptions.SKBuildError``. Anything else is deprecated: "
+"``skbuild.cmaker``, ``skbuild.constants``, ``skbuild.utils`` and "
+"``skbuild.setuptools_wrap`` are compatibility shims that warn on import and "
+"keep only the handful of helpers downstream ``setup.py`` files use (see "
+"below)."
 msgstr ""
 
 #: ../../../hacking.rst:30

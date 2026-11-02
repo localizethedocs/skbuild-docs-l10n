@@ -187,8 +187,8 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:92
 msgid ""
-"$ docker run --rm -itv $PWD:/src -w /src quay.io/pypa/manylinux_2_28_x86_64:"
-"latest pipx run nox"
+"$ docker run --rm -itv $PWD:/src -w /src quay.io/pypa/"
+"manylinux_2_28_x86_64:latest pipx run nox"
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:94
