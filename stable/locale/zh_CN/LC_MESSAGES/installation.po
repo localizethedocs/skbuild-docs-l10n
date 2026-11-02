@@ -91,9 +91,9 @@ msgstr ""
 #: ../../../installation.rst:44
 msgid ""
 "The same compiler toolchain used to build the CPython interpreter should "
-"also be available. Refer to the `CPython Developer's Guide <https://devguide."
-"python.org/getting-started/setup-building/#install-dependencies>`_ for "
-"details about the compiler toolchain for your operating system."
+"also be available. Refer to the `CPython Developer's Guide <https://"
+"devguide.python.org/getting-started/setup-building/#install-dependencies>`_ "
+"for details about the compiler toolchain for your operating system."
 msgstr ""
 
 #: ../../../installation.rst:49

@@ -40,12 +40,12 @@ msgstr ""
 msgid ""
 "The classic scikit-build backend has been replaced by [scikit-build-core]"
 "(https://github.com/scikit-build/scikit-build-core)'s setuptools plugin. "
-"`skbuild.setup()` is now a thin wrapper around `scikit_build_core.setuptools."
-"wrapper.setup()`, and scikit-build depends on `scikit-build-"
-"core[setuptools]`. Most packages — those that only use `from skbuild import "
-"setup` with the documented `cmake_*` keyword arguments — will continue to "
-"build unchanged. New projects are still encouraged to use scikit-build-core "
-"directly."
+"`skbuild.setup()` is now a thin wrapper around "
+"`scikit_build_core.setuptools.wrapper.setup()`, and scikit-build depends on "
+"`scikit-build-core[setuptools]`. Most packages — those that only use `from "
+"skbuild import setup` with the documented `cmake_*` keyword arguments — will "
+"continue to build unchanged. New projects are still encouraged to use scikit-"
+"build-core directly."
 msgstr ""
 
 #: ../../../../CHANGES.md:12
@@ -96,20 +96,21 @@ msgstr ""
 #: ../../../../CHANGES.md:22
 msgid ""
 "`cmake_with_sdist=True` now raises an error; `cmake_languages` and "
-"`cmake_minimum_required_version` are ignored with a warning (set `cmake."
-"version` in `[tool.scikit-build]` instead)."
+"`cmake_minimum_required_version` are ignored with a warning (set "
+"`cmake.version` in `[tool.scikit-build]` instead)."
 msgstr ""
 
 #: ../../../../CHANGES.md:23
 msgid ""
 "The internal modules `skbuild.command`, `skbuild.platform_specifics`, "
-"`skbuild.utils`, and `skbuild.setuptools_wrap` were removed. `skbuild."
-"constants` and `skbuild.cmaker` are now deprecation shims keeping only the "
-"helpers downstream `setup.py` files use: `skbuild_plat_name()`, "
-"`CMAKE_INSTALL_DIR()`, and `get_cmake_version()`. `skbuild.exceptions."
-"SKBuildError` is now an alias of setuptools' `SetupError`, so it is no "
-"longer a `RuntimeError`; its `SKBuildInvalidFileInstallationError` and "
-"`SKBuildGeneratorNotFoundError` subclasses were removed."
+"`skbuild.utils`, and `skbuild.setuptools_wrap` were removed. "
+"`skbuild.constants` and `skbuild.cmaker` are now deprecation shims keeping "
+"only the helpers downstream `setup.py` files use: `skbuild_plat_name()`, "
+"`CMAKE_INSTALL_DIR()`, and `get_cmake_version()`. "
+"`skbuild.exceptions.SKBuildError` is now an alias of setuptools' "
+"`SetupError`, so it is no longer a `RuntimeError`; its "
+"`SKBuildInvalidFileInstallationError` and `SKBuildGeneratorNotFoundError` "
+"subclasses were removed."
 msgstr ""
 
 #: ../../../../CHANGES.md:24
@@ -121,8 +122,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:25
 msgid ""
-"sdists no longer auto-generate their manifest from git; provide a `MANIFEST."
-"in` (or use setuptools-scm) like any setuptools project."
+"sdists no longer auto-generate their manifest from git; provide a "
+"`MANIFEST.in` (or use setuptools-scm) like any setuptools project."
 msgstr ""
 
 #: ../../../../CHANGES.md:26
@@ -748,8 +749,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:262
 msgid ""
-"Stop assuming that `.pyx` files are in the same directory as `CMakeLists."
-"txt` by {user}`vyasr` in {pr}`871`."
+"Stop assuming that `.pyx` files are in the same directory as "
+"`CMakeLists.txt` by {user}`vyasr` in {pr}`871`."
 msgstr ""
 
 #: ../../../../CHANGES.md:263
@@ -1405,8 +1406,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:468
 msgid ""
-"Fix linting error [F522](https://flake8.pycqa.org/en/latest/user/error-codes."
-"html) reported with flake8 \\>= 3.8.x. Thanks {user}`benbovy` for the "
+"Fix linting error [F522](https://flake8.pycqa.org/en/latest/user/error-"
+"codes.html) reported with flake8 \\>= 3.8.x. Thanks {user}`benbovy` for the "
 "contributions. See {issue}`494`."
 msgstr ""
 
@@ -1497,9 +1498,9 @@ msgstr ""
 
 #: ../../../../CHANGES.md:497
 msgid ""
-"Fix unclosed file resource in {meth}`skbuild.cmaker.CMaker."
-"check_for_bad_installs`. Thanks {user}`Nic30` for the suggestion. See {issue}"
-"`429`."
+"Fix unclosed file resource in {meth}"
+"`skbuild.cmaker.CMaker.check_for_bad_installs`. Thanks {user}`Nic30` for the "
+"suggestion. See {issue}`429`."
 msgstr ""
 
 #: ../../../../CHANGES.md:498
@@ -1626,9 +1627,10 @@ msgstr ""
 
 #: ../../../../CHANGES.md:539
 msgid ""
-"Fix `check_wheel_content()` to consider changes in `0.33.1 < wheel."
-"__version__ < 0.33.4` where directory entries are included when building "
-"wheel. See [pypa/wheel#294](https://github.com/pypa/wheel/issues/294)."
+"Fix `check_wheel_content()` to consider changes in `0.33.1 < "
+"wheel.__version__ < 0.33.4` where directory entries are included when "
+"building wheel. See [pypa/wheel#294](https://github.com/pypa/wheel/issues/"
+"294)."
 msgstr ""
 
 #: ../../../../CHANGES.md:540
@@ -1636,8 +1638,8 @@ msgid ""
 "Fix reporting of `AssertionError` raised in `check_wheel_content()` function "
 "by relocating the source code into a dedicated module `tests.pytest_helpers` "
 "and by adding a `conftest.py` configuration file registering it for pytest "
-"assertion rewriting. See <https://docs.pytest.org/en/latest/writing_plugins."
-"html#assertion-rewriting> and {issue}`403`."
+"assertion rewriting. See <https://docs.pytest.org/en/latest/"
+"writing_plugins.html#assertion-rewriting> and {issue}`403`."
 msgstr ""
 
 #: ../../../../CHANGES.md:541
@@ -1987,8 +1989,9 @@ msgstr ""
 #: ../../../../CHANGES.md:640
 msgid ""
 "Support specifying a default directory for all packages not already "
-"associated with one using syntax like `package_dir={'':'src'}` in `setup."
-"py`. Thanks {user}`benjaminjack` for reporting the issue. See {issue}`274`."
+"associated with one using syntax like `package_dir={'':'src'}` in "
+"`setup.py`. Thanks {user}`benjaminjack` for reporting the issue. See {issue}"
+"`274`."
 msgstr ""
 
 #: ../../../../CHANGES.md:641
@@ -2002,8 +2005,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:642
 msgid ""
-"Set `skbuild <version>` as wheel generator. See [PEP-0427](https://www."
-"python.org/dev/peps/pep-0427/#file-contents) and {issue}`191`."
+"Set `skbuild <version>` as wheel generator. See [PEP-0427](https://"
+"www.python.org/dev/peps/pep-0427/#file-contents) and {issue}`191`."
 msgstr ""
 
 #: ../../../../CHANGES.md:643
@@ -2068,12 +2071,12 @@ msgstr ""
 msgid ""
 "from more than **2 hours to ~50 minutes** for 64 and 32-bit Python 3.5 tests "
 "done using Visual Studio 2015. Improvement specific to Python 3.x were "
-"obtained by caching the results of slow calls to `distutils.msvc9compiler."
-"query_vcvarsall` (for Python 3.3 and 3.4) and `distutils._msvccompiler."
-"_get_vc_env` (for Python 3.5 and above). These functions were called "
-"multiple times to create the list of {class}`skbuild.platform_specifics."
-"windows.CMakeVisualStudioCommandLineGenerator` used in {class}`skbuild."
-"platform_specifics.windows.WindowsPlatform`."
+"obtained by caching the results of slow calls to "
+"`distutils.msvc9compiler.query_vcvarsall` (for Python 3.3 and 3.4) and "
+"`distutils._msvccompiler._get_vc_env` (for Python 3.5 and above). These "
+"functions were called multiple times to create the list of {class}"
+"`skbuild.platform_specifics.windows.CMakeVisualStudioCommandLineGenerator` "
+"used in {class}`skbuild.platform_specifics.windows.WindowsPlatform`."
 msgstr ""
 
 #: ../../../../CHANGES.md:663
@@ -2148,8 +2151,8 @@ msgstr ""
 msgid ""
 "Ensure CMake arguments passed to scikit-build and starting with `-DCMAKE_*` "
 "are passed to the test project allowing to determine which generator to use. "
-"For example, this ensures that arguments like `-DCMAKE_MAKE_PROGRAM:"
-"FILEPATH=/path/to/program` are passed. See {issue}`256`."
+"For example, this ensures that arguments like `-"
+"DCMAKE_MAKE_PROGRAM:FILEPATH=/path/to/program` are passed. See {issue}`256`."
 msgstr ""
 
 #: ../../../../CHANGES.md:695
@@ -2340,8 +2343,8 @@ msgstr ""
 #: ../../../../CHANGES.md:757
 msgid ""
 "Add support for short signature: `check_dynamic_lookup(<ResultVar>)`. See "
-"[SimpleITK/SimpleITK#80](https://github.com/SimpleITK/SimpleITK/"
-"pull/80#issuecomment-267617180)."
+"[SimpleITK/SimpleITK#80](https://github.com/SimpleITK/SimpleITK/pull/"
+"80#issuecomment-267617180)."
 msgstr ""
 
 #: ../../../../CHANGES.md:761
@@ -2440,10 +2443,11 @@ msgstr ""
 
 #: ../../../../CHANGES.md:794
 msgid ""
-"{meth}`skbuild.platform_specifics.abstract.CMakePlatform."
-"get_best_generator`: Change parameter name from `generator` to "
-"`generator_name`. Note that this function is also directly importable from "
-"{mod}`skbuild.platform_specifics`. This change breaks backward compatibility."
+"{meth}"
+"`skbuild.platform_specifics.abstract.CMakePlatform.get_best_generator`: "
+"Change parameter name from `generator` to `generator_name`. Note that this "
+"function is also directly importable from {mod}`skbuild.platform_specifics`. "
+"This change breaks backward compatibility."
 msgstr ""
 
 #: ../../../../CHANGES.md:795
@@ -2507,8 +2511,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:820
 msgid ""
-"CMake module: `skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup."
-"cmake`:"
+"CMake module: `skbuild/resources/cmake/"
+"targetLinkLibrariesWithDynamicLookup.cmake`:"
 msgstr ""
 
 #: ../../../../CHANGES.md:822
@@ -2519,10 +2523,10 @@ msgstr ""
 
 #: ../../../../CHANGES.md:823
 msgid ""
-"It configure the text project setting [CMAKE_ENABLE_EXPORTS](https://cmake."
-"org/cmake/help/v3.6/prop_tgt/ENABLE_EXPORTS.html?highlight=enable_export) to "
-"ON. Doing so ensure the executable compiled in the test exports symbols (if "
-"supported by the underlying platform)"
+"It configure the text project setting [CMAKE_ENABLE_EXPORTS](https://"
+"cmake.org/cmake/help/v3.6/prop_tgt/ENABLE_EXPORTS.html?"
+"highlight=enable_export) to ON. Doing so ensure the executable compiled in "
+"the test exports symbols (if supported by the underlying platform)"
 msgstr ""
 
 #: ../../../../CHANGES.md:825
@@ -2531,8 +2535,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:827
 msgid ""
-"Add [short note](http://scikit-build.readthedocs.io/en/latest/cmake-modules."
-"html) explaining how to include scikit-build CMake module"
+"Add [short note](http://scikit-build.readthedocs.io/en/latest/cmake-"
+"modules.html) explaining how to include scikit-build CMake module"
 msgstr ""
 
 #: ../../../../CHANGES.md:828
@@ -2661,8 +2665,8 @@ msgstr ""
 
 #: ../../../../CHANGES.md:874
 msgid ""
-"Improvement of documentation published on <http://scikit-build.readthedocs."
-"io/en/latest/>"
+"Improvement of documentation published on <http://scikit-"
+"build.readthedocs.io/en/latest/>"
 msgstr ""
 
 #: ../../../../CHANGES.md:875

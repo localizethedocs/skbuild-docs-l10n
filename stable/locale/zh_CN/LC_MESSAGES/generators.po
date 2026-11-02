@@ -52,10 +52,11 @@ msgstr ""
 #: ../../../generators.rst:27
 msgid ""
 "``Ninja`` is the recommended generator. It is automatically parallel and is "
-"available on all platforms. The recommended ``scikit_build_core.setuptools."
-"build_meta`` backend (see :ref:`basic_usage_example`) adds the `ninja python "
-"package <https://pypi.org/project/ninja/>`_ to the build requirements "
-"automatically when no suitable build tool is already available."
+"available on all platforms. The recommended "
+"``scikit_build_core.setuptools.build_meta`` backend "
+"(see :ref:`basic_usage_example`) adds the `ninja python package <https://"
+"pypi.org/project/ninja/>`_ to the build requirements automatically when no "
+"suitable build tool is already available."
 msgstr ""
 
 #: ../../../generators.rst:34
